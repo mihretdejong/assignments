@@ -1,0 +1,161 @@
+body{
+    background-color: firebrick;
+}
+
+p{  
+    color: rgb(13, 13, 92);
+    text-shadow: 10px;
+    font-family: Geneva; 
+
+}
+
+#total {
+    color: white    
+}
+
+
+
+.parentMarioDiv{
+    animation-name: mario;
+    animation-duration: 3s;
+    width: 75%;
+    margin: auto;
+    margin-top: 60px;
+    
+}
+
+#marioF{
+    display: flex;
+    justify-content: center;
+
+}
+/* @keyframes mario {
+    0% {left: 0px; top: 0px;}
+    100% {left: 500px; top: 0px;} 
+*/
+
+.headPic{
+    border-color: white;
+    border: 5px solid white;
+    border-radius: 30%;
+    height: 200px
+}
+
+h1{
+    color: white;
+    font-family: geneva; 
+    text-align: center;
+    font-family: Verdana; 
+    font-size:  50px;
+}
+
+.imgBtn{
+    /* position: relative; */
+    top: 100px;
+    right: 0px;
+    height: 100x;
+    width: 100px;
+   
+}
+.superM{
+    position: absolute;
+    width: 700px;
+    top:0;
+    margin-top: auto;
+    margin-left: auto  
+}
+.mario{
+
+    position: relative;
+    left:0;
+    display: flex;
+    border-radius: 8px;
+    padding: 5px;
+    width:150px;
+    z-index: 1;
+   
+}
+
+.top {
+    margin-top: 100px;
+
+}
+
+/* .container > div {
+
+    background-color: blue
+
+} */
+
+.section{
+    background-color: white;
+    padding: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 10px solid red;
+    border-radius: 50px;
+    width: 50%;
+    margin: 20px;
+    margin-bottom: 30px;
+    height: 60px;
+    color: red;
+    
+}
+
+.input {
+    width: 70px;
+    color: darkblue;
+    
+ 
+}
+ 
+button{
+    background-color: darkblue;
+    color: white;
+    font-size: larger;
+    border: 5px solid white;
+    border-radius: 20px;
+    position: relative;
+    display:  center; 
+    width: 30%;
+    height:50px;
+}
+
+.container{
+    display: flex
+}
+
+#result{
+    background-color: white;
+    width: 100%
+}
+
+footer{
+    text-align: center;
+    width: 700px;
+    padding: 20%
+}
+
+
+
+
+
+/* input {
+    display: iniline; 
+
+    do list
+    - center everything
+    - change color of divs to red background color when mouth over
+    and back to white when mouth is moved, the white border changes to red
+    - animate the bad guy divs
+    -
+    -get a mario gif in the center above the mario pest control text
+    -change the font for the names of the bad guys
+    - style the out put box at the bottom and center it along with the submit button
+    - 
+    -
+} */
+
+
+
