@@ -1,0 +1,81 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: white;
+    background-image: url("/images/eugenivy_reserv-1399952-unsplash.jpg");
+    background-size: cover;
+    width: 100%;
+    hight:800px;
+}
+
+
+#container {
+   
+    background-color: rgb(0, 0, 0, 0.5);
+    position:fixed;
+    width: 100%;  
+    color: white 
+
+}
+
+#navBar{
+    margin-top: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+a{
+    color: white;
+    text-decoration: none;
+
+}
+a:active {
+    color: white;
+}
+
+a:visited{
+    color: white;
+}
+
+.gracieMe{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.htag{
+    font-family:sans-serif;
+    text-align: center;
+   
+
+
+}
+
+.textDiv{
+    text-align: center;
+   
+}
+    
+
+
+.pTag{
+    font-family: sans-serif;
+    text-align: center;
+    padding: 5px;
+    
+
+}
+
+.gracieAlton{
+    width: 30%;
+    height: 500px;
+    padding: 80px;
+    border:10px solid white
+}
+
+

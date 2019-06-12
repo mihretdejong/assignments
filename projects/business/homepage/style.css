@@ -1,3 +1,430 @@
-/* home */
-/* about */
-/* gallery  */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    /* insert floral bright image here or the logo, click on the logo and it opens to the home page */
+}
+
+#containerNavbar {
+   
+    background-color: rgb(0, 0, 0, 0.4);
+    position:fixed;
+    width: 100%;  
+    color: white 
+}
+
+#navBar{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+a{
+    color: white;
+    text-decoration: none;
+
+}
+a:active {
+    color: white;
+}
+
+a:visited{
+    color: white;
+}
+  
+
+.gracieMe{
+    width: 100%;
+    height: 320px;
+    size: contain;
+}
+
+.welcomeTitle{
+
+    margin-top:70px;
+    background-color: aliceblue;
+    font-size: 3em;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 50px;
+
+}
+.welcomeText{
+    text-align: center;
+    padding: 40px;
+    
+}
+
+.welcomeSection{
+    background-color: aliceblue
+}
+
+.maternityText{
+    font-family: calli;
+    font-size: 4em;
+    color: black;
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    padding: 20px
+
+    }
+
+.maternityImgRP{
+    width: 100%; 
+
+}
+
+.Toddlers{
+    display: flex;
+    justify-content: center;
+    font-family: calli;
+    color: black;
+    font-size: 5em
+
+}
+.gracie{
+    background-color: aliceblue
+
+}
+.gracie2{
+    width: 100%
+}
+
+
+
+.wedding4{
+    width: 100%;
+    box-shadow: 0 0 8px 8px white inset;
+}
+
+
+
+.subNewb {
+    display: flex;
+    justify-content: center;
+    font-family: calli;
+    color: black;
+    font-size: 5em
+    
+}
+
+.newBArya{
+
+    width: 100%;
+    height: 340px;
+    box-shadow: 0 0 8px 8px white inset;
+
+}
+
+
+.registerM{
+    padding: 10px;
+    background-color: lavender;
+    margin-bottom: 20px;
+
+}
+
+.bodyText{
+   background-color: white;
+   text-align: center;
+}
+
+a.contactTag{
+    color: rgb(139, 129, 69);
+    
+}
+
+
+.magicLink{
+    color: black;
+    text-align: center;
+    margin: 70px;
+   
+}
+
+.contactLinkDiv{
+    background-color: aliceblue;
+    padding: 30px;
+
+}
+
+
+
+/* #footerSecion{
+    width: 100%;
+    height: 50vh;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0px;
+} */
+#footerCon{
+    width: 100%;
+    height: 50vh;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.dirDiv{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.blackLogo{
+    width: 50%;
+    height: 300px;
+}
+
+@font-face{
+    font-family: calli;
+    src: url(CestLaIsabellyAlt.ttf)
+
+}
+
+@media screen and (min-width: 600px){
+
+    
+    .gracieMe {
+       display:none
+    }
+
+    .welcomeHeading{
+        font-size: 8em;
+        margin: 50px;
+    }
+
+    .welcomePtag{
+        margin: 80px;
+
+    }
+
+    .welcomeText{
+        display: flex;
+        justify-content: center;
+        flex-direction: column
+    }
+
+
+
+
+    .logoMD{
+        margin-right: 90px;
+    }
+
+    .welcomeBackImage{
+        background-image: url("/images/60079605_783348745381556_4942541127493353472_n.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 600px;
+
+    }
+
+
+
+    .welcomeText{
+        display: flex;
+        justify-content: right;
+
+        
+    }
+    .wedding4{
+        display: none;
+    }
+    .amyWed2{
+        background-image: url("/images/amyWed2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 700px;
+        box-shadow: 0 0 40px 40px white inset;
+        
+        
+
+    }
+
+    .newBArya{
+        display: none;
+    }
+
+    .newBornDiv{
+        background-image: url("/images/Aryabw.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 700px;
+        margin-top: 40px;
+
+    }
+
+    .maternityImgRP{
+        display: none;
+    }
+    .maternityDiv{
+        background-image: url("/images/MaternityRayna.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 700px;
+    }
+}
+
+/* 
+body{
+    background-image: url("/images/60079605_783348745381556_4942541127493353472_n.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-color: white;
+} */
+
+
+.gracieDJ{
+    width: 100%;
+    height: 340px;
+    border: 10px solid white;
+    margin-top: 50px;
+    
+}
+
+#container {
+   
+    background-color: black;
+    position:fixed;
+    width: 100%;  
+    color: white 
+
+}
+
+#navBar{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    
+}
+
+.gracieMe{
+    width: 100%;
+    height: 340px;
+}
+
+.welcomeDiv{
+    margin-top: 0px;
+}
+
+.welcomeHeading{
+
+    margin-top: px;
+    background-color: white;
+    font-size: 2.5em;
+    font-family: calli;
+    text-align: center;
+
+}
+.welcomePtag{
+    font-family: sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 10px;
+    background-color: white
+}
+
+.weddingDiv{
+    font-family: calli;
+    font-size: 5em;
+    color: black;
+    display: flex;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center
+
+    }
+
+
+.amyWedding{
+    width: 100%;
+    height: 340px;
+}
+
+
+
+.subNewb {
+    display: flex;
+    justify-content: center;
+    font-family: calli;
+    color: black;
+    font-size: 5em
+    
+}
+
+
+.newBArya{
+
+    width: 100%;
+    height: 340px;
+
+}
+
+.maternityDiv{
+    font-family: calli;
+    font-size: 4em;
+    color: black;
+    display: flex;
+    justify-content:center;
+    width: 100%;
+    background-color:white;
+    padding: 10px;
+
+    /* background-image: url("/images/53089522_295055381173704_3453680655521546240_o.jpg");
+    background-size: contain;
+    background-repeat: no-repeat; */
+
+}
+
+.maternityImg{
+    width: 100%;
+    height: 340px;
+}
+
+
+
+
+.registerM{
+    padding: 10px;
+    background-color: lavender;
+    margin-bottom: 20px;
+
+}
+
+.bodyText{
+   background-color: white;
+   text-align: center;
+}
+
+
+
+
+
+
+/* 
+plan
+- click on the burger menu when at smaller scale
+-  */
