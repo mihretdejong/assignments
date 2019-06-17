@@ -75,40 +75,37 @@
 // }
 
 
-const readline = require("readline-sync");
-console.log ("Hi gamer! welcome to the rising up in the morning game!")
+// const readline = require("readline-sync");
+// console.log ("Hi gamer! welcome to the rising up in the morning game!")
 
 
 
-const gamer = {
-    name: "",
-    age: 10,
-    inventory: [],
-}
+// const gamer = {
+//     name: "",
+//     age: 10,
+//     inventory: [],
+// }
 
 
-gamer.name = readline.question("What is your name?")
-console.log(`Thank you! ${gamer.name}`)
+// gamer.name = readline.question("What is your name?")
+// console.log(`Thank you! ${gamer.name}`)
 
 
 
-gamer.inventory.push()
-let gameOver = false
-let options = ["wake up early","wake up late","take a shower","eat breakfast","play time and go to class!"]
-let upEarly = false
-let tookShower = false
-let eatBfast = false
+// gamer.inventory.push()
+// let gameOver = false
+// let options = ["wake up early","wake up late","take a shower","eat breakfast","play time and go to class!"]
+// let upEarly = false
+// let tookShower = false
+// let eatBfast = false
 
-while(!gameOver){
-    const userAnswer = readline.keyInSelect(options, "What would you like to do?:")
-    if (userAnswer === 0) {
-        console.log("Good morning,early riser! what would you like to do?")
-    } else if (userAnswer === -1) {
-        console.log("No more snooze, you gotta get up!")
-    }
-}
-
-//     } else if (userAnswer === 1){
+// while(!gameOver){
+//     const userAnswer = readline.keyInSelect(options, "What would you like to do?:")
+//     if (userAnswer === 0) {
+//         console.log("Good morning,early riser! what would you like to do?")
+//     } else if (userAnswer === -1) {
+//         console.log("No more snooze, you gotta get up!")
+//     }  else if (userAnswer === 1){
 //         console.log ("Good morning, late riser! You're late for class! RUN!!!")
 //         gameOver = true
 //     } else if (userAnswer === 2){
@@ -136,3 +133,20 @@ while(!gameOver){
 
 
 // }
+
+const randomNum = Math.floor(Math.random() * 3)
+
+console.log(Math.floor(Math.random() * 2))
+
+
+
+
+
+
+
+
+
+
+
+
+
