@@ -63,31 +63,29 @@ function Enemy(type, health, ammunition, weapon){
     this.health = health
     this.ammunition = ammunition
     this.weapon = weapon
-    this.enemyAttack = function(){
-    }
 }
 
 function generateEnemy(arr){
-    //remvove option if array contains it
+    //remove option if array contains it
     // we used recursive function (calling a function inside the function)
     const randomNum = Math.floor(Math.random() * 3)
     if (randomNum === 0 ){
-        if (arr.indexOf("selweapon") !== -1 ){
+        if (arr.indexOf("self destruction button") !== -1 ){
            return generateEnemy(arr)
         } else {
-            return new Enemy("self", 50, 10, "selweapon")  
+            return new Enemy("yourself", 50, 10, "self destruction button")  
         }
     } else if (randomNum === 1 ){
-        if (arr.indexOf("matWeapon") !== -1 ){
+        if (arr.indexOf("Money") !== -1 ){
             return generateEnemy(arr)
         } else {
-            return new Enemy ("materializm", 30, 20, "matWeapon")
+            return new Enemy ("world", 30, 20, "Money")
         }
     } else if (randomNum === 2 ){ 
-        if (arr.indexOf("lucWeapon") !== -1 ){
+        if (arr.indexOf("Lies") !== -1 ){
             return generateEnemy(arr)
         } else {
-        return new Enemy("lucifer", 20, 20, "lucWeapon")
+        return new Enemy("lucifer", 20, 20, "Lies")
         }
     }
 }
@@ -95,7 +93,7 @@ function generateEnemy(arr){
 // ["fight", "run","chill with the enemy","quit"]
 function battleLoop(enemy){
     while(enemy.health > 0 && player.health > 0){
-        const userChoice = ask.keyIn("Decisions, decisions, what will you do?: Press [f] to fight and press [r] to run. Press [c] to chill with your enemy. Press [q] to bounce out.", {limit: "frcq"})
+        const userChoice = ask.keyIn(`"Your enemy is blocking your path! Decisions, decisions, what will you do?: Press [f] to fight and press [r] to run. Press [c] to chill with your enemy. Press [q] to bounce out."`, {limit: "frcq"})
         // const myEnemy = generateEnemy()
         console.clear()
         if (userChoice === "f"){
@@ -115,16 +113,17 @@ function battleLoop(enemy){
             // console.log(player) 
         } else if (userChoice === "r"){
             
-            console.log("you can't run forever! You gotta face your friendly enemy wink wink :)")
+            console.log("you can't run forever! You gotta face your friendly enemy! wink wink :)")
             const didEscape = run()
             if (didEscape){
                 break
             } 
         } else if (userChoice === "c"){
-            console.log("your friendly enemy is a canibal. watch out!")
+            console.log("Gobble gobble! your enemy ate your arm and leg! What did you expect?!! \n your friendly enemy is not so friendly! He's a preditor! watch out!")
+
             console.clear()
         } else if (userChoice === "quit"){
-            console.log ("gotach again! Joke! there is no quitting!")
+            console.log ("haha nice try! Joke! there is no quitting! Go back and Fight or lace up your shoe and RUN!!!")
         }
     }
 }
@@ -147,47 +146,47 @@ function give(){
 //////////////////////////////
 // Game
 
-console.log("Hello Player! Welcome!")
-// console.log(
-                //     `
-                //                       //                //
-                //                     ////               ////
-                //                   //////             ///////
-                //                 //////////        ////////////
-                //               ///////////////////////////////
-                //             ////////////////////////////////////
-                //             /////////////////////////////////////
-                //          ///////////     ////////       /////////////
-                //         /////////  ///// //////// ////// /////////////
-                //         ////////////////////////////////////////////////
-                //       //////////////////  ////   ////////////////////////
-                //       ///////////////////////////////////////////////////
-                //       /////////////   ///////////// /////////////////////
-                //         ////////////   ////////  //////////////////////
-                //           /////////////        //////////////////////
-                //             ////////////////////////////////////
-                //              ///////////////////////////////
 
+console.log(
+                    `
+                                      //                //
+                                    ////               ////
+                                  //////             ///////
+                                //////////        ////////////
+                              ///////////////////////////////
+                            ////////////////////////////////////
+                            /////////////////////////////////////
+                         ///////////     ////////       /////////////
+                        /////////  ///// //////// ////// /////////////
+                        ////////////////////////////////////////////////
+                      //////////////////  ////   ////////////////////////
+                      ///////////////////////////////////////////////////
+                      /////////////   ///////////// /////////////////////
+                        ////////////   ////////  //////////////////////
+                          /////////////        //////////////////////
+                            ////////////////////////////////////
+                             ///////////////////////////////
+             ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+          ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+             ]]]]]]]]  ]]]]]]]]]]]]]]]]  ]]]]]]]]  ]]]]]]]]]]]       ]]]]]]]]]]]]]]]]]]]]]]]
+          ]]]]]]]]]]]  ]]]]]]]]]]]]]]]  ]]]]]]]     ]]]]]]]]] ]]]]]  ]]]]]]]]]]]]]]]]]]]]]
+          ]]]]]]]]]]]  ]]]]]]]]] ]]]]]]  ]]]]]] ]]]] ]]]]]]]]] ]]]]]  ]]]]]]]]]  ]]]]]]]]]]
+            ]]]]]]]]]   ]]]]]]  ]]]]]]  ]]]]]]  ]]]]  ]]]]]]]]      ]]]]]]]]]]]]]]]]]]]]]]
+          ]]]]]]]]]]]]   ]]]]]   ]]]]   ]]]]]           ]]]]]]  ]]]   ]]]]]]]]]]]]]]]]]]]]
+          ]]]]]]]]]]]]]]  ]]]  ]]  ]]  ]]]]]    ]]]]]]]  ]]]]]  ]]]]]]  ]]]]]]]]]]]]]]]]]]]
+          ]]]]]]]]]]]]]]]    ]]]]]    ]]]]]   ]]]]]]]]]]  ]]]]   ]]]]]]]  ]]]]]]]]]]]]]]]]
+           ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+          ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+             ]]]]    ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]    ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+          ]]]]]]]]]]]]]]]]]]]]]]]]]]]]] ]]]]]]]]]]]]]]]]]]]]]]]]]]]    ]]]]]]]]]]]]]]]
+              ]]]]]]]]]]]]]]]]]]]]]]]]]    ]]]]]]]]]]  ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+          ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+   
+       `
+)
 
-//              ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-//           ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-//              ]]]]]]]]  ]]]]]]]]]]]]]]]]  ]]]]]]]]  ]]]]]]]]]]]       ]]]]]]]]]]]]]]]]]]]]]]]
-//           ]]]]]]]]]]]  ]]]]]]]]]]]]]]]  ]]]]]]]     ]]]]]]]]] ]]]]]  ]]]]]]]]]]]]]]]]]]]]]
-//           ]]]]]]]]]]]  ]]]]]]]]] ]]]]]]  ]]]]]] ]]]] ]]]]]]]]] ]]]]]  ]]]]]]]]]  ]]]]]]]]]]
-//             ]]]]]]]]]   ]]]]]]  ]]]]]]  ]]]]]]  ]]]]  ]]]]]]]]      ]]]]]]]]]]]]]]]]]]]]]]
-//           ]]]]]]]]]]]]   ]]]]]   ]]]]   ]]]]]           ]]]]]]  ]]]   ]]]]]]]]]]]]]]]]]]]]
-//           ]]]]]]]]]]]]]]  ]]]  ]]  ]]  ]]]]]    ]]]]]]]  ]]]]]  ]]]]]]  ]]]]]]]]]]]]]]]]]]]
-//           ]]]]]]]]]]]]]]]    ]]]]]    ]]]]]   ]]]]]]]]]]  ]]]]   ]]]]]]]  ]]]]]]]]]]]]]]]]
-//            ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-//           ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-//              ]]]]    ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]    ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-//           ]]]]]]]]]]]]]]]]]]]]]]]]]]]]] ]]]]]]]]]]]]]]]]]]]]]]]]]]]    ]]]]]]]]]]]]]]]
-//               ]]]]]]]]]]]]]]]]]]]]]]]]]    ]]]]]]]]]]  ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-//           ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+console.log("Hello friend! Welcome to life! \n    \n The war is ON! \n")
 
-    
-//        `
-// )
 player.name = ask.question("May I have your name?:")
 console.log(`Thank you ${player.name}`)
 console.clear()
