@@ -17,26 +17,46 @@
     .then(response => {
         console.log(response)
         const todos = response.data
-        todos.innerHTML=""
+        todoList.innerHTML=""
+        //the .innerHTML line deletes everything and reloads everything after the update
+        // everytime you call the function that has the get reqeuest
         for (let i = 0; i < todos.length; i++){
           const divContainer = document.createElement ("div")
-          const btn = document.createElement ("button")
+          divContainer.classList.add("divContainer")
           const h1 = document.createElement("h1")
           const p = document.createElement("p")
           const img = document.createElement("img")
           const checkBoxInput = document.createElement("input")
+          checkBoxInput.classList.add("checkBoxInput")
           const btnEdit = document.createElement("button")
+          btnEdit.classList.add("btnEdit")
+          const imgDiv = document.createElement("div")
+          imgDiv.style.backgroundImage = img
+
           checkBoxInput.type = "checkbox"
           checkBoxInput.checked = todos[i].completed
           
+          const btn = document.createElement ("button")
+          
           // addEventListeners 
-          checkBoxInput.addEventListener("change", function(){
-            putReq(todos[i], checkBoxInput )
+          checkBoxInput.addEventListener("click", (event)=>{
+            const updates = {
+              completed: !todos[i].completed
+            }
+             axios.put("https://api.vschool.io/mihretdejong/todo/" + todos[i]._id, updates )
+            .then(response =>{
+            console.log(response.data)
+            getTodos()
+            })
+            // putReq(todos[i], checkBoxInput )
 
           })
           btn.addEventListener("click", function(event){
             deleteReq(todos[i]._id)
           })
+          if(todos[i].completed){
+            h1.style.textDecoration = "line-through"
+          }
 
           
 
@@ -114,12 +134,12 @@
           // btn.setAttribute('class', 'delete')  
 
           // append elements ////////////////////////
-          divContainer.appendChild(checkBoxInput)   
           divContainer.appendChild(h1)
           divContainer.appendChild(p)
-          divContainer.appendChild(img)
+          divContainer.appendChild(imgDiv)
           divContainer.appendChild(btn)
           divContainer.appendChild(btnEdit)
+          divContainer.appendChild(checkBoxInput)   
 
           todoList.appendChild(divContainer)
 
@@ -127,19 +147,24 @@
           if(todos[i].completed === true){
             h1.style.textDecoration = "line-through"
           } 
-          if(checkBoxInput.checked === true){
-            h1.style.textDecoration = "line-through"
-          }
+       
          
         }
      }) 
     // .catch(error => console.log(error))
  }
+ //////////////////////////////////////////////////
+//  const wrapper = document.createElement("div")
+//  wrapper.appendChild(todoList)
+//  wrapper.appendChild(formTodo)
+//  body.appendChild(wrapper)
+ 
 
  getTodos()
 
 
  const formTodo = document.formTodo
+
  let newTodo = {}
 
  formTodo.addEventListener("submit", function(event){
@@ -162,9 +187,15 @@
    axios.post("https://api.vschool.io/mihretdejong/todo", newTodo)
       .then(response =>{
         console.log(response.data)
+        // title.value = ""
+        // description.value = ""
+        // price.value = ""
+        // img.value = ""
         getTodos()
       })
       postRsp()
+
+
 
       .catch(error => console.log(error))
 
@@ -182,12 +213,12 @@
 
 
 
-  function putReq(obj, checkBox){
-   axios.put("https://api.vschool.io/mihretdejong/todo/" + obj._id, {completed:checkBox.checked} )
-    .then(response =>{
-      console.log(response.data)
-    })
-  }
+  // function putReq(obj, checkBox){
+  //  axios.put("https://api.vschool.io/mihretdejong/todo/" + obj._id, {completed:checkBox.checked} )
+  //   .then(response =>{
+  //     console.log(response.data)
+  //   })
+  // }
     
 
 //     .catch(error => console.log(error))
