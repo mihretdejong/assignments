@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+
+.app-div{
+ 
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
+}
+
+.img-div{
+    grid-column: 1/ 4 ;
+    background-image: url("https://images.unsplash.com/photo-1424709746721-b8fd0ff52499?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: flex-end
+}
+.h3-tag{
+    color: white;
+    width: 30vw;
+    font-size: 5em;
+    text-align: center;
+    border: 2px  white;
+    border-style: dotted;
+    padding: 20px;
+    margin:10px
+}
+.friends-and-pup{
+    background-image:  url("https://images.unsplash.com/photo-1447684808650-354ae64db5b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=747&q=80");
+    background-attachment: fixed;
+    height: 300px;
+    width: 100vw;
+    background-size: cover;
+    
+
+
+}
+.hello-div{
+    grid-column: 1/ 4 ;
+}
+
+p{
+    padding: 20px;
+    text-align: center
+}
+
+.petDiv{
+    border-top:5px solid aliceblue;
+    grid-column: 2/ 3;
+    grid-row: 2;
+    margin: auto;
+    width: 60vw;
+
+}
+

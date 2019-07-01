@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+nav{ 
+    margin: 20px;
+    height: 100px;
+}
+nav > h1{    
+   color: tomato
+}
+
+.nav-links > a { 
+    margin: 10px;
+    text-decoration: none;
+    color: grey;
+}
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.home{
+   
+    width: 100vw;
+    height: 700px;
+}
+.services{
+    background-image: url('https://images.unsplash.com/photo-1550005778-c9ef880d7268?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=749&q=80');
+    background-size: cover;
+    width: 100vw;
+    height: 800px;
+}
+.about{
+    background-image: url('https://images.unsplash.com/photo-1559831763-61ab7104cf53?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+    background-size: cover;
+    width: 100vw;
+    height: 700px;
+}
+.main-div{
+    background-image: url('https://images.unsplash.com/photo-1542120456-8267840d1409?ixlib=rb-1.2.1&auto=format&fit=crop&w=749&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #F3DFE9;
+}
+.main-text-div{
+    width: 400px;
+}
+
+.main-div >h1{
+    margin: 30px auto;
+}
+
+.contact-div{
+    background-image: url('https://images.unsplash.com/photo-1454262041357-5d96f50a2f27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+    background-size: cover;
+    height: 700px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 20px
+   
+    
+
+}
+
+form >input{
+    margin: 10px;
+    height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+.dir-div{
+    display: flex;
+    flex-direction: column;
+    padding: 50px
+    
+}
+.dir-div >a{
+    margin: 5px;
+    text-decoration: none;
+    color: #AB909E;
+
+}
+
+.address{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: grey;
+
+
+}
+
+.address > button{
+    height: 40px;
+    width: 200px;
+    align-self: center;
+    margin: 25px;
+    color: grey;
+    border: 2px solid grey;
+    background-color: white;
+}

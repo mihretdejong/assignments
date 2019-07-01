@@ -23,6 +23,8 @@ function appendTodos(myTodos){
         const checkBox = document.createElement("input")
         const imgUrl = document.createElement("img")
         todoDiv.classList.add("todoDiv")
+        subDiv.classList.add("subDiv")
+        checkBox.classList.add("checkBoxStyle")
         title.textContent = todo.title
         description.textContent = todo.description
         price.textContent = todo.price
@@ -42,6 +44,8 @@ function appendTodos(myTodos){
             editPrice.name = "editPrice"
             editPrice.type = "number"
             editimgUrl.name = "editimgUrl"
+
+
             editForm.addEventListener("submit", function(e){
                 event.preventDefault()
                 let editObj = {}
@@ -81,8 +85,8 @@ function appendTodos(myTodos){
         if(todo.completed){
             title.style.textDecoration = "line-through"
         }
-        todoDiv.appendChild(title)
-        todoDiv.appendChild(checkBox)
+        subDiv.appendChild(title)
+        subDiv.appendChild(checkBox)
         todoDiv.appendChild(description)
         todoDiv.appendChild(price)
         todoDiv.appendChild(imgUrl)

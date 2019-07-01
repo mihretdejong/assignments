@@ -1,0 +1,203 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    src: url ('https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet');
+}
+
+.menu-div >a{
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Open Sans';
+    position: relative;
+    margin: 20px;
+    display: flex;
+    display: inline-block;
+    justify-content: flex-end;
+    padding: 10px;
+    
+}
+.menu-div{
+    width:100%;
+    text-align: end;
+}
+.boot {
+   color: white;
+   position: absolute;
+   margin: 20px
+}
+
+
+.master-header{
+    background: no-repeat center center;
+    background-color:#868e96;
+    background-attachment:scroll; 
+    background-size: cover;
+    position: relative;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 550px;
+}
+.overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color: rgb(0, 0, 0, .4);
+    display: block;
+
+}
+.header-div{
+    display: flex;
+    flex-wrap: wrap; 
+    box-sizing: border-box;
+    color: #fff
+    /* box-sizing allows us to calculate the size of a box
+    regardless of the padding. box-sizing:border box; */
+    /* wrap determines whether the line can be single line or break into lines */
+   
+}
+.title-div{
+    margin: 150px auto;
+    text-align: center
+    
+}
+h1{
+    font-size: 80px;
+    font-family: 'Open Sans';
+    font-weight: 900;
+    line-height: 1.2;
+    display: block;
+    text-align: center;
+    color:#fff;
+    position: relative;
+}
+h4{
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.1;
+    display: block;
+    margin: 10px 0 0;
+    font-family: 'Open Sans';
+    padding: 0;
+    color:#fff;
+    position: relative;
+}
+/* .headerImg{ */
+    
+    /* background-image: url("https://blackrockdigital.github.io/startbootstrap-clean-blog/img/home-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; */
+    /* color: white;
+    display: block;
+
+
+} */
+.post-column{
+    /* width:60vw; */
+    width: 60%;
+    padding-right:50px;
+    padding-left:50px;
+    margin-right:auto;
+    margin-left:auto;
+    margin: 50px auto 50px auto  
+
+}
+h2{
+    font-size:36px;
+    margin-bottom: 10px;
+    font-family: 'Open Sans';
+    line-height: 1.2;
+    /* line height determines what it says 
+    recomended to use 110 to 120% or 1.6 is recomended*/
+
+}
+h3{
+    font-weight: 100;
+    font-family: 'Open Sans';
+    font-size: 26px;
+    line-height: 1.2;
+    color: #212529;
+
+}
+a{
+    color: #212529;
+    transition: 0.2s;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+a:hover{
+    color: #0085a1
+}
+p{
+  font-size: 18px;
+  font-style: italic;
+  color: #868e96;
+  line-height: 1.5;
+  margin:30px 0;
+ 
+
+}
+
+/* a -webkit-any-link{
+    
+} */
+
+hr{
+    margin-top:1rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid rgba(0,0,0,.1);
+    /* overflow: visible */
+    display: block;
+    /* unicode-bidi: isolate */   
+}
+
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+
+}
+
+.github-div{
+    width: 50px;
+    height: 50px;
+    background-image: url("https://image.flaticon.com/icons/svg/25/25231.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px
+}
+.twitter-div{
+    width: 50px;
+    height: 50px;
+    background-image: url("https://image.flaticon.com/icons/svg/69/69407.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px
+
+}
+.facebook-div{
+    width: 50px;
+    height: 50px;
+    background-image: url("https://image.flaticon.com/icons/svg/69/69480.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px
+}
+
+
+
+.copy{
+    text-align: center;
+    font-style: normal;
+      }

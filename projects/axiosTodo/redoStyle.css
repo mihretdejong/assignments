@@ -71,6 +71,23 @@ input{
     align-items: center
       
 }
+.subDiv{
+    display: flex;
+    width: 50%;
+    border: 1px solid tomato;
+    padding:5px
+}
+
+ h3 {
+    background: lightgreen;
+    border: 1px;
+    /* font-size: 2em; */
+}
+.checkBoxStyle{
+    padding: 0;
+    margin: 0;
+    width:10%;
+}
 #myTodoDiv{
     border: 1px solid lightgrey;
     border-radius: 10px;
@@ -78,9 +95,7 @@ input{
     width:100%;
     margin: 10px;
 }
-h3{
-    padding: 20px;
-}
+
 
 #myTodoDiv{
     display: inline;
