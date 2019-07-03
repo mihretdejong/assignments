@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Contact = props => {
+const Contact = () => {
     return (
         <div className="contact-div">
+            
             <form>
                 <input
                     type="text"
@@ -33,6 +34,7 @@ const Contact = props => {
                     value=""
                     placeholder="Tell us more about yourself..."/>
             </form>
+            <p1> </p1>
         </div>
     )
 }

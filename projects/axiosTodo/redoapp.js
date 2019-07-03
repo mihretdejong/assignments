@@ -43,8 +43,15 @@ function appendTodos(myTodos){
             editDescription.name = "editDescription"
             editPrice.name = "editPrice"
             editPrice.type = "number"
-            editimgUrl.name = "editimgUrl"
+            // editimgUrl.name = "editimgUrl"
 
+            editBtn.style.display = "none"
+            editForm.appendChild(editTitle)
+            editForm.appendChild(editDescription)
+            editForm.appendChild(editPrice)
+            // editForm.appendChild(editImgUrl)
+            editForm.appendChild(saveBtn)
+            todoDiv.appendChild(editForm)
 
             editForm.addEventListener("submit", function(e){
                 event.preventDefault()
@@ -52,19 +59,12 @@ function appendTodos(myTodos){
                 editObj.title = editForm.editTitle.value
                 editObj.description = editForm.editDescription.value
                 editObj.price = editForm. editPrice.value
-                editObj.imgUrl = editForm.editimgUrl.value
+                // editObj.imgUrl = editForm.editimgUrl.value
                 editReq(editObj, todo._id)
                 editForm.style.display = "none"
                 editBtn.style.display = "inline"
                 getTodo()
             })
-            editBtn.style.display = "none"
-            editForm.appendChild(editTitle)
-            editForm.appendChild(editDescription)
-            editForm.appendChild(editPrice)
-            editForm.appendChild(editImgUrl)
-            editForm.appendChild(saveBtn)
-            todoDiv.appendChild(editForm)
         })
         delBtn.textContent = "Delete"
         delBtn.classList.add("delBtn")
@@ -87,12 +87,12 @@ function appendTodos(myTodos){
         }
         subDiv.appendChild(title)
         subDiv.appendChild(checkBox)
+        todoDiv.appendChild(subDiv)
         todoDiv.appendChild(description)
         todoDiv.appendChild(price)
         todoDiv.appendChild(imgUrl)
         todoDiv.appendChild(delBtn)
         todoDiv.appendChild(editBtn)
-        todoDiv.appendChild(subDiv)
         myTodoDiv.appendChild(todoDiv)
     })
 }
@@ -104,7 +104,8 @@ todoForm.addEventListener("submit", (e) => {
     newTodo.description = todoForm.description.value
     newTodo.price = todoForm.price.value
     newTodo.imgUrl = todoForm.imgUrl.value
-    title.setAttribute('paceholder', 'title') 
+    
+    // title.setAttribute('paceholder', 'title') 
     postReq()
 })
 function postReq(){

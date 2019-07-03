@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+body{
+    background-color: #F4ECE4;
+}
+
+.title-div{
+    background-image: url('http://www.csszengarden.com/214/huntington.jpg');
+    background-size: cover;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+.title-div >h1{
+    grid-column: 2/ 3;
+    color: white;
+    margin: 50px auto 0 auto;
+}
+.title-div >h3{
+    grid-column: 2/ 3;
+    color: white;
+    margin: 0 auto 70px auto;
+}
+.body-container{
+   
+    line-height: 1.8;
+    
+
+}
+
+.body-div{
+    
+    margin: 20px auto;
+}
+.body-div{
+    line-height: 220%;
+
+}
+p{
+    margin: 20px auto;
+    width: 80%;
+}
+h2{
+    margin: 20px auto;
+    width: 80%;
+
+}
+
+.bamboo-div{
+    background-image: url('http://www.csszengarden.com/214/bamboo.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #BADBC3;
+    width: 100%;
+
+}
+.footer-div-name{
+    background-image: url('http://www.csszengarden.com/214/koi.jpg');
+    background-size: cover;
+    margin: 0 auto;
+    line-height: 220%;
+    height: 200px;
+}
+.footer-social-media{
+    background-color: #204B4C;
+    height: 150px
+}
