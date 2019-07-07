@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Die from './Die'
+import DiceBox from './DiceBox'
 import './style.css'
 
 
@@ -7,41 +7,50 @@ class App extends Component {
     constructor(){
         super()
         this.state = {
-            num1: 0,
-            num2: 0,
-            num3: 0,
-            num4: 0,
-            num5: 0
-
+            numArr: [
+                {num:0, isSelected:false},
+                {num:0, isSelected:false},
+                {num:0, isSelected:false},
+                {num:0, isSelected:false},
+                {num:0, isSelected:false},
+            ],
+            
+            
+          
         }
     }
+    //how do you save the rolled nums
     rollingDice = () => {
-        this.setState({
-            num1: Math.floor(Math.random() * 6),
-            num2: Math.floor(Math.random() * 6),
-            num3: Math.floor(Math.random() * 6),
-            num4: Math.floor(Math.random() * 6),
-            num5: Math.floor(Math.random() * 6),
-            num6: Math.floor(Math.random() * 6),
+        this.setState(prevState => {
+            return {
+                numArr: prevState.numArr.map((number, i)=>{
+                    return {
+                            num: Math.floor(Math.random() * 6 +1),
+                            isSelected: prevState.numArr[i].isSelected , 
+                            
+                    }
+                }) 
 
+            }
+        
         })
-
     }
+   
     
 
 
     render (){
         return (
             <div className="container">
-                <h1> Hello Pocker Face! </h1>
-                <Die num={this.state.num1}/>
-                <Die num={this.state.num2}/>
-                <Die num={this.state.num3}/>
-                <Die num={this.state.num4}/>
-                <Die num={this.state.num5}/>
-                <Die num={this.state.num6}/>
+                {/* <h1> Hello Pocker Face! </h1> */}
+                <DiceBox numbers={this.state.numArr}/>
+                {/* <DiceBox num={this.state.num2}/>
+                <DiceBox num={this.state.num3}/>
+                <DiceBox num={this.state.num4}/>
+                <DiceBox num={this.state.num5}/> */}
+                
 
-                <button className="box" onClick={this.rollingDice}> Roll...</button>
+                <button  className="box-btn" onClick={this.rollingDice}> Roll...</button>
             </div>
         )
     }

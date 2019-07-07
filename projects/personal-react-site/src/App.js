@@ -1,6 +1,14 @@
 import React, { Component } from 'react'
-import axios from 'axios'
-import Card from './Card.js'
+import Navbar from './Navbar.js'
+import Footer from './Footer.js'
+
+import Home from './Home.js'
+import Score from './Score.js'
+import Questions from './Questions.js'
+import './style.css'
+import {Switch, Route } from 'react-router-dom'
+// import QuestionList from './QuestionList.js';
+
 
 
 
@@ -8,28 +16,22 @@ class App extends Component{
     constructor(){
         super()
         this.state = {
-            questions: [],
-
-
-        
-
+            setofquestions: [],
             
         }
     }
 
-    componentDidMount = () => {
-        axios.get('https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple')
-            .then(response => {
-                console.log(response.data.results)
-                this.setState({
-                    questions: response.data.results
-                  
-                    
-                })
-            })
-            .catch(err => console.log(err))
+    // componentDidMount = () => {
+    //     axios.get('https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple')
+    //         .then(response => {
+    //             console.log(response.data.results)
+    //             this.setState({
+    //                 setofquestions: response.data.results  
+    //             })
+    //         })
+    //         .catch(err => console.log(err))
 
-    }
+    // }
 
 
 //
@@ -38,18 +40,30 @@ class App extends Component{
 // include a 
     render(){
 
-        const mappedQuestions = this.state.questions.map(trivia => {
-            return <Card 
-                    question={trivia.question}
-                    correctAnswer={trivia.correct_answer}
-                    category={trivia.category}
-                    />
-        })
+       
 
         return(
             <div>
+                <Navbar/>
+                <Switch>
+                    
+                    
+                    <Route exact path="/" component={Home}/>
+                
 
-                {mappedQuestions}
+                    <Route 
+                        path="/questions"
+                        component={Questions}/>
+                    <Route
+                        path="/score"
+                        component={Score}/>
+                </Switch>
+                {/* <h1> {Replace("&#039")}</h1> */}
+                <Footer/>
+
+                        {/* <Route path="/questionlist" component={QuestionList}/>
+                        //we need exact path or it won't go to the other pages */}
+                
 
                 
                 

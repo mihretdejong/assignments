@@ -6,7 +6,8 @@ import React from 'react'
    
      
     const {handleSubmit, handleChange, firstName, lastName, email, placeOfBirth, phone, favFood, textArea } = props;
-    const isEnabled = props.firstName > 3 && props.lastName > 3 
+    const isEnabled =
+    
   
    
       return(
@@ -82,7 +83,7 @@ import React from 'react'
                     onChange={handleChange}
                     placeholder="Tell us about yourself..."></textarea>
 
-                    <button disabled = {!isEnabled}  className="sub-btn"> Submit </button>
+                    <button disabled = {!firstName}  className="sub-btn"> Submit </button>
                     
                 </form>
           
