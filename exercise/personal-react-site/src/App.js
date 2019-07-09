@@ -4,7 +4,7 @@ import Footer from './Footer.js'
 
 import Home from './Home.js'
 import Score from './Score.js'
-import Questions from './Questions.js'
+import Questions from './Components/Questions'
 import './style.css'
 import {Switch, Route } from 'react-router-dom'
 // import QuestionList from './QuestionList.js';

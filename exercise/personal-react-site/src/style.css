@@ -66,6 +66,7 @@ form{
     width: 70vw;
     height: 50vh;
     z-index: 20;
+    color: white;
     background-color: hsla(29, 48%, 83%, 0.102);
     border: 10px double rgb(226, 207, 207);
     border-radius: 10px;

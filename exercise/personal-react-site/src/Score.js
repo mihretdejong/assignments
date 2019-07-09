@@ -2,10 +2,10 @@ import React from 'react'
 
 
 
-const Score = () => {
+const Score = (props) => {
     return(
         <div>
-            <p>Your score is WOHOOOOO</p>
+            <p></p>
         </div>
     )
 }
