@@ -5,7 +5,9 @@ import React from 'react'
 const Score = (props) => {
     return(
         <div>
-            <p></p>
+            <div className="score-page-div">
+                <h3> More Trivia Options Coming Soon!</h3>
+            </div>
         </div>
     )
 }

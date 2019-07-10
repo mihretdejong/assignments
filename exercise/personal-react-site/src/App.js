@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import Navbar from './Navbar.js'
 import Footer from './Footer.js'
 
-import Home from './Home.js'
-import Score from './Score.js'
-import Questions from './Components/Questions'
-import './style.css'
+import Home from './Pages/Home.js'
+import Score from './Pages/Score.js'
+import Questions from './Pages/Questions.js'
+import './style/style.css'
 import {Switch, Route } from 'react-router-dom'
 // import QuestionList from './QuestionList.js';
 

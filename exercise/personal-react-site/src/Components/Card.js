@@ -27,14 +27,14 @@ const Card = props => {
     const mappedAnswers = secondRun.map((answer, i) => {
         return <div key={i} >
             
-                    <button onClick={()=> props.handleSubmit(answer, props.correct_answer)}>{Replace(answer)}</button>
+                    <button className="answer-choices-btn" onClick={()=> props.handleSubmit(answer, props.correct_answer)}>{Replace(answer)}</button>
                     
                </div>
     })
 
     return(
-        <div className="card-div" style={{border: "1px solid black"}}>  
-            <p>{Replace(props.question)}</p>
+        <div className="card-div" style={{}}>  
+            <p className="question-tag" >{Replace(props.question)}</p>
                 {mappedAnswers}
                 {/* in the "hey" div, we are writing a ternery that askes if displayanswer is
             still false, if so, we are telling it  */}
@@ -44,8 +44,13 @@ const Card = props => {
                     {props.displayAnswer? 
                     <div className="background-div"> 
                         <div className="correct-answer" >
-                            <p>{Replace(props.correct_answer)}</p>
-                            <p>Your current score is {props.score}</p>
+                            <div>
+                                {/* write a ternary that asks if the answer is 
+                                wrong, display the correct */}
+                                
+                            </div>
+                            <p>The correct answer is: {Replace(props.correct_answer)}</p>
+                            <p>Your current score is: {props.score}</p>
                             
                             {/* the btn onClick also triggers the form's onSubmit and the onSubmit resets
                             the value of displayAnswer in state so that the correct answer is not displayed 
@@ -55,10 +60,10 @@ const Card = props => {
                             that asks whether we have reached at ten questions and if so 
                             to go to the score page. if not, to keep displaying the continue button  */}
                              
-                            <div>{props.afterTenQuestions?
-                                <Link to="/score" >SCORE</Link> 
+                            <div className="score-link-end">{props.afterTenQuestions?
+                                <Link to="/score" >Go to SCORE page</Link> 
                                 : 
-                                <button onClick={props.nextQuestion}>Continue</button>}</div> 
+                                <button className="continue-btn" onClick={props.nextQuestion}>Continue</button>}</div> 
                             
                         </div>
                     </div>

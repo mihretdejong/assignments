@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links{
+    height: 80px;
+    width: 100%;
+    padding: 15px;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.nav-links >a{
+    text-decoration: none;
+    /* margin-top: 20px; */
+    margin: 5px;
+    padding: 10px;
+    right: 10px; 
+    color: lightgray;
+
+
+}
+.home-div{
+   
+}
+.category-div{
+    /* width: 300vw; */
+
+    /* display: grid;
+    grid-template-columns: 3fr 1fr; */
+    
+    /* grid-auto-rows: 400px; */
+    
+}
+.level-div{
+    width: 300px;
+    display: flex;
+
+}
+.subject-div{
+    width: 300px;
+    display: flex;
+    align-content: center;
+    
+
+}
+.category-div >div{
+    grid-column: 1/ 2;
+    /* grid-row: 1/ 2; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    /* align-content: center; */
+    width: 80%;
+    height: 15%;
+    padding: 30px;
+    background-color: salmon;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 50px auto;
+}
+.category-div button{
+    height: 50px;
+    width: 100px;
+    border: 3px solid lightgrey;
+    border-radius: 25px;
+    display: inline;
+    margin: 10px;
+}
+/* .question-div{
+    height: 100px;
+    width: 500px;
+    background-color: lightpink;
+}
+.answer-div{
+    height: 500px;
+    width: 300px;
+    background-color: lightpink;
+} */
+
+.card-div{
+    margin: 70px;
+    text-align: center;
+    z-index: 0;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center; */
+}
+.question-tag{
+    font-family: sans-serif;
+    font-size: 1.6em;
+    padding: 10px;
+    margin: 20px auto;
+    color: grey;
+}
+/* padding allows the text to have a space  */
+.answer-choices-btn{
+    width: 60vw;
+    /* height: 10vh; */
+    min-height: 80px;
+    margin: 10px;
+    border: 3px solid grey;
+    border-radius: 45px;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: grey;
+    padding: 10px;
+}
+.answer-choices-btn:hover {
+    background-color: grey;
+    color: white;
+    width: 65vw;
+    min-height: 100px;
+    transition: .4s
+}
+form{
+    /* display: flex;
+    flex-direction: column; */
+    padding: 10px;
+
+}
+.hidebutton{
+    display: none;
+}
+.correct-answer{
+    width: 70vw;
+    height: 50vh;
+    z-index: 20;
+    background-color: hsla(36, 82%, 89%, 0.618);
+    border: 10px double rgb(226, 207, 207);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    line-height: 180%;
+    font-family: sans-serif;
+    color: white;
+    font-size: 20px;
+    
+    
+
+}
+.correct-answer div{
+    padding: 20px;
+
+}
+.continue-btn{
+    width:30vw;
+    height: 5vh;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: white;
+    background-color: lightsalmon;
+    border: 2px solid lightgrey;
+    border-radius: 15px;
+    padding: 5px auto;
+    margin: 35px auto;
+
+}
+.score-link-end a{
+    text-decoration: none;
+    color: white;
+    padding: 10px ;
+    border: 2px solid grey;
+    border-radius: 25px;
+    background-color: lightsalmon;
+    margin: 35px auto;
+    font-size: 15px;
+
+}
+.background-div{
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: rgb(0, 0, 0, 0.9);
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    /* even if the vw and vh are stated we have to tell it where to begin hence top 0 and left 0 */
+
+}
+.score-page-div{
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-div{
+    height: 150px;
+    width: 100%;
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+}
+.linkedin{
+    background-image: url('https://image.flaticon.com/icons/svg/8/8707.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    margin: 15px;  
+}
+.github{
+    background-image: url('https://www.stickpng.com/assets/images/5847f98fcef1014c0b5e48c0.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    margin: 15px;     
+}
+.twitter{
+    background-image: url('https://image.flaticon.com/icons/svg/1384/1384017.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    margin: 15px;     
+}
+

@@ -4,13 +4,13 @@ import React from 'react'
 const Home = () => {
     return (
         <div className="home-div">
-            <form className="category-div">
-                <div>
-                    <button>Easy</button>
-                    <button>Medium</button>
-                    <button>Difficult</button>
+            <div className="category-div">
+                <div className="level-div">
+                    {/* <button onClick={() => props.onDifficultySelect()} >Easy</button> */}
+                    <button onClick="" >Medium</button>
+                    <button onClick="">Difficult</button>
                 </div>
-                <div>
+                <div className="subjects-div">
                     <button className="math">MATH</button>
                     <button className="sports">SPORTS</button>
                     <button className="history">HISTORY</button>
@@ -20,9 +20,11 @@ const Home = () => {
                     <button className="music">MUSIC</button>
 
                 </div>
+                <button className="submit-btn-home">Submit</button>
 
-            </form>
-            <p> this is the home page</p>
+
+            </div>
+            
 
 
     

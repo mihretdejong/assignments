@@ -1,6 +1,7 @@
 import React, { Component} from 'react'
 import axios from 'axios';
-import Card from './Card.js'
+import Card from '../Components/Card.js'
+
 
 
 
@@ -12,11 +13,9 @@ class Questions extends Component {
             trivia: [],
             i: 0,
             afterTenQuestions: false,
-            
             score: 0,
             displayAnswer: false,
             difficulty: 'Easy',
-           
             messageToUser: "",
 
 
@@ -30,7 +29,7 @@ class Questions extends Component {
     // compare the user's choice with the correct answer
     // save the user's running score
     componentDidMount(){
-        axios.get('https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple')
+        axios.get('https://opentdb.com/api.php?amount=10&type=multiple')
             .then(res => {
                  console.log(res.data.results)
                 this.setState({
@@ -84,6 +83,8 @@ class Questions extends Component {
         }
 
     }
+
+    handleDifficultySelect = difficulty => {}
     //.persist - requests permission to use persistent storage() and returns a promise with a .then and a .catch
     //asks the browser to use persistent storage(local storage), if the browser grants permission
     //react creats a synthetic event and if we want the event's information to stay, we use e.persist
@@ -120,7 +121,11 @@ class Questions extends Component {
                                             handleSubmit={this.handleSubmit}
                                             correct_answer={this.state.trivia[this.state.i].correct_answer}
                                             incorrect_answers={this.state.trivia[this.state.i].incorrect_answers}
-                                            question={this.state.trivia[this.state.i].question}/> : "Question Loading"}
+                                            question={this.state.trivia[this.state.i].question}/>
+                                        
+
+                                             : 
+                                             "Question Loading"}
                  {this.state.messageToUser}
             </div>
         )

@@ -16,13 +16,21 @@ class CountProvider extends Component {
     constructor(){
         super()
         this.state = {
+            count: 0
 
         }
     }
+    increment = () => this.setState(prevState => ({count: prevState + 1}))
 
     render(){
         return(
-           <CountContext.Provider>
+           <CountContext.Provider 
+                value={{
+                    count: this.state.count,
+                    increment: this.increment
+                }
+
+                } >
                {this.props.children}
 
                
