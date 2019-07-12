@@ -1,86 +1,68 @@
-// import React, {Component, createContext} from 'react'
+import React, {Component, createContext} from 'react'
+import axios from 'axios'
+
+const {Consumer, Provider } = createContext()
 
 
-// const {Consumer, Provider } = createContext()
-
-
-// //
-// class TriviaProvider extends Component{
-//     constructor(){
-//         super()
-//         this.state = {
-//             trivia: [],
-//             i: 0,
-//             afterTenQuestions: false,
-//             score: 0,
-//             displayAnswer: false,
-//             difficulty: 'Easy',
+//
+class TriviaProvider extends Component{
+    constructor(){
+        super()
+        this.state = {
+            bookByAuthor: [],
+            authorFirstName: "",
             
-//         }
-//     }
+        }
+    }
 
-//     getTrivia =() => {
-//         axios.get('https://opentdb.com/api.php?amount=10&type=multiple')
-//             .then(res => {
-//                  console.log(res.data.results)
-//                 this.setState({
-//                     trivia: res.data.results,
-//                     afterTenQuestions: false,   
-//                 })
-//             })
-//             .catch(err => console.log(err))   
-//     }
-//     handleSubmit = ( userAnswer, correctAnswer ) => {
-//         // let number = this.state.score 
-//         // if(userAnswer === correctAnswer){
-//         //     number += 10
-//         //     console.log(number)
-//         // }
-//         this.setState(prevState =>{
-//             if(userAnswer === correctAnswer){
-//                 return {
-//                     displayAnswer: !prevState.displayAnswer,
-//                     score: prevState.score += 10 , 
-//                 }
-//             }else {
-//                 return {
-//                     displayAnswer: !prevState.displayAnswer, 
-//                 }
+    getBookByAuthor =() => {
+        axios.get(`https://reststop.randomhouse.com/resources/authors/${this.state.authorFirstName}-S.jpg`)
+             .then(res => {
+                 console.log(res)
+                // this.setState({
+                //     bookByAuthor: res
+                       
+                // })
+            })
+            .catch(err => console.log(err))   
+    }
 
-//             }
-//         })
-  
+    handleChange = e => {
+        this.setState({
+            [e.target.name] : e.target.value
+        })
 
-//     }
-//     nextQuestion = () => {
-//         console.log(this.state.i)
-//         if (this.state.i < 9){
-//             this.setState(prevState => {
-//                 return {
-//                     i: prevState.i + 1,
-//                     displayAnswer: false,
-//                 }
-//             })
+    }
+    handleSubmit = e => {
 
-//         } else {
-//             this.setState({afterTenQuestions: true})
-            
-//         }
+        e.preventDefault() 
+        this.setState({
+            isbn: this.state.isbn
+        })
 
-//     }
 
-//     render(){
-//         return(
-//            <Provider
-//                 value={{
 
-//                     ...this.state, handleSubmit: this.handleSubmit
+    }
 
-//                 }}>
-//                 {this.props.children}
+    render(){
+        return(
+           <Provider
+                value={{
 
-//            </Provider>
-//         )
-//     }
+                    
+                }}>
+                {this.props.children}
+           </Provider>
+       )
+    }
+}
 
-// }
+export default TriviaProvider
+
+export const withTrivia = C => props => (
+    <Consumer>
+        { (value) => < C {...value} {...props}/>}
+    </Consumer>
+)
+
+

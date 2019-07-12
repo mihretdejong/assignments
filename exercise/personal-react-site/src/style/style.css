@@ -3,11 +3,11 @@
     margin: 0;
 }
 
+
 .nav-links{
     height: 80px;
     width: 100%;
     padding: 15px;
-    background-color: lightcoral;
     display: flex;
     justify-content: flex-end;
     
@@ -18,11 +18,14 @@
     margin: 5px;
     padding: 10px;
     right: 10px; 
-    color: lightgray;
+    color: darkgray;
+
 
 
 }
 .home-div{
+    height: 800px;
+    width: 100%;
    
 }
 .category-div{
@@ -56,18 +59,27 @@
     width: 80%;
     height: 15%;
     padding: 30px;
-    background-color: salmon;
+    background-color: white;
     border: 2px solid white;
     border-radius: 10px;
     margin: 50px auto;
 }
 .category-div button{
-    height: 50px;
-    width: 100px;
+    /* height: 50px;
+    width: 100px; */
     border: 3px solid lightgrey;
     border-radius: 25px;
     display: inline;
     margin: 10px;
+}
+.submit-btn-home{
+    border: 3px solid lightgrey;
+    border-radius: 25px;
+    display: inline;
+    margin: 10px;
+    /* height: 50px;
+    width: 300px; */
+
 }
 /* .question-div{
     height: 100px;
@@ -100,7 +112,7 @@
     width: 60vw;
     /* height: 10vh; */
     min-height: 80px;
-    margin: 10px;
+    margin: 30px;
     border: 3px solid grey;
     border-radius: 45px;
     font-family: sans-serif;
@@ -193,8 +205,36 @@ form{
     justify-content: center;
     align-items: center;
 }
+
+.resource-page-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    
+}
+
+.search-input{
+    
+    height: 40px;
+    width: 300px;
+    border: 2px solid lightgray;
+    border-radius: 25px;
+    /* padding: 5px; */
+    /* margin: 50px auto; */
+
+}
+.resource-page-div h3{
+    grid-column: 1 /2;
+    color: grey;
+    margin: 20px auto;
+
+
+}
+
 .footer-div{
-    height: 150px;
+    height: 100px;
     width: 100%;
     background-color: lightcoral;
     display: flex;
@@ -226,4 +266,17 @@ form{
     width: 50px;
     margin: 15px;     
 }
+/* if we go below 736px, get rid of my toolbar */
+@media (max-width: 736px){
+    .toolbar-nav-items {
+        display: none;
 
+    }
+    .side-drawer{
+        background: rgb(0, 0, 0, 0.5);
+    }
+    .toolbar-logo{
+        background-image: url('')
+    }
+
+}
