@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import Card from './Card.js'
+import Card from './components/Card.js/index.js.js.js'
 import './style.css'
 
 class App extends Component{
@@ -13,6 +13,7 @@ class App extends Component{
             correctAnswers: [],
             incorrectAnswers: [],
             score: 0,
+            sideDrawerOpen: false
 
         }
     }

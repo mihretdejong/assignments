@@ -13,14 +13,23 @@ const Sidedrawer = props => {
         drawerClasses = 'side-drawer open'
     }
    return (  
+       <div>
             <nav className={drawerClasses}>
+            
                <div className="side-drawer-links">
-                    <Link to="/" >HOME</Link>
-                    <Link to="/questions" >QUESTIONS</Link>
-                    <Link to="/score" >RESOURCES</Link>
-
+                   
+                        <Link to="/" >HOME</Link>
+                        <Link to="/questions" >QUESTIONS</Link>
+                        <Link to="/score" >RESOURCES</Link>
+                
                 </div> 
             </nav>
+            <nav>
+                <div className="side-drawer-right" ></div>
+
+            </nav>
+
+       </div>
    )
 }
 

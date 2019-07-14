@@ -1,0 +1,126 @@
+form{
+    /* display: flex;
+    flex-direction: column; */
+    padding: 10px;
+
+}
+
+
+.resources-form-div{
+    align-content: center;
+    padding: 30px;
+    
+
+}
+.resources-form{
+    display: flex;
+}
+
+
+.resource-page-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr  1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    align-content: center;
+    
+    
+}
+
+.search-input{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    height: 40px;
+    width: 300px;
+    border: 2px solid lightgray;
+    border-radius: 25px;
+    /* padding: 5px; */
+    /* margin: 50px auto; */
+
+}
+/* .resource-page-div h3{
+    grid-column: 1 /2;
+    color: grey;
+    margin: 20px auto;
+} */
+
+.resources-form-div{
+    grid-column: 2/ 6;
+    grid-row: 2/ 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+.resources-books-div{
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    grid-column: 2 / 6;
+    grid-row: 3/ 4; 
+    overflow-x: scroll; 
+}
+.book1{
+    background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70%;
+    width: 80%;
+    margin: 30px
+}
+.book1{
+    background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70%;
+    width: 90%;
+    margin: 30px
+}
+.book2{
+    background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70%;
+    width: 90%;
+    margin: 30px
+}
+.book3{
+    background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70%;
+    width: 90%;
+    margin: 30px
+}
+.book4{
+    background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70%;
+    width: 90%;
+    margin: 30px
+}
+.book5{
+    background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70%;
+    width: 90%;
+    margin: 30px
+}
+.book6{
+    background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70%;
+    width: 90%;
+    margin: 30px
+}
+.book7{
+    background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30vh;
+    width: 40vh;
+    margin: 30px
+}

@@ -1,6 +1,7 @@
 import React, { Component} from 'react'
 import axios from 'axios';
 import Card from '../Components/Card.js'
+import '../style/question.css'
 
 
 

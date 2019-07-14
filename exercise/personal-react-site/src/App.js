@@ -6,7 +6,9 @@ import Sidedrawer from './SideDrawer/Sidedrawer'
 import Home from './Pages/Home.js'
 import Resources from './Pages/Resources.js'
 import Questions from './Pages/Questions.js'
+import LoadingPage from './LoadingPage/LoadingPage.js'
 import './style/style.css'
+
 import {Switch, Route } from 'react-router-dom'
 // import QuestionList from './QuestionList.js';
 
@@ -19,6 +21,7 @@ class App extends Component{
         this.state = {
             setofquestions: [],
             sideDrawerOpen: false,
+            loadingPageOn: true,
             
         }
     }
@@ -40,6 +43,10 @@ class App extends Component{
 // how to map out the arrays and feed it into answers
 // turn it into form (check box?)
 // include a 
+    loadingPageHandler = () => {
+        this.setState({loadingPageOn: false})
+    }
+    
     drawerToggleClickHandler = () => {
         this.setState((prevState) => {
             return {sideDrawerOpen: !prevState.sideDrawerOpen}
@@ -65,9 +72,11 @@ class App extends Component{
             } 
 
         return(
-            <div style={{height: 100}}>
-                
+            <div className="app-container-div" >
+
+                <LoadingPage loadingPageOn={this.state.loadingPageOn} loadingPageHandler = {this.loadingPageHandler}/>
                 <Sidedrawer show={this.state.sideDrawerOpen}/>
+                {/* <Sided /> */}
                 {/* <Backdrop/> */}
                 
                 {backdrop}

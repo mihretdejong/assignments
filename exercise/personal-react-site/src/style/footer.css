@@ -1,0 +1,38 @@
+.footer-div{
+    /* position: ; */
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+}
+.linkedin{
+    background-image: url('https://image.flaticon.com/icons/svg/8/8707.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    margin: 15px;  
+}
+.github{
+    background-image: url('https://www.stickpng.com/assets/images/5847f98fcef1014c0b5e48c0.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    margin: 15px;     
+}
+.twitter{
+    background-image: url('https://image.flaticon.com/icons/svg/1384/1384017.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    margin: 15px;     
+}
+
+
+

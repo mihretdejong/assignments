@@ -1,8 +1,8 @@
 .toolbar-navigation {
-    position: fixex;
+    position: fixed;
     width: 100%;
     height: 100px;
-    background:rgb(241, 203, 199);
+    background-color: rgba(0, 0, 0, 0);
     top: 0;
     left:10px; 
     padding: 0 1rem;
@@ -12,9 +12,9 @@
 .toolbar-logo{
     width: 100%;
     height: 200px;
-    background-image: url('./Images/imageedit_25_3619404442.png');
+    /* background-image: url('./Images/imageedit_25_3619404442.png');
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 .toolbar-logo a{
     text-decoration: none;
@@ -27,7 +27,7 @@
 }
 /* the gap is an empmty div that just adds a space between our two nav items */
 .toolbar-nav-items a{
-    color: white;
+    color: grey;
     text-decoration: none;
     padding: 0 0.5rem;
 }
