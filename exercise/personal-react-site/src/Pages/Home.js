@@ -4,6 +4,7 @@ import '../style/home-page.css'
 
 
 
+
 const Home = () => {
     return (
         <div className="home-div">

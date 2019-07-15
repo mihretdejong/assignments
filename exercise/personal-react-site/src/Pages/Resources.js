@@ -37,7 +37,7 @@ const Resources = (props) => {
                             
 
                         </div>
-                        <div className="resources-books-div">
+                        {/* <div className="resources-books-div">
                             <a href="https://books.google.com/books?id=loC0vNA1a4IC&dq=the+curious+incident+of+the+dog+in+the+nighttime" ><div className="book1"> </div></a>
                             <a href="https://books.google.com/books?id=OF-YSMKCVwMC&dq=mere+christianity+cs+lewis"><div className="book2"></div></a>
                             <a href="https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows"><div className="book3"/> </a>
@@ -47,7 +47,7 @@ const Resources = (props) => {
                             <div className="book6"/>
                             <div className="book7"/>
 
-                        </div>
+                        </div> */}
         </div>
     )
 }

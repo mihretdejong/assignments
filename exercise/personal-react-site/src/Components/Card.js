@@ -38,6 +38,7 @@ const Card = props => {
         
        
         <div className="card-div" style={{}}> 
+            
             <p className="question-tag" >{Replace(props.question)}</p>
                 {mappedAnswers} 
             <div className="hey">

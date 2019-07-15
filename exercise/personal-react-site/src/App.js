@@ -82,7 +82,8 @@ class App extends Component{
             <div className="app-container-div" >
 
                 <LoadingPage loadingPageOn={this.state.loadingPageOn} loadingPageHandler = {this.loadingPageHandler}/>
-                <Sidedrawer show={this.state.sideDrawerOpen}/>
+                <Sidedrawer show={this.state.sideDrawerOpen}
+                            click={this.backdropClickHandler}/>
                 {/* <Sided /> */}
                 {/* <Backdrop/> */}
                 

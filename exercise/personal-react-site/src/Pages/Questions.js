@@ -20,8 +20,6 @@ class Questions extends Component {
             messageToUser: "",
             userIsCorrect: false,
             category:"",
-
-
         }     
     }
   
@@ -44,11 +42,12 @@ class Questions extends Component {
                     displayAnswer: !prevState.displayAnswer,
                     score: prevState.score += 10 , 
                     category: prevState.category,
-                    userIsCorrect: !prevState.userIsCorrect   
+                    userIsCorrect: true 
                 }
             }else {
                 return {
                     displayAnswer: !prevState.displayAnswer, 
+                    userIsCorrect: false
                 }
             }
         })
@@ -81,7 +80,7 @@ class Questions extends Component {
         console.log(this.state.userIsCorrect)
 
         return (
-            <div>
+            <div className="question-div">
                 {this.state.trivia[0]? <Card 
                                             userIsCorrect={this.state.userIsCorrect}
                                             displayAnswer={this.state.displayAnswer}

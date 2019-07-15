@@ -20,6 +20,7 @@ form{
     justify-content: center;
     align-items: center;
 }
+
 .resource-page-div h2{
     margin: 50px;
     font-family: 'Rajdhani', sans-serif;
@@ -75,12 +76,12 @@ form{
     text-decoration: none;
 }
 .google-books{
-    height: 20vh;
+    height: 10vh;
     width: 30vh;
     background-color: grey;
     margin: 50px;
     border: 5px solid white;  
-    border-radius: 30px
+    border-radius: 40px
 }
 .google-books {
     display: flex;
@@ -89,35 +90,38 @@ form{
     text-decoration: none;
     color: white;
     font-size: 20px;
+    font-family: 'Rajdhani', sans-serif;
 
 }
 .good-reads{
-    height: 20vh;
+    height: 10vh;
     width: 30vh;
     background-color: grey;
     margin: 50px;
     border: 5px solid white; 
-    border-radius: 30px;
+    border-radius: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     color: white;
     font-size: 20px;
+    font-family: 'Rajdhani', sans-serif;
 }
 .barnes-nobles{
-    height: 20vh;
+    height: 10vh;
     width: 30vh;
     background-color: grey;
     margin: 50px;
     border: 5px solid white;  
-    border-radius: 30px;
+    border-radius: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     color: white;
     font-size: 20px;
+    font-family: 'Rajdhani', sans-serif;
 
 }
 
@@ -135,20 +139,20 @@ form{
     background-size: cover;
     background-attachme: fixed; */
 }
-.book1{
+/* .book1{
     background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     height: 70%;
     width: 80%;
     margin: 50px
-}
+} */
 .book1{
     background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     height: 500px;
-    width: 400px;
+    width: 250px;
     margin: 30px
 }
 .book2{
@@ -156,7 +160,7 @@ form{
     background-size: contain;
     background-repeat: no-repeat;
     height: 500px;
-    width: 400px;
+    width: 250px;
     margin: 30px
 }
 .book3{
@@ -164,7 +168,7 @@ form{
     background-size: contain;
     background-repeat: no-repeat;
     height: 500px;
-    width: 400px;
+    width: 250px;
     margin: 30px
 }
 .book4{
@@ -172,7 +176,7 @@ form{
     background-size: contain;
     background-repeat: no-repeat;
     height: 500px;
-    width: 400px;
+    width: 250px;
     margin: 30px
 }
 /* 
@@ -304,6 +308,17 @@ form{
         grid-template- */
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .resources-books-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .resources-books-div a{
+        display: flex;
         justify-content: center;
         align-items: center;
     }
