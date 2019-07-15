@@ -1,16 +1,38 @@
 form{
-    /* display: flex;
-    flex-direction: column; */
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 / 6;
+    grid-row: 3/ 4
 
 }
-
-
 .resources-form-div{
     align-content: center;
-    padding: 30px;
-    
+    padding: 30px;  
+    height: 50vh;
 
+}
+.resources-overlay{
+    background-color: rgb(255, 255, 255,0.5);
+    padding:10px;
+    height:97%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resource-page-div h2{
+    margin: 50px;
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 2pt;
+    line-height: 1.6;
+    font-size: 30px;
+    color: black;
+    -webkit-animation: fadein 15s;
+    text-shadow:1px .3px 4px #343E42 ;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 .resources-form{
     display: flex;
@@ -18,30 +40,158 @@ form{
 
 
 .resource-page-div{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr  1fr;
-    grid-template-rows: 1fr 1fr 1fr ;
+    /* display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;  */
     align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1535058314881-56b6eb96bd69?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+    background-repeat: no-repeat;
+    background-size: cover
     
     
 }
+.seprate-div{
+    height: 100vh;
+    width: 100vw;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template- */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed
 
+
+}
+.seprate-div a{
+    text-decoration: none;
+}
+.google-books{
+    height: 20vh;
+    width: 30vh;
+    background-color: grey;
+    margin: 50px;
+    border: 5px solid white;  
+    border-radius: 30px
+}
+.google-books {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+
+}
+.good-reads{
+    height: 20vh;
+    width: 30vh;
+    background-color: grey;
+    margin: 50px;
+    border: 5px solid white; 
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.barnes-nobles{
+    height: 20vh;
+    width: 30vh;
+    background-color: grey;
+    margin: 50px;
+    border: 5px solid white;  
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+
+}
+
+
+.resources-books-div{
+    height: 350vh;
+    width: 100vw;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-image: linear-gradient(to right, rgb(175, 169, 169) , white)
+   
+    /* background-image: url('https://images.unsplash.com/photo-1495640388908-05fa85288e61?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachme: fixed; */
+}
+.book1{
+    background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70%;
+    width: 80%;
+    margin: 50px
+}
+.book1{
+    background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 400px;
+    margin: 30px
+}
+.book2{
+    background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1468102872l/11138.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 400px;
+    margin: 30px
+}
+.book3{
+    background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1474171184l/136251._SY475_.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 400px;
+    margin: 30px
+}
+.book4{
+    background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1490528560l/4671._SY475_.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 400px;
+    margin: 30px
+}
+/* 
 .search-input{
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     height: 40px;
-    width: 300px;
+    width: 100px;
     border: 2px solid lightgray;
     border-radius: 25px;
-    /* padding: 5px; */
-    /* margin: 50px auto; */
+    padding: 5px; 
+     margin: 50px auto;
 
 }
-/* .resource-page-div h3{
+ .resource-page-div h3{
     grid-column: 1 /2;
     color: grey;
     margin: 20px auto;
-} */
+} 
 
 .resources-form-div{
     grid-column: 2/ 6;
@@ -49,10 +199,12 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center
-}
-.resources-books-div{
+    align-items: center }*/
+
+/* .resources-books-div{
     height: 40%;
+    height: 400px;
+    width: 500px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -64,63 +216,97 @@ form{
     background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    height: 70%;
-    width: 80%;
+    height: 70px;
+    width: 80px;
     margin: 30px
 }
 .book1{
     background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    height: 70%;
-    width: 90%;
+    height: 70px;
+    width: 80px;
     margin: 30px
 }
 .book2{
     background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    height: 70%;
-    width: 90%;
+    height: 70px;
+    width: 80px;
     margin: 30px
 }
 .book3{
-    background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
+    background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1474171184l/136251._SY475_.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    height: 70%;
-    width: 90%;
+    height: 70px;
+    width: 80px;
     margin: 30px
 }
 .book4{
     background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    height: 70%;
-    width: 90%;
+    height: 70px;
+    width: 80px;
     margin: 30px
 }
 .book5{
     background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    height: 70%;
-    width: 90%;
+    height: 70px;
+    width: 80px;
     margin: 30px
 }
 .book6{
     background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    height: 70%;
-    width: 90%;
+    height: 70px;
+    width: 80px;
     margin: 30px
 }
 .book7{
     background-image:url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618._SY475_.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    height: 30vh;
-    width: 40vh;
+    height: 70px;
+    width: 80px;
     margin: 30px
+} */
+
+@media (max-width: 736px){
+    .resources-books-div{
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .resource-page-div{
+        background-image: url('https://images.unsplash.com/photo-1510172951991-856a654063f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        
+
+    }
+    .seprate-div{
+        height: 100vh;
+        width: 100vw;
+        /* display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template- */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
 }

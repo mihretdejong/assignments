@@ -21,9 +21,13 @@
    line-height: 200%;
    letter-spacing: 6pt;
    margin: 150px;
-
-
+   -webkit-animation: fadein 5s;
 }
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 .loading-overlay{
     background-color: rgba(0, 0, 0, 0.5);
     padding:10px;

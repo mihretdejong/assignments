@@ -31,7 +31,7 @@ class Form extends Component{
         e.preventDefault()
         this.props.submit(this.state.inputs)
         this.setState({ inputs: this.props.inputs})
-        //line above is simply resets our form once the user hit submit
+        //line above simply resets our form once the user hit submit
 
         //
         // alert(`Hello, I am ${this.state.fName} ${this.state.lName}`)
@@ -51,18 +51,6 @@ class Form extends Component{
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 export default Form 

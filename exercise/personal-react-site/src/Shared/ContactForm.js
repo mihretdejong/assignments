@@ -42,6 +42,9 @@ const ContactForm = props => {
                 <button>Submit</button>
 
             </form>
+            <div>
+                <h1>{fName}  {lName}</h1>
+            </div>
 
         </div>
     )

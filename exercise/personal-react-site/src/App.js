@@ -8,7 +8,6 @@ import Resources from './Pages/Resources.js'
 import Questions from './Pages/Questions.js'
 import LoadingPage from './LoadingPage/LoadingPage.js'
 import './style/style.css'
-
 import {Switch, Route } from 'react-router-dom'
 // import QuestionList from './QuestionList.js';
 
@@ -25,6 +24,14 @@ class App extends Component{
             
         }
     }
+    //one of the reason we need to use a class is for a lifecycle method
+    //we use the axios library so that we don't have to do an xhr file everytime?
+    //setState is asynchronous-meaning, it waits, pending, before it mutates the state. the waiting is still fast but it makes a difference if we expect react to display the mutatted dtata right away
+    //as opposed to, synchrouns-maening, it immediately executs change of state.
+    //the change of state is first rendered before it is saved in state, 
+    //render is called twice, once following the get request,the second time after the first condition
+    //KEY: when you console log to see your data, do it in render
+    // otherwise, you can tell it to r
 
     // componentDidMount = () => {
     //     axios.get('https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple')
@@ -82,17 +89,13 @@ class App extends Component{
                 {backdrop}
                 <Navbar drawerClickHandler = {this.drawerToggleClickHandler}/>
                 <Switch>
-                    
-                    
-                    <Route exact path="/" component={Home}/>
-                
-
+                    <Route exact path="/" render={(routerProps) =>  <Home {...routerProps}/>}/>
                     <Route 
                         path="/questions"
-                        component={Questions}/>
+                        render={(routerProps) =>  <Questions {...routerProps}/>}/>
                     <Route
                         path="/score"
-                        component={Resources}/>
+                        render={(routerProps) =>  <Resources {...routerProps}/>}/>
                 </Switch>
                 {/* <h1> {Replace("&#039")}</h1> */}
                 <Footer/>

@@ -18,17 +18,13 @@ class Questions extends Component {
             displayAnswer: false,
             difficulty: 'Easy',
             messageToUser: "",
+            userIsCorrect: false,
+            category:"",
 
 
         }     
     }
-    //check if it's the last question
-    //check if i === i.length, then reroute them to score page
-    // on submit, check if choice is equal to the correct answer
-    //if it is add 1 to score
-    //pass the 
-    // compare the user's choice with the correct answer
-    // save the user's running score
+  
     componentDidMount(){
         axios.get('https://opentdb.com/api.php?amount=10&type=multiple')
             .then(res => {
@@ -40,30 +36,22 @@ class Questions extends Component {
             })
             .catch(err => console.log(err))   
     }
-  // handleSubmit is being given more than one prop, from the Card component
-  //since handleSubmit is a function it can take as many props as you give it
-  
-    handleSubmit = ( userAnswer, correctAnswer ) => {
-        // let number = this.state.score 
-        // if(userAnswer === correctAnswer){
-        //     number += 10
-        //     console.log(number)
-        // }
+    handleSubmit = ( userAnswer, correctAnswer, e ) => {
+        // e.preventDefault()
         this.setState(prevState =>{
             if(userAnswer === correctAnswer){
                 return {
                     displayAnswer: !prevState.displayAnswer,
                     score: prevState.score += 10 , 
+                    category: prevState.category,
+                    userIsCorrect: !prevState.userIsCorrect   
                 }
             }else {
                 return {
                     displayAnswer: !prevState.displayAnswer, 
                 }
-
             }
         })
-  
-
     }
     //client presses to go to the next question after the score and correct answer display
     //onClick event, the i is the entire object (q's and answers)
@@ -79,41 +67,23 @@ class Questions extends Component {
             })
 
         } else {
-            this.setState({afterTenQuestions: true})
-            
+            this.setState({afterTenQuestions: true})   
         }
-
     }
-
-    handleDifficultySelect = difficulty => {}
-    //.persist - requests permission to use persistent storage() and returns a promise with a .then and a .catch
-    //asks the browser to use persistent storage(local storage), if the browser grants permission
-    //react creats a synthetic event and if we want the event's information to stay, we use e.persist
-    //
-    //e.persist()
-    //the e isn't available to asynchronous(as is in the case of setState), we we have to save it by using e.persist
-    //but if we don't pass our method e, we don't have to use e.persist 
-    //console.log(e.target.textContent)
-    // handleQuestionAnswer = () => {
-
-    //     this.setState(prevState => {
-    //        if( e.target.textContent === this.state.correct_answer ){
-    //            return {score: prevState.score + 1, displayAnswer: true}
-    //        } else {
-    //            return {messageToUser: "Wrong Anser- continue to next question", displayAnswer: true}
-    //        }
-            
-    //     })
-    // }
-    //toaster ~ kind of alert
-
+     handleChange = difficulty => {
+        //  const value = e.target.value
+        //  [e.target.name] = e.target.value 
+         this.setState({
+             [difficulty.target.name]: difficulty.target.value
+         })
+     }
     render(){
+        console.log(this.state.userIsCorrect)
 
         return (
             <div>
-                
                 {this.state.trivia[0]? <Card 
-
+                                            userIsCorrect={this.state.userIsCorrect}
                                             displayAnswer={this.state.displayAnswer}
                                             score={this.state.score}
                                             afterTenQuestions={this.state.afterTenQuestions}
@@ -122,9 +92,8 @@ class Questions extends Component {
                                             handleSubmit={this.handleSubmit}
                                             correct_answer={this.state.trivia[this.state.i].correct_answer}
                                             incorrect_answers={this.state.trivia[this.state.i].incorrect_answers}
-                                            question={this.state.trivia[this.state.i].question}/>
-                                        
-
+                                            question={this.state.trivia[this.state.i].question}
+                                            />
                                              : 
                                              "Question Loading"}
                  {this.state.messageToUser}

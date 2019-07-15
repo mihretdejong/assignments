@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import Card from './components/Card.js/index.js.js.js'
+import Card from './components/Card.js'
 import './style.css'
 
 class App extends Component{
@@ -8,12 +8,8 @@ class App extends Component{
         super()
         this.state = {
             triviaQuestions: [],
-            index: 0,
-            allAnswers: [],
-            correctAnswers: [],
-            incorrectAnswers: [],
-            score: 0,
-            sideDrawerOpen: false
+            count: 0
+            
 
         }
     }
@@ -28,19 +24,17 @@ class App extends Component{
                 }))
              .catch(err => console.log(err))
     }
+  
 
     render(){
+        console.log(this.state.triviaQuestions)
        
-        
 
         return(
             <div>
-                <Card
-                    correctAnswer={this.state.trivia[0].correct_answer}
-                    incorrectAnswers={this.state.trivia[0].incorrect_answer}/>
-                    console.log(this.state.triviaQuestions)
+                <Card/>
                
-                
+                    
                
             </div>
         )

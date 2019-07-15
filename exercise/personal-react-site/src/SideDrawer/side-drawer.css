@@ -46,7 +46,12 @@
     letter-spacing: 5pt;
     /* background-color: rgba(0, 0, 0, 0.5) */
     text-shadow:  -2px 2px 4px #2E2F30;
+    -webkit-animation: fadein 5s;
 
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 .side-drawer-links a:hover,
 .side-drawer-links a:active{

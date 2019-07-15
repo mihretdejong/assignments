@@ -21,8 +21,9 @@ const Home = () => {
                 </div>
                 <div className="home-second-text-div">
                     <p>
-                    “I cannot teach anybody anything. I can only make them think” 
-                        ― Socrates 
+                    “Education is the kindling of a flame, not the filling of a vessel.”
+
+                        ― Socrates
                     </p>
                     <a className="good-reads-btn" href="https://www.goodreads.com/">
                            Good Reads

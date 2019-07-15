@@ -31,13 +31,16 @@
     color: rgba(68, 63, 63, 0.99);
     margin: 50px 50px 0 50px;
     transition: transform 3s;
+    text-shadow: 3px 2px 3px #434C4F;
     display: block;
+
     
 }
 .home-text-element p{
     font-size: 40px;
     color: rgba(157, 116, 13, 0.99);
     font-family: 'Rajdhani', sans-serif;
+    text-shadow: 1px 2px 4px #A88C4D
     /* display: block; */
 }
 .home-second-text-div{
@@ -51,8 +54,9 @@
 }
 .home-second-text-div a{
     text-decoration: none;
-    color: firebrick;
+    color: rgb(66, 62, 62);
     text-align: center;
+    padding: 10px;
 
 }
 .home-second-text-div p{
@@ -61,23 +65,24 @@
     font-family: 'Rajdhani', sans-serif;
     font-weight: 800;
     font-size: 40px;
-    letter-spacing: 2pt;
+    
     color: rgb(122, 122, 71)
 }
 .good-reads-btn{
     width: 200px;
-    height: 40px;
-    background-color: orange;
+    height: 30px;
+    background-color: rgb(185, 180, 169);
     font-family: 'Merriweather Sans', sans-serif;
-    border: 2px solid gold;
-    border-radius: 10px;
+    border: 2px solid rgb(187, 184, 170);
+    border-radius: 30px;
+    
     
 
 }
 
 
 .lady-img-books {
-    background-image: url("https://images.unsplash.com/photo-1495640452828-3df6795cf69b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+    background-image: url("https://images.unsplash.com/photo-1510172951991-856a654063f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
     background-repeat: no-repeat;
     background-size: contain;
     background-attachment: fixed;
@@ -96,24 +101,27 @@
 }
 
 .briliant-ideas-div h2{
-    margin: 30px;
+    margin: 0 70px;
+    line-height: 100%;
+    /* text-align: center; */
     width: 40vw;
-    height:60vh; 
+    height:13vh; 
     z-index: 10;
-    font-size: 80px;
+    font-size: 100px;
     font-family:'Rajdhani', sans-serif;
-    color: white; 
+    color: rgb(92, 87, 87); 
+    letter-spacing: 4pt; 
 
 }
 .briliant-ideas-img{
-    position: absolute;
+    /* position: absolute; */
     background-color: rgb(255, 255, 255), .6;
-    background-image: url('https://images.unsplash.com/photo-1498906538030-8da82e61e424?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+    background-image: url('https://images.unsplash.com/photo-1512045482940-f37f5216f639?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 30px;
-    width: 90vw;
-    height:60vh;
+    width: 100vw;
+    height:100vh;
+    margin: 20 auto;
 }
 @media (max-width: 736px){
     .home-first-img-div{
@@ -124,6 +132,13 @@
         height: 800px;
         
         /* width: 100px; */
+    }
+    .briliant-ideas-img{
+    background-color: rgb(255, 255, 255), .6;
+    background-image: url('https://images.unsplash.com/photo-1510172951991-856a654063f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
+    background-repeat: no-repeat;
+    background-size: 100%;
+
     }
     
 

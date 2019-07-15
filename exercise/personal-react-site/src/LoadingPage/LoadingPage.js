@@ -5,7 +5,7 @@ import '../style/fonts.css'
 const LoadingPage = (props) => {
     return (
         <div>
-            {/* <div ></div>
+            <div ></div>
             <div 
                 onClick={props.loadingPageHandler} 
                 className={props.loadingPageOn? "loading-page-div" : "loading-page-null" } >
@@ -17,7 +17,7 @@ const LoadingPage = (props) => {
                 </div>
 
 
-            </div> */}
+            </div>
 
         </div>
     )
