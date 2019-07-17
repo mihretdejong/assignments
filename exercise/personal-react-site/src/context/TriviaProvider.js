@@ -10,13 +10,14 @@ class TriviaProvider extends Component{
         super()
         this.state = {
             bookByAuthor: [],
-            authorFirstName: "",
+            authorName: "",
             
         }
     }
 
     getBookByAuthor =() => {
-        axios.get(`https://reststop.randomhouse.com/resources/authors/${this.state.authorFirstName}-S.jpg`)
+        axios.get(`https://www.googleapis.com/books/v1/volumes?q=${this.state.authorName}`)
+        // https://www.googleapis.com/books/v1/volumes?q=search+terms
              .then(res => {
                  console.log(res)
                 // this.setState({

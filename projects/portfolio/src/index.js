@@ -5,12 +5,18 @@ import { BrowserRouter } from 'react-router-dom'
 
 
 
+
 ReactDOM.render(
     <BrowserRouter>
-       <App />
+        <App/>
     </BrowserRouter>
 
 , document.getElementById('root'))
 
-// ReactDOM.render(<App name="Mihret" age={20}/>, document.getElementById('root'))
+
+
+
+
+
+
 

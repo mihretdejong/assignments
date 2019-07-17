@@ -1,7 +1,8 @@
 import React from 'react'
 
 
-function Main(){
+
+const Home = (props) =>{
     return (
         <div className="main">
             <p></p>
@@ -15,13 +16,7 @@ function Main(){
                 </div>
                 
                 
-                {/* <div className="servicesDiv">
-                    <h4>Our Photography Services</h4>
-                    <p></p>
-                    <lo>yumbreakfast</lo>
-                    <lo>yumdinner</lo>
-                    <lo>yumlunch</lo>
-                </div> */}
+            
 
             </div>
            
@@ -29,4 +24,4 @@ function Main(){
     )
 }
 
-export default Main
+export default Home

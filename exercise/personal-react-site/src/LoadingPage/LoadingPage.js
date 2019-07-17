@@ -9,12 +9,12 @@ const LoadingPage = (props) => {
             <div 
                 onClick={props.loadingPageHandler} 
                 className={props.loadingPageOn? "loading-page-div" : "loading-page-null" } >
-                <div className="loading-overlay">
+                {/* <div className="loading-overlay">
                     <h1>{`THE UNIVERSE IS FULL OF MAGICAL THINGS, PATIENTLY WAITING FOR OUR WITS TO      GROW SHARPER. 
                             -Eden Phillpotts`}
                           </h1>
 
-                </div>
+                </div> */}
 
 
             </div>
