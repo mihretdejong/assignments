@@ -158,16 +158,60 @@
     .describe-div{
         grid-column: 2/ 3;
         grid-row: 3/ 4;  
-        width: 
+         
     }
     .describe-div h5{
         margin: 5px
     }
+    .skills-div{
+        width: 100%;
+        height: 100%;
+        grid-column: 1/ 4;
+        grid-row: 3/ 4; 
+    }
+    .css-svg{
+        width: 10%;
+        height: 15%;
+    }
+    svg:hover{
+        fill: grey
+    }
+    .react-svg{
+        width: 10%;
+        height: 15%;
+    }
+    .react-svg >svg{
+        fill: rgb(85, 175, 231);
+    }
+    .node-js {
+        width: 10%;
+        height: 15%;
+    }
+    svg:hover{
+        fill: palevioletred
+    }
+    
     /* .node-js{
         width: 30vw;
         height: 30vh;
     } */
+    .home-projects-overview{
+        display: grid;
+        width: 100%;
+        height: 600px;
 
+    }
+    .home-css-zen{
+        background: grey
+    }
+    .home-trivia{
+        background-color: grey;
+        border: 2px solid black
+    }
+    .home-business{
+        background-color: grey;
+
+    }
 
 }
 /* position fixed with top and right pixels will fix the 

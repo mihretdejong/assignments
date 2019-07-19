@@ -72,10 +72,11 @@ body{
     background-size: auto, auto, cover;
     /* you can have multiple back images, separate url with comma and the same for the size  */
     /* height: 230px; */
-    display: grid;
-    grid-template-rows: auto auto auto 40%;
+    /* display: grid; */
+    /* grid-template-rows: auto auto auto 40%; */
     
-    
+    display:flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center; 
     width: 100vw;

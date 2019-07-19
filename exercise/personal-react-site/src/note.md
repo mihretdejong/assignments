@@ -42,3 +42,11 @@
     //pass the 
     // compare the user's choice with the correct answer
     // save the user's running score
+
+
+     // const answers = props.incorrect_answers.push(props.correct_answer)
+    // console.log(answers)
+    // const randomizedAnswer = answers.sort((a, b) => {
+    //     return a - b
+
+    //             })

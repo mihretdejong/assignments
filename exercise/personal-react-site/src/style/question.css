@@ -1,5 +1,9 @@
 .card-div{
-    margin: 40px;
+    margin: 30px;
+    position: relative;
+    /* relative to where it is by default?
+    to use top, bottom...etc we need to assign the position */
+    top:100px ;
     text-align: center;
     z-index: 0;
     padding: 10px
