@@ -1,9 +1,4 @@
-
-
-
 let marioForm = document.marioF
-
-
 
 marioForm.addEventListener("submit",function (event){
     event.preventDefault()
@@ -17,12 +12,8 @@ marioForm.addEventListener("submit",function (event){
     let result = (parseInt(goonName)*5) + (parseInt(boomName)*7) + (parseInt(cheepName)*11)
 
     totalSum.textContent = "Your total cost is $" + result 
-
     // btn.innerText = `Total = goonName) + boomName + cheepName`
-    
-    
     let divTotal = document.getElementById("result")
-
     divTotal.appendChild(totalSum)
     // pTag.style.color = "white"
     
@@ -32,13 +23,6 @@ marioForm.addEventListener("submit",function (event){
 
 })
 
-
-
-
-
-
-
-
  let sectionDiv = document.getElementById("sectionDiv1")
 
  sectionDiv.addEventListener("mouseover",function(){
@@ -47,27 +31,19 @@ marioForm.addEventListener("submit",function (event){
      sectionDiv.style.color = "white"
 
  })
-
  let sectionDiv2 = document.getElementById("sectionDiv2")
-
  sectionDiv2.addEventListener("mouseover",function(){
      sectionDiv2.style.backgroundColor ="firebrick"
      sectionDiv2.style.borderColor = "white"
      sectionDiv2.style.color = "white"
 
  })
-
  let sectionDiv3 = document.getElementById("sectionDiv3")
-
  sectionDiv3.addEventListener("mouseover",function(){
      sectionDiv3.style.backgroundColor ="firebrick"
      sectionDiv3.style.borderColor = "white"
      sectionDiv3.style.color = "white"
  })
-
-
-
-
  sectionDiv.addEventListener("mouseleave", function(){
     sectionDiv.style.backgroundColor ="white"
     sectionDiv.style.borderColor = "red"

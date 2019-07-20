@@ -29,6 +29,12 @@
     font-family: 'Russo One', sans-serif;
     src: url(https://fonts.googleapis.com/css?family=Russo+One&display=swap);
   }
+
+.form-div{
+    position: fixed;
+    top: 50vh;
+    right: 30vw;
+}
 .answer-choices-btn{
     width: 60vw;
     /* height: 10vh; */
