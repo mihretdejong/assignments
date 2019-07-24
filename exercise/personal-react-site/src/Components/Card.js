@@ -1,7 +1,7 @@
 import React from 'react'
 import Replace from './Replace.js'
 import { Link, withRouter } from 'react-router-dom'
-var random = require ('lodash/random');
+// var random = require ('lodash/random');
 
 
 const Card = props => {

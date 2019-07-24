@@ -9,6 +9,7 @@ import Questions from './Pages/Questions.js'
 import LoadingPage from './LoadingPage/LoadingPage.js'
 import './style/style.css'
 import {Switch, Route } from 'react-router-dom'
+import TriviaProvider from './context/TriviaProvider.js';
 // import QuestionList from './QuestionList.js';
 
 
@@ -66,6 +67,7 @@ class App extends Component{
         this.setState({sideDrawerOpen: false})
 
     }
+    
 
     render(){
 
@@ -92,11 +94,15 @@ class App extends Component{
                 <Switch>
                     <Route exact path="/" render={(routerProps) =>  <Home {...routerProps}/>}/>
                     <Route 
-                        path="/questions"
+                        path="/trivia"
                         render={(routerProps) =>  <Questions {...routerProps}/>}/>
                     <Route
-                        path="/score"
-                        render={(routerProps) =>  <Resources {...routerProps}/>}/>
+                        path="/resources"
+                        render={(routerProps) => 
+                        <TriviaProvider>
+                            <Resources {...routerProps}/>
+                        </TriviaProvider>                   
+                        }/>
                 </Switch>
                 {/* <h1> {Replace("&#039")}</h1> */}
                 <Footer/>

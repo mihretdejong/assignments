@@ -1,12 +1,14 @@
 .card-div{
-    margin: 30px;
+    margin: 30px auto 200px auto;
     position: relative;
     /* relative to where it is by default?
     to use top, bottom...etc we need to assign the position */
     top:100px ;
     text-align: center;
     z-index: 0;
-    padding: 10px
+    padding: 10px;
+    bottom: 300px;
+    
 
     /* display: flex;
     flex-direction: row;
@@ -30,11 +32,11 @@
     src: url(https://fonts.googleapis.com/css?family=Russo+One&display=swap);
   }
 
-.form-div{
+/* .form-div{
     position: fixed;
     top: 50vh;
     right: 30vw;
-}
+} */
 .answer-choices-btn{
     width: 60vw;
     /* height: 10vh; */
@@ -50,10 +52,11 @@
 }
 .answer-choices-btn:hover {
     background-color: grey;
+    background-image: linear-gradient(to bottom right, rgb(212, 146, 138), white);    
     border: 3px solid white;
     color: rgb(145, 139, 139);
     width: 65vw;
-    min-height: 100px;
+    min-height: 80px;
     transition: .4s
 }
 /* .hidebutton{
@@ -134,7 +137,7 @@
         font-family: sans-serif;
         font-size: 1em;
         padding: 0;
-        margin: 0px auto;
+        margin:  20px ;
         color: grey;
         /* box-shadow: -7px 4px 22px */
     }
@@ -160,12 +163,13 @@
     }
     .answer-choices-btn:hover {
         background-color: grey;
+        background-image: linear-gradient(to bottom right, rgb(106, 161, 161), white);    
         border: 3px solid white;
         color: rgb(189, 84, 84);
-        width: 65vw;
-        min-height: 50px;
+        width: 50vw;
+        min-height: 40px;
         transition: .4s;
-        transform: translate(10px, 10px)
+        /* transform: translate(10px, 10px) */
     }
 
     

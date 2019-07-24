@@ -95,6 +95,16 @@
 .describe-div h5{
     margin: 5px
 }
+.mongo-svg-div{
+    /* transform: skewY(-5deg) */
+    width: 50%;
+}
+.git-hub-svg{
+    width: 50%;
+}
+.htmls-svg{
+    width: 50%
+}
 .about {
     width: 100vw;
     height: 100vh;

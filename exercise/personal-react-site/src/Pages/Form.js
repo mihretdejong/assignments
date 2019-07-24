@@ -1,13 +1,16 @@
 import React from 'react'
+import '../style/form.css'
 //the value that we set in here is what updates state and updates the 
 const Form = (props) => {
     return(
         <div className="form-div"> 
-        <form onSubmit={ (e) => props.handleSubmitForm(e)} >
-                
-                
+             <div className="text-div-form">
+                 <h3> Select from the options below and click submit to start your trivia  </h3>
+                 <h3> Have Fun! </h3>
+             </div>
+             <form className="form-select" onSubmit={ (e) => props.handleSubmitForm(e)} >
                 <select onChange={props.handleChangeCat} name={props.category}>
-                    <option>-Select a Category </option>
+                    <option>Select a Category </option>
                     <option value="9">General Knowledge </option>
                     <option value="10">Books</option>
                     <option value="28">Cars</option>
@@ -26,12 +29,12 @@ const Form = (props) => {
                 </select>
 
                 <select onChange={props.handleChangeDif} name={props.difficulty}>
-                    <option>-Select level-</option>
+                    <option>Select Level</option>
                     <option value="easy">Easy</option>
                     <option value="medium">Medium</option>
                     <option value="hard">Difficult</option>   
                 </select>
-                <button >Submit</button>
+                <button className="trivia-submit-btn" >Submit</button>
             </form>
         </div>
     )

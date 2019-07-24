@@ -19,8 +19,8 @@ const Sidedrawer = props => {
                <div className="side-drawer-links">
                    
                         <Link to="/" >HOME</Link>
-                        <Link to="/questions" >QUESTIONS</Link>
-                        <Link to="/score" >RESOURCES</Link>
+                        <Link to="/trivia" >TRIVIA</Link>
+                        <Link to="/resources" >RESOURCES</Link>
                         <div onClick={props.click} className="sidedrawer-close-btn">Close</div>
                 
                 </div> 

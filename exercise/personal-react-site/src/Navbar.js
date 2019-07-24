@@ -17,8 +17,8 @@ const Navbar = (props) => {
                 <div className="gap"/>
                 <div className="toolbar-nav-items">
                     <Link to="/" >HOME</Link>
-                    <Link to="/questions" >QUESTIONS</Link>
-                    <Link to="/score" >RESOURCES</Link>
+                    <Link to="/trivia" >TRIVIA</Link>
+                    <Link to="/resources" >RESOURCES</Link>
 
                 </div> 
                 

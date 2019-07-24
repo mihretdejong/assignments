@@ -1,0 +1,35 @@
+.shoe-container-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+}
+
+.shoe-img-div{
+    width: 300px;
+    height: 300px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    margin: 10px;
+
+}
+
+
+.shoe-div{
+    border: 2px solid grey;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.form-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}

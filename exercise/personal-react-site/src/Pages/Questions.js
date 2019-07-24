@@ -137,6 +137,7 @@ class Questions extends Component {
             <div className="question-div">
                  {this.state.displayForm && 
                     <Form
+                        
                         handleSubmitForm = {this.handleSubmitForm}
                         handleChangeCat= {this.handleChangeCat}
                         handleChangeDif={this.handleChangeDif}/> 

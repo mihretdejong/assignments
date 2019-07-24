@@ -20,10 +20,10 @@ class TriviaProvider extends Component{
         // https://www.googleapis.com/books/v1/volumes?q=search+terms
              .then(res => {
                  console.log(res)
-                // this.setState({
-                //     bookByAuthor: res
+                this.setState({
+                    bookByAuthor: res
                        
-                // })
+                })
             })
             .catch(err => console.log(err))   
     }

@@ -32,9 +32,7 @@
     margin: 50px 50px 0 50px;
     transition: transform 3s;
     text-shadow: 3px 2px 3px #434C4F;
-    display: block;
-
-    
+    display: block;   
 }
 .home-text-element p{
     font-size: 40px;
@@ -132,6 +130,12 @@
         height: 800px;
         
         /* width: 100px; */
+    }
+    .home-text-element h2{
+        font-size: 140px;
+    }
+    .home-text-element p{
+        font-size: 30px
     }
     /* background imag-100% vs cover (both supposed to cover the whole div) */
     .briliant-ideas-img{
