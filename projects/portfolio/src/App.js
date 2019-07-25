@@ -3,6 +3,7 @@ import Home from './Home.js'
 import About from './About.js'
 import Projects from './Projects.js'
 import Navbar from './Navbar.js'
+import Footer from './Footer.js'
 import { Switch, Route } from 'react-router-dom'
 import './style.css'
 //swtich will hve to be imported with route that specifies where the 
@@ -38,6 +39,7 @@ class App extends Component{
                     <About/>
                     <Projects/>
                 </Switch>
+                <Footer/>
 
             </div>
         )

@@ -97,7 +97,7 @@ class App extends Component{
                         path="/trivia"
                         render={(routerProps) =>  <Questions {...routerProps}/>}/>
                     <Route
-                        path="/resources"
+                        path="/about"
                         render={(routerProps) => 
                         <TriviaProvider>
                             <Resources {...routerProps}/>

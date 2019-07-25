@@ -22,6 +22,9 @@ mongoose.connect("mongodb://localhost:27017/contactsdb",
 
 
 // Routes : define how to interact with the data(what methods to use, API etc)
+
+
+
 //model: defines how our data should look like
 app.use("/contacts", require('./routes/contactRouter.js'))
 
