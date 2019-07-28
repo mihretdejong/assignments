@@ -1,0 +1,34 @@
+.projects {
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(radial-gradient(red, green, blue));
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center
+    
+}
+
+.home-projects-overview{
+    display: grid;
+    width: 100%;
+    height: 600px;
+   
+
+}
+.home-css-zen{
+    background: grey;
+    margin: 10px 0; 
+
+}
+.home-trivia{
+    background-color: grey;
+    border: 2px solid black;
+    margin: 10px 0; 
+}
+.home-business{
+    background-color: grey;
+    margin: 10px 0; 
+
+}

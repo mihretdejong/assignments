@@ -3,16 +3,11 @@
     position: relative;
     /* relative to where it is by default?
     to use top, bottom...etc we need to assign the position */
-    top:100px ;
+    top:10px ;
     text-align: center;
     z-index: 0;
     padding: 10px;
     bottom: 300px;
-    
-
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center; */
 }
 /* .question-div{
     height: 300vh;
@@ -52,7 +47,7 @@
 }
 .answer-choices-btn:hover {
     background-color: grey;
-    background-image: linear-gradient(to bottom right, rgb(212, 146, 138), white);    
+    background-image: linear-gradient(to bottom right, rgb(238, 198, 194), white);    
     border: 3px solid white;
     color: rgb(145, 139, 139);
     width: 65vw;
@@ -171,7 +166,4 @@
         transition: .4s;
         /* transform: translate(10px, 10px) */
     }
-
-    
-
 }

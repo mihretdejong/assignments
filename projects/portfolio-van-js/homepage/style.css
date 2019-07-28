@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+.navbar{
+    display: none;
+}
+.drop-down-menu{
+    display: inline-block;
+    z-index: 10;
+    /* background-color:  */
+
+}
+.line-1, .line-2, .line-3{
+    width: 40px;
+    height: 3px;
+    background-color: lightgrey;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+.name-section{
+    top:0;
+    z-index:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: rgb(249, 250, 249);
+    background-color: grey
+
+
+}
+.aboutme-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+}
+.name-div{
+    grid-column: 2/ 3;
+    grid-row: 1/ 2
+
+}
+.describe-div{
+    
+}
+
+
+
