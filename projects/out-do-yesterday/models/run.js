@@ -1,10 +1,11 @@
 const mongoose = require ('mongoose')
 const Schema = mongoose.Schema
 
-const goalsSchema = new Schema({
-    name: {
+const runSchema = new Schema({
+
+    fitnessActivity: {
         type: String,
-        default: ""
+        required: true,
     },
     time:{
         type: Number,
@@ -13,15 +14,15 @@ const goalsSchema = new Schema({
     },
     category: {
         type: "String",
-        enum: ["Personal-nutrition","Personal-health","Personal-financial", "Personal-exercise","Personal-selfDev","Professional-work" ]
+        enum: ["Stay Active","","Couch to 5K", "10K","Half-Marathon","Marathon" ]
     },
     completed: {
         type: Boolean,
         default: false
     },
-    profile: {
+    user: {
         type: Schema.Types.Object,
-        ref: "Profile",
+        ref: "User",
         required: true,
     }
   
@@ -35,10 +36,4 @@ const goalsSchema = new Schema({
 
 
 
-
-
-
-
-
-
-module.exports = mongoose.model("Goals", goalsSchema)
+module.exports = mongoose.model("Run", runSchema)

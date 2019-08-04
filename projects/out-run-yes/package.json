@@ -1,5 +1,5 @@
 {
-  "name": "out-do-yesterday",
+  "name": "out-run-yes",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -12,8 +12,9 @@
   "dependencies": {
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.6.7",
+    "mongoose": "^5.6.8",
     "morgan": "^1.9.1"
   }
 }

@@ -1,0 +1,13 @@
+.about-page{
+    background-color: rgb(36, 35, 35)
+    
+}
+.text{
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}

@@ -5,6 +5,8 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+// import { faHeart } from '@fortawesome/free-brands-svg-icons'
+// import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 
 const Footer = () =>{
@@ -13,6 +15,10 @@ const Footer = () =>{
             <div className="footer-div">
                     <div className="linkedin=">
                       <a href=""> <FontAwesomeIcon icon={faLinkedin} /> </a>
+                    </div>
+                    <div>
+                      {/* <FontAwesomeIcon icon={faHeart}/> */}
+                      {/* <FontAwesomeIcon icon={faHeart}/> */}
                     </div>
                 
                     {/* <FontAwesomeIcon icon={faFacebook} />  */}
@@ -26,14 +32,12 @@ const Footer = () =>{
                     <div className="instagram=">
                     <a href=""> <FontAwesomeIcon icon={faInstagram} /> </a>
 
-                    </div>
-              
-                
+                    </div>           
             </div>
-            <div></div>
-            <div></div>
+            
             <div>
-                <h2> Mihret De Jong</h2>
+                <h2> Mihret De Jong: mihret.dejong@gmail.com</h2>
+                <h2> (801) 814-3086</h2>
             </div>
         </div>
     )

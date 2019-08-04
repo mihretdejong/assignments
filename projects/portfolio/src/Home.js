@@ -2,6 +2,7 @@ import React from 'react'
 // import { render } from 'react-dom'
 // import ReactSVG from 'react-svg'
 import { Link } from 'react-router-dom'
+// import File form './uploadfile.js'
 
 // render(<ReactSVG src="svg.svg" />, document.getElementById('root'))
 
@@ -27,13 +28,13 @@ const Home = () => {
                 </div>
                 <div className="moi-div">
                     
-                    <p>I'm a:</p>
+                    <p>a:</p>
                     <hr></hr>
                     
                 </div>
                 <div className="describe-div">
                     <h5>Full-stack developer</h5>
-                    <h5>Life time learner</h5>
+                    <h5>Life long learner</h5>
                     <h5>Triathlon enthusiast</h5>
                     <h5>Photographer</h5>
                     <h5>Marathoner</h5>
@@ -45,10 +46,10 @@ const Home = () => {
                     <Link to="/projects">
                         <div className="projects-link"> PROJECTS</div>
                     </Link>
-
                 </div>
 
             </div>
+     
             
             <div className="skills-div">
                 
