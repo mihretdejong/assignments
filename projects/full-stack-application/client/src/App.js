@@ -18,6 +18,7 @@ class App extends Component{
     }
 
     drawerToggleClickHandler = () => {
+        console.log("hi")
         this.setState((prevState) => {
             return {sideDrawerOpen: !prevState.sideDrawerOpen}
         })
@@ -26,15 +27,19 @@ class App extends Component{
     closeHandler = () => {
         this.setState({sideDrawerOpen: false})
     }
+    
 
     render(){
+        
+
         return(
             <div>
+                <Navbar
+                    drawerToggleClickHandler={this.drawerToggleClickHandler}/>
+                    
                 <Sidedrawer 
                     show={this.state.sideDrawerOpen}
                     click={this.closeHandler}/>
-                <Navbar
-                    drawerToggleClickHandler={this.drawerToggleClickHandler}/>
                 <Switch>
                     <Route exact path="/" render={ routerProps => <Home {...routerProps}/>}/>
                     <Route path="/about" render={ routerProps => <About {...routerProps}/>}/>

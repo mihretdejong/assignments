@@ -4,6 +4,7 @@ import About from './About.js'
 import Projects from './Projects.js'
 import Navbar from './Navbar.js'
 import Footer from './Footer.js'
+// import Sidedrawer from './Sidedrawer/Sidedrawer.js'
 
 // import BurgerMenu from './BurgerMenu.js'
 import { Switch, Route } from 'react-router-dom'
@@ -17,29 +18,27 @@ class App extends Component{
     constructor(){
         super()
         this.state = {
-            
-            menuOpen: true
-
-
+            sideDrawerOpen: false,
 
         }
     }
 // if we don't pass specify the exact path, it will always load the home page when it reads the "/"
 // we need Link component which is the a tag in React router
-    menuHandler = () =>{
-        this.setState((prevState =>{    
-                return {menuOpen: !prevState.menuOpen}
-            })
-        
-        )}
+    drawerToggleClickHandler = () => {
+        this.setState((prevState) => {
+            return { sideDrawerOpen: !prevState.sideDrawerOpen}
+        })
+    }
+    closeHandler = () => {
+        this.setState({ sideDrawerOpen: false})
+    }
     render(){
         return(
             <div className="container-div">
                 
-                {/* <BurgerMenu 
-
-                    menuHandler = {this.menuHandler}
-                    menuOpen= {this.state.menuOpen}/> */}
+                {/* <Sidedrawer
+                    show = {this.state.sideDrawerOpen}
+                    click= {this.closeHandler}/> */}
                 <Navbar/>
                 <Switch>
                     <Route 

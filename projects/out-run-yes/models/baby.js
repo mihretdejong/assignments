@@ -6,6 +6,10 @@ const babySchema = new Schema({
         type: String,
         required: true
     },
+    babyImg: {
+        type: String,
+        default: ""
+    },
     user: {
         type: Schema.Types.ObjectId,
         ref: "User",

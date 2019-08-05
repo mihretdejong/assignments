@@ -1,10 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import DrawerToggleBtn from './Sidedrawer/DrawerToggleBtn.js'
 
 //url is always lowercase by convention
 const Navbar = () => {
     return(
         <div className="navbar">
+          <div>
+            <DrawerToggleBtn/>
+          </div>
             <Link to="/">
               <h6>H</h6>
               <h6>O</h6>

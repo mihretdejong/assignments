@@ -32,7 +32,7 @@ authRouter.post("/signup", (req, res, next) => {
         if(user){
             res.status(400)
             return next(new Error("That username is already taken."))
-        }
+        }  
         // if it doesn't, create the user and the token, send them both bak
         const newUser = new User(req.body)
         newUser.save((err, savedUser) => {

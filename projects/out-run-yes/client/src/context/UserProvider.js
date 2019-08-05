@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 
 const UserContext = React.createContext()
@@ -7,8 +8,11 @@ class UserProvider extends Component{
     constructor(){
         super()
         this.state ={
-            user: {},
-            token: ""
+            // we have duery that says that if there is anything in local storage, get it and save it in state if not resent to an empthy default
+            //this keeps us logged in even if the page resets
+            user: JSON.parse(localStorage.getItem("user")) || {},
+            token: localStorage.getItem("token") || "", 
+            baby: []
         }
     }
     // the user provider maintains the user info
@@ -16,24 +20,53 @@ class UserProvider extends Component{
     //it mmaintains the user and token in state 
 
     // this recieves the credential as a paramenter from our authform
-    signup = () => {
+    signup = (credentials) => {
         axios.post("/auth/signup", credentials)
             .then(res => {
+                console.log(res)
                 //what we sent in our authRouther is what we should expect to get
                 const { user, token } = res.data
                 // object literal can let us simply state the user and toke in object parentehsis and not use key value this but,
                 // this.setState({ user, token})
+                localStorage.setItem("token", token)
+                //the user comes as an object so we stringy it into react object
+                // we have to save the local storage info in state so that it doesn't reset into empthy object
+                localStorage.setItem("user", JSON.stringify(user))
                 this.setState({ user: user, token: token})
+                //the token disappears/everything in state when we refresh the page
+                // we save it local storage so we can stay signed in 
             })
             .catch(err => console.log(err))
 
     }
 
-    login = () => {
+    login = (credentials) => {
+        axios.post("/auth/login", credentials)
+            .then(res => {
+                // console.log(res)
+                const { user, token } = res.data
+                localStorage.setItem("token", token)
+                localStorage.setItem("user", JSON.stringify(user))
+                this.setState({ user, token })
+            })
+            .catch(err => console.log(err))
 
     }
 
     logout = () => {
+        localStorage.removeItem("token")
+        localStorage.removeItem("user")
+        this.setState({
+            user: {},
+            token: ""
+        })
+
+    }
+    getUserBaby = () => {
+         
+    }
+
+    addBaby = () => {
 
     }
     // the context returns the UserContext.Provider
@@ -44,7 +77,9 @@ class UserProvider extends Component{
                     ...this.state,
                     signup: this.signup,
                     login: this.login,
-                    logout: this.logout
+                    logout: this.logout,
+                    getUserBaby: this.getUserBaby,
+                    addBaby: this.addBaby
                 }}>
                 { this.props.children }
 
@@ -68,14 +103,3 @@ export const withUser = C => props => (
 )
 
 
-
-
-
-
-
-
-
-
-
-
-export default UserProvider

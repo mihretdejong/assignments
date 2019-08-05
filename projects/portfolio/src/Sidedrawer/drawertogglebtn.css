@@ -19,10 +19,10 @@
 .toggle-btn-burger{
     width: 30px;
     height: 3px;
-    background: rgb(78, 77, 77);
+    background: white;
 
 }
-@media (min-width: 760px){
+@media (max-width: 760px){
     .toggle-button{
         display: none;
     }

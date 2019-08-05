@@ -1,12 +1,13 @@
 import React from 'react'
-import './drawer-toggle-btn.css'
+import './drawertogglebtn.css'
+
 
 
 const DrawerToggleBtn = props => {
     const { drawerClickHandler } = props
-    // console.log(props)
-    return (
-        <button className="toggle-button" 
+
+    return(
+        <button className="toggle-button"
                 onClick={drawerClickHandler}>
             <div className="toggle-btn-burger"/>
             <div className="toggle-btn-burger"/>
@@ -14,6 +15,8 @@ const DrawerToggleBtn = props => {
         </button>
     )
 }
+
+
 
 
 
