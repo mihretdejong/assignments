@@ -7,12 +7,12 @@ const DrawerToggleBtn = props => {
     const { drawerClickHandler } = props
 
     return(
-        <button className="toggle-button"
+        <div className="toggle-button"
                 onClick={drawerClickHandler}>
             <div className="toggle-btn-burger"/>
             <div className="toggle-btn-burger"/>
             <div className="toggle-btn-burger"/>
-        </button>
+        </div>
     )
 }
 

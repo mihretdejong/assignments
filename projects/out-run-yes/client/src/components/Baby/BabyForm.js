@@ -2,6 +2,7 @@ import React from 'react'
 // import 'babyform.css'
 
 const BabyForm = props => {
+    console.log(props)
 
     const { handleChange, handleSubmit, babyname, babyImg, btnText } = props
     return (
@@ -28,6 +29,7 @@ const BabyForm = props => {
                         onChange={}
                         placeholder="Baby "/> */}
                     <button>{btnText}</button>
+                    
                     
                 </form>
     

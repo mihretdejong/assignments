@@ -1,29 +1,31 @@
-.toggle-button {
-    display: flex;
-    flex-direction: column ;
-    justify-content: space-around;
-    margin-bottom: 1px;
-    height: 25px;
-    width: 36px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    box-sizing: border-box;
-}
-/*  */
-/* it's like border but can't control it */
-.toggle-button:focus {
-    outline: none;
-}
-.toggle-btn-burger{
-    width: 30px;
-    height: 3px;
-    background: white;
-
-}
-@media (max-width: 760px){
-    .toggle-button{
-        display: none;
-    }
+/* .toggle-button{
+    display: none;
+} */
+@media (min-width: 760px){
+    
+    
+    /* .toggle-button {
+        display: flex;
+        flex-direction: column ;
+        justify-content: space-around;
+        margin-bottom: 1px;
+        height: 25px;
+        width: 36px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        box-sizing: border-box;
+    } */
+    /*  */
+    /* it's like border but can't control it */
+    /* .toggle-button:focus {
+        outline: none;
+    } */
+    /* .toggle-btn-burger{
+        width: 30px;
+        height: 3px;
+        background: green;
+    
+    } */
 }

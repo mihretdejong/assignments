@@ -33,10 +33,4 @@ babyRouter.post("/", (req, res, next) => {
 
 
 
-
-
-
-
-
-
 module.exports = babyRouter

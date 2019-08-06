@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 import BabyForm from './BabyForm.js'
 
+//when you export this file, it will be named Baby and not index. 
+// in App.js when we import it and call it in protected routes it will just be baby because it has all the methods and states we want 
+//
 class Baby extends Component {
     constructor(){
         super()
         this.state = {
-            babyname: ""
+            babyname: "",
+            babyImg: ""
         }
     }
 
@@ -16,15 +20,25 @@ class Baby extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
+        //this handleSubmit is updating the local state
+        // const newBaby = {
+        //     babyname: this.state.babyname,
+        //     babyImg: this.state.babyImg
+        // }
+        // the newBaby is the same thing as saying this.state in the brackest where we're adding a new baby 
+        this.props.addBaby(this.state)
     }
+
     render(){
         return (
             <div>
                 <BabyForm
-                    babyname={this.state.title}
+                    babyname={this.state.babyname}
+                    babyImg={this.state.babyImg}
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
-                    btnText="Add Baby"
+                    btnText="Add Little Love"
+                    
                 />
 
             </div>

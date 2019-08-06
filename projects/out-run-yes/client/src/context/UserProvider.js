@@ -12,7 +12,9 @@ class UserProvider extends Component{
             //this keeps us logged in even if the page resets
             user: JSON.parse(localStorage.getItem("user")) || {},
             token: localStorage.getItem("token") || "", 
-            baby: []
+            babies: [],
+            errMsg: ""
+
         }
     }
     // the user provider maintains the user info
@@ -20,6 +22,8 @@ class UserProvider extends Component{
     //it mmaintains the user and token in state 
 
     // this recieves the credential as a paramenter from our authform
+    // proxy will take over whenever we have a forward slash request
+    //
     signup = (credentials) => {
         axios.post("/auth/signup", credentials)
             .then(res => {
@@ -36,11 +40,14 @@ class UserProvider extends Component{
                 //the token disappears/everything in state when we refresh the page
                 // we save it local storage so we can stay signed in 
             })
-            .catch(err => console.log(err))
+            // the console.dir shows you the directory and allows you to see the content of the err response
+            .catch(err => this.handleAuthErr(err.response.data.errMsg))
+            // .catch(err => console.dir(err.response.data.errMsg))
 
     }
 
     login = (credentials) => {
+        console.log(credentials)
         axios.post("/auth/login", credentials)
             .then(res => {
                 // console.log(res)
@@ -49,7 +56,8 @@ class UserProvider extends Component{
                 localStorage.setItem("user", JSON.stringify(user))
                 this.setState({ user, token })
             })
-            .catch(err => console.log(err))
+            .catch(err => this.handleAuthErr(err.response.data.errMsg))
+            // .catch(err => console.log(err))
 
     }
 
@@ -62,14 +70,21 @@ class UserProvider extends Component{
         })
 
     }
-    getUserBaby = () => {
+    handleAuthErr = (errMsg ) => {
+        this.setState({ errMsg})
+    }
+    
+
+
+    getUserBabies = () => {
          
     }
 
-    addBaby = () => {
+    addBaby = newBaby => {
 
     }
     // the context returns the UserContext.Provider
+
     render(){
         return(
             <UserContext.Provider
@@ -78,7 +93,7 @@ class UserProvider extends Component{
                     signup: this.signup,
                     login: this.login,
                     logout: this.logout,
-                    getUserBaby: this.getUserBaby,
+                    getUserBabies: this.getUserBaby,
                     addBaby: this.addBaby
                 }}>
                 { this.props.children }
