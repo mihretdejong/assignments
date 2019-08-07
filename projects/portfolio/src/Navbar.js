@@ -5,10 +5,12 @@ import DrawerToggleBtn from './Sidedrawer/DrawerToggleBtn.js'
 //url is always lowercase by convention
 const Navbar = () => {
     return(
-        <div className="navbar">
-          <div>
+        <div className="navbar-container">
+          <div >
             <DrawerToggleBtn/>
           </div>
+          
+          <div className="navbar">
             <Link to="/">
               <h6>H</h6>
               <h6>O</h6>
@@ -33,16 +35,11 @@ const Navbar = () => {
               <h6>S</h6>
             
             </Link>
+
+          </div>
         </div>
     )
 }
-
-
-
-
-
-
-
 
 
 export default Navbar

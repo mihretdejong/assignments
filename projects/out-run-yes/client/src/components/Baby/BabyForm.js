@@ -2,9 +2,9 @@ import React from 'react'
 // import 'babyform.css'
 
 const BabyForm = props => {
-    console.log(props)
+    // console.log(props)
 
-    const { handleChange, handleSubmit, babyname, babyImg, btnText } = props
+    const { handleChange, handleSubmit, babyname, babyImg, btnText, caption } = props
     return (
         <div>
             {/* <div className="gracie-div" style={{backgroundImg: `url(${https://images.unsplash.com/photo-1544126592-807ade215a0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80})`}}/> */}
@@ -22,12 +22,12 @@ const BabyForm = props => {
                         value={babyImg}
                         onChange={handleChange}
                         placeholder="Baby Picture"/>
-                    {/* <input
+                    <input
                         type="text"
-                        name=""
-                        value={}
-                        onChange={}
-                        placeholder="Baby "/> */}
+                        name="caption"
+                        value={caption}
+                        onChange={handleChange}
+                        placeholder="Baby Image Cpation "/>
                     <button>{btnText}</button>
                     
                     

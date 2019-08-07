@@ -9,7 +9,7 @@
     top: 0;
     left: 0;
     /* it helps keep the bar top */
-    background-color: black;
+    background-color: transparent;
 }
 .toolbar-navigation{
     display: flex;

@@ -1,25 +1,15 @@
 import React from 'react'
-// import { render } from 'react-dom'
-// import ReactSVG from 'react-svg'
 import { Link } from 'react-router-dom'
-// import File form './uploadfile.js'
-
-// render(<ReactSVG src="svg.svg" />, document.getElementById('root'))
-
-
-
-
 const Home = () => {
     return (
-        <div className="home-container" >
-                <div className="main-name-div">
-                    <h1>Mihret De Jong</h1>
-                    <div className="whatido-div">
-                        <h3>Full-Stack Web Developer</h3>
-                        {/* <h3> Web Designer</h3> */}
-                    </div>
-
+        <div className="wrapper" >
+            <div className="main-name-div">
+                <h1>Mihret De Jong</h1>
+                <div className="whatido-div">
+                    <h3>Full-Stack Web Developer</h3>
                 </div>
+
+            </div>
             <div className="home">
                 <div className="name-div">
                     <h1> Hello, </h1>

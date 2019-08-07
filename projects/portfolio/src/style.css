@@ -2,24 +2,72 @@
     margin:0;
     padding: 0;
 }
-/* **************************----------------Navbar-------------------****************** */
-/* .toggle-btn-burger{
-    width: 30px;
-    height: 3px;
-    background: red;
-
-} */
+/* ----------------------------all container div--------------- */
 .container-div{
     width:100%;
     height: 4000px;
     display: grid;
     grid-template-columns: 90px 4fr;
     background-color: rgba(52, 53, 54, 0.5);
-    /* overflow: hidden; */
     position: relative;
-    /* background-image: linear-gradient(to bottom right,rgb(250, 173, 186), white); */
-
 }
+/* -------------------------------drawertogglebtn-------------------- */
+.toggle-button {
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-around;
+    margin-bottom: 1px;
+    height: 25px;
+    width: 36px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+} 
+.toggle-btn-burger{
+    width: 30px;
+    height: 3px;
+    background: White;
+}
+/* ---------------------------------sidedrawer ---------------------*/
+.side-drawer {
+    height: 100%;
+    background: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: -400px;
+    width: 400px;
+    max-width: 400px;
+    transition: 0.7s ease-out;
+    /* transform: translatex(-100%) */
+}
+.side-drawer.open {
+    transform: translatex(0);
+    left: 0px;
+}
+.sidedrawer-close-btn{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+.side-drawer a{
+    /* height: 100%; */
+    text-decoration: none;
+    display: flex;
+    margin-bottom: 100px;
+    justify-content: center;
+}
+.side-drawer a:hover,
+.side-drawer a:active {
+    color: salmon;
+}
+
+
+/* **************************----------------Navbar-------------------****************** */
+
+
 
 .navbar{
     display: flex;
@@ -36,6 +84,8 @@
     padding: 5px;
     font-family: 'Oswald', sans-serif;
 }
+
+/* ------------------------------home--------------------------- */
 
 .home {
     width: 100vw;
@@ -78,9 +128,6 @@
     color: rgb(240, 231, 231);
     line-height: 100%;
     text-shadow: 2px 2px 7px #535A63
-}
-.container-div{
-    background-color: blue;
 }
 .name-div{
     color: rgb(66, 64, 64);
@@ -185,7 +232,13 @@
 
 }
 
-
+/* max-width/ on screens that are 740px or less, set the following properties */
+/* min-width- on screens that are 740px or more, set the following peroperties */
+/* min-width and max-width together are used to set the setting for the in between cases, 
+such as tablets 
+syntax: to say for screen sixe between 600px and 900px
+@media (max-width: 900px) and (min-width: 600px){
+    background-color: blue */
 @media (max-width: 740px){
     .container-div{
         grid-template-columns: 1fr;
@@ -194,6 +247,9 @@
         position: relative;
 
 
+    }
+    .navbar{
+        display: none
     }
     /* .toggle-button {
         display: flex;

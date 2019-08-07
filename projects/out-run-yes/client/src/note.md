@@ -6,5 +6,9 @@ first thing to build the front end
     // "proxy": "http://localhost/7000
 
 //
-
+//
+// create a baby using a post request and no propterties except for name
+// add baby image posts using a put request (baby img, caption)
+// add in
+//
     

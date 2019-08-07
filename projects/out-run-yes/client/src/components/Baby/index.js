@@ -9,7 +9,8 @@ class Baby extends Component {
         super()
         this.state = {
             babyname: "",
-            babyImg: ""
+            babyImg: "",
+            caption: "",
         }
     }
 
@@ -26,15 +27,24 @@ class Baby extends Component {
         //     babyImg: this.state.babyImg
         // }
         // the newBaby is the same thing as saying this.state in the brackest where we're adding a new baby 
-        this.props.addBaby(this.state)
+        const newObj = {
+            babyname: this.state.babyname,
+            post: [{
+                img: this.state.babyImg,
+                imgCaption: this.state.caption
+            }]
+
+        }
+        // this.props.addBaby(this.state)
+        this.props.addBaby(newObj)
+        this.setState({babyname: "", babyImg: ""})
     }
 
     render(){
         return (
             <div>
                 <BabyForm
-                    babyname={this.state.babyname}
-                    babyImg={this.state.babyImg}
+                    {...this.state}
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
                     btnText="Add Little Love"

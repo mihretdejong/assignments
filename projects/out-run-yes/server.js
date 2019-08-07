@@ -24,13 +24,11 @@ mongoose.connect("mongodb://localhost:27017/runactivities",{
 .then(() => console.log("connected to the DB"))
 .catch(err => console.log(err))
 
-
-
  //gatekeeper. checks for a token on requests to/api, 
  // if there is a token, it will create the req.user object
 // if there is not a token, it will through an "unauthorized error"
 //once the request past 
-app.use("/api", expressJwt({secret: process.env.SECRET})) //creates the req.user object 
+app.use("/api", expressJwt({secret: process.env.SECRET})) //creates the req.user object // will have teh authentication 
 
 // Routes
 app.use("/auth", require('./routes/authRouter.js'))
@@ -44,7 +42,6 @@ app.use((err, req, res, next) => {
     }
     return res.send({errMsg: err.message})
 } )
-
 
 
 

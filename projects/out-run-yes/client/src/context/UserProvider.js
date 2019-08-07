@@ -3,12 +3,23 @@ import axios from 'axios'
 
 
 const UserContext = React.createContext()
-// the user state maintains the user information and the token created during signup and login 
+
+//takes the axios package and resave in userAxios package which we can use to configure the authentication
+const  userAxios = axios.create()
+//Axios interceptor(it's like a middleware)
+userAxios.interceptors.request.use((config) => {
+    const token = localStorage.getItem("token")
+    config.headers.Authorization = `Bearer ${token}`
+    return config
+
+})
+// the user state maintains the user information and the token created during signup and login
+
 class UserProvider extends Component{
     constructor(){
         super()
         this.state ={
-            // we have duery that says that if there is anything in local storage, get it and save it in state if not resent to an empthy default
+            // we have query that says that if there is anything in local storage, get it and save it in state if not resent to an empthy default
             //this keeps us logged in even if the page resets
             user: JSON.parse(localStorage.getItem("user")) || {},
             token: localStorage.getItem("token") || "", 
@@ -80,8 +91,14 @@ class UserProvider extends Component{
          
     }
 
-    addBaby = newBaby => {
-
+    addBaby = (newBaby) => {
+        // console.log(newBaby)
+        userAxios.post("/api/baby", newBaby)
+            .then(res => {
+                console.log(res.data)
+            })
+            
+            .catch(err => console.log(err))
     }
     // the context returns the UserContext.Provider
 

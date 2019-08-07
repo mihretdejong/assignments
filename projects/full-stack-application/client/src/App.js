@@ -7,6 +7,7 @@ import Sidedrawer from './Sidedrawer/Sidedrawer.js'
 import Navbar from './components/Navbar.js'
 import Contact from './components/Contact.js'
 import ContactProvider from './context/ContactProvider.js'
+import './style/style.css'
 
 class App extends Component{
     constructor(){

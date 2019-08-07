@@ -9,6 +9,7 @@ const Sidedrawer = props => {
     if(props.show){
         drawerClasses = 'side-drawer open'
     }
+    console.log(props)
     return(
         <div>
             <nav className={drawerClasses}>
@@ -35,4 +36,4 @@ const Sidedrawer = props => {
 
 
 
-export default Sidedrawer
+export default withRouter(Sidedrawer)

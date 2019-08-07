@@ -4,6 +4,7 @@ const Baby = require('../models/baby.js')
 
 //get all babies with the user id as given in the filter
 babyRouter.get("/", (req, res, next) => {
+    // we have the user_id because of jwt that created the auth in the server
     Baby.find({user: req.user._id}, (err, babys) => {
         if(err){
             res.status(500)
@@ -16,10 +17,10 @@ babyRouter.get("/", (req, res, next) => {
 // Add new baby
 babyRouter.post("/", (req, res, next) => {
     // add user's id to the new baby object before saving in the db
+    //the user's id is in the token
     req.body.user = req.user._id
     // we need to add teh user's id to the baby 
     // we get the user's id info from the token which we have access to
-
     const newBaby = new Baby(req.body)
     newBaby.save((err, savedBaby) => {
         if(err){
