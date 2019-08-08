@@ -6,10 +6,12 @@ const BabyForm = props => {
 
     const { handleChange, handleSubmit, babyname, babyImg, btnText, caption } = props
     return (
-        <div>
+        <div className="baby-form-direct-div" >
             {/* <div className="gracie-div" style={{backgroundImg: `url(${https://images.unsplash.com/photo-1544126592-807ade215a0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80})`}}/> */}
-            <div> Baby baby</div>
-                <form onSubmit={handleSubmit}>
+            <div> 
+                <h2>Register baby</h2>
+            </div>
+                <form className="baby-form" onSubmit={handleSubmit}>
                     <input
                         type="text"
                         name="babyname"
@@ -32,6 +34,9 @@ const BabyForm = props => {
                     
                     
                 </form>
+                <div>
+                    <div> {babyname}</div>
+                </div>
     
           </div>
     )

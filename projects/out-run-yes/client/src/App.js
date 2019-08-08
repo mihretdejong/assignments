@@ -6,6 +6,7 @@ import Baby from './components/Baby'
 import ProtectedRoute from './shared/ProtectedRoute.js'
 import Nav from './components/Nav/Nav.js'
 import { withUser} from './context/UserProvider'
+import './style.css'
 
 // the end point is different from our end point in express
 // this is SPA, everything in our app gets loaded  with a single request

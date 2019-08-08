@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 
+fonts
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Russo One', sans-serif;
+ */
+/* ********************* Entire SPA ********************** */
+.all-warper{
+    background-color: #1a1a1a;
+    width: 100%;
+    height: 100%;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px 1fr 1fr; */
+    
+}
+.navbar{
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* it helps keep the bar top */
+    /* background-color: #1a1a1a; */
+}
+.toolbar-navigation{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+    
+    
+}
+.gap {
+    flex: 1
+}
+.toolbar-nav-items >a{
+    text-decoration: none;
+    color: grey;
+    margin: 5px;
+}
+.toolbar-nav-items a:hover,
+.toolbar-nav-items a:active {
+    color: salmon;
+}
+/* ******************** DrawerToggleBtn ********************* */
+.toggle-button {
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-around;
+    margin-bottom: 1px;
+    height: 25px;
+    width: 36px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+}
+.toggle-btn-burger{
+    width: 30px;
+    height: 3px;
+    background: rgb(78, 77, 77);
+}
+/* ********************   Sidedrawer   ************************ */
+.side-drawer {
+    height: 100%;
+    background: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: -500px;
+    width: 900px;
+    max-width: 400px;
+    transition: 0.7s ease-out;
+    /* transform: translatex(-100%) */
+}
+.side-drawer.open {
+    transform: translatex(0);
+    left: 0px;
+
+}
+.sidedrawer-close-btn{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+.side-drawer a{
+    /* height: 100%; */
+    text-decoration: none;
+    display: flex;
+    margin-bottom: 100px;
+    justify-content: center;
+
+}
+.side-drawer a:hover,
+.side-drawer a:active {
+    color: salmon;
+}
+/* ********************    Home    ****************************** */
+.home-div{
+    background-color: #1a1a1a;
+    width: 100%;
+}
+/* flexbox and grid work on direct child */
+.intro-div{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    /* min-height: 50vh; */
+    /* line-height: 400% */
+    color: rgba(255, 255, 255, 0.918);
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    grid-template-rows: 150px 1fr 1fr 250px;
+
+}
+.intro-div h1{
+    font-family: 'Anton', sans-serif;
+    font-size: 80px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-bottom: 0px;
+    
+}
+.intro-div h3{
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+    grid-column: 2/4;
+    grid-row: 3/ 4;
+    
+
+}
+.intro-div h4{
+    font-family: 'Anton', sans-serif;
+    font-size:20px;
+    grid-column: 2/4;
+    grid-row: 3/ 4;
+    margin-top: 60px;
+    color: rgb(207, 174, 154);
+
+}
+.skills-div{
+    padding: 15px;
+    grid-column: 1/4;
+    grid-row: 4/ 6;
+    display: grid;
+    /* grid-template-columns: 10; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-rows: 1fr ; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+
+}
+.skills-div >h1{
+    font-family: 'Anton', sans-serif;
+    grid-column: 1/4;
+    grid-row: 1/ 2;
+    height: 100px;
+    text-align: center;
+    font-size: 60px;
+    letter-spacing: 1.5pt;
+    color: rgba(255, 255, 255, 0.918);
+}
+.skills-div >h1:hover{
+    color: rgb(197, 125, 77);
+    font-size: 65px;
+}
+.skills-div >div{
+    padding:5px;
+    color: rgb(207, 174, 154);
+    font-family: 'Oswald', sans-serif;
+    
+    max-width: 150px;
+    max-height: 100px;
+
+}
+.skills-div >div:hover{
+    color: rgb(32, 218, 209);
+    font-size: 15px;
+
+}
+
+/* ***************************  About   ****************************** */
+.about-div{
+    padding: 10px;
+    background-color: #1a1a1a;
+    height: 100vh;
+    display: flex;
+    
+
+    /* height: 100vh; */
+}
+.enjoy-div {
+  font-family: 'Russo One', sans-serif;
+    color: rgba(255, 255, 255, 0.918);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    letter-spacing: 1pt
+    /* height: 100vh; */
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 200px; */
+
+}
+.enjoy-div a{
+    text-decoration: none;
+    color: rgb(105, 231, 225);
+    max-height: 100px;
+    margin-top: 15px
+
+}
+.resume-div{
+    margin: 12px 13px;
+    align-items: flex-end;
+    padding: 20px;
+    border: 1px solid white;
+}
+.enjoy-div >h1{
+    /* grid-column: 2/ 3;
+    grid-row: 3/ 4; */
+    /* font-family: 'Russo One', sans-serif; */
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.enjoy-div >h5{
+
+    padding: 5px;
+    font-family: 'Oswald', sans-serif;
+    margin-left: 9px;
+
+}
+/* *********************************  projects ************************* */
+.projects-div{
+    width: 100%;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+   
+    
+}
+
+.projects-div h1{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding-top: 100px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    
+}
+.u-triv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.u-triv >h2{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding: 20px;
+}
+.proj-utri-img{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.utriv-snap{
+    width: 30vw;
+    height:35vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 2px;
+    z-index: 10;
+}
+/* .utriv-snap:hover{
+    width: 40vw;
+    height: 45vh;
+} */
+.utriv-snap.utriv-home-page{
+    background-image: url(./images/utriv1.png);
+    margin-left: 15px
+}
+.utriv-snap.utriv-trivia-page{
+    background-image: url(./images/triviapage.png)
+}
+.utriv-snap.utriv-about-page{
+    background-image: url(./images/utriv3.png)
+}
+.instagram-clone-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.instagram-clone-div >h2{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding: 50px;
+    max-height: 100px
+
+}
+.instagram-clone{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.insta-snap{
+    margin-top:5px;
+    width: 30vw;
+    height: 35vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 2px;
+    /* border: 2px solid black; */
+    /* border-radius: 20px; */
+
+
+}
+.insta-snap:hover{
+    width: 40vw;
+    height: 45vh;
+    
+}
+.insta-snap.insta-signup-page{
+    background-image: url(./images/signup.png);
+    margin-left: 15px
+}
+.insta-snap.insta-home-page{
+    background-image: url(./images/feed.png)
+}
+.insta-snap.insat-profile-page{
+    background-image: url(./images/prorile.png)
+}
+/* ******************** Contact *************** */
+.contact-div{
+    height: 100vh
+}
+
+
+
+/* *************************  mobile size ***************************** */
+@media (max-width: 760px){
+    .toolbar-nav-items{
+        display: none;
+    }
+}
+
+/* ****************************** desktope size  ******************** */
+
+@media (min-width: 760px){
+    .toggle-button{
+        display: none;
+    }
+}

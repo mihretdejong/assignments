@@ -16,7 +16,7 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 // DB connection 
-mongoose.connect("mongodb://localhost:27017/runactivities",{
+mongoose.connect("mongodb://localhost:27017/bLog",{
     useNewUrlParser: true,
     useFindAndModify: false,
     useCreateIndex: true

@@ -28,8 +28,8 @@ class Baby extends Component {
         // }
         // the newBaby is the same thing as saying this.state in the brackest where we're adding a new baby 
         const newObj = {
-            babyname: this.state.babyname,
-            post: [{
+            name: this.state.babyname,
+            posts: [{
                 img: this.state.babyImg,
                 imgCaption: this.state.caption
             }]
@@ -37,12 +37,12 @@ class Baby extends Component {
         }
         // this.props.addBaby(this.state)
         this.props.addBaby(newObj)
-        this.setState({babyname: "", babyImg: ""})
+        this.setState({babyname: "", babyImg: "", caption: ""})
     }
 
     render(){
         return (
-            <div>
+            <div className="baby-form-div">
                 <BabyForm
                     {...this.state}
                     handleChange={this.handleChange}

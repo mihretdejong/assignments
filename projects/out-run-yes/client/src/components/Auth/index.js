@@ -51,7 +51,7 @@ class Auth extends Component{
     render(){
         return(
 
-            <div>
+            <div className="auth-div">
             
                 { !this.state.toggle? 
                       <>
@@ -62,9 +62,14 @@ class Auth extends Component{
                             handleChange={this.handleChange}
                             handleSubmit={this.handleSignupSubmit}
                             btntext="Sign up"
+                            className="signup"
                             />
-                        <p onClick={this.toggler}> Already have an account </p>
-                        <p>{this.props.errMsg} </p>
+                            <div className="auth-redirect-div">
+                                <p>Have an account? 
+                                    <span onClick={this.toggler}> Log in  </span>
+                                </p>
+                                <p>{this.props.errMsg} </p>
+                            </div>
                         {console.log(this.props.errMsg)}
                        </>
 
@@ -76,6 +81,7 @@ class Auth extends Component{
                             handleChange={this.handleChange}
                             handleSubmit={this.handleLoginSubmit}
                             btntext="Login"
+                            className="login"
                             />
                         <p onClick={this.toggler}> Don't have an account </p>
                         <p>{this.props.errMsg}</p>

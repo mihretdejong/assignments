@@ -19,7 +19,7 @@ class Questions extends Component {
             messageToUser: "",
             userIsCorrect: false,
             category:"",
-            difficulty: "hart",
+            difficulty: "easy",
             displayForm: true,   
         }     
     }

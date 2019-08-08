@@ -13,9 +13,9 @@
 }
 /*  */
 /* it's like border but can't control it */
-.toggle-button:focus {
+/* .toggle-button:focus {
     outline: none;
-}
+} */
 .toggle-btn-burger{
     width: 30px;
     height: 3px;
