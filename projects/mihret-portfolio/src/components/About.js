@@ -13,7 +13,9 @@ const About = () => {
                     <h5>Designing web pages</h5>
                     <h5>Growing my photography business</h5>
                     <h5>Running marathons when I'm not coding...</h5>
-                   <a href=""> <div className="resume-div">Checkout my resume</div> </a>
+                    {/* <a href={require('../images/MihretDeJongWebDeveloperJPEG.jpg')} download/> */}
+
+                   <a href={require('../images/MihretDeJongWebDeveloperJPEG.jpg')} download> <div className="resume-div">Checkout my resume</div> </a>
                 </div>
 
         </div>

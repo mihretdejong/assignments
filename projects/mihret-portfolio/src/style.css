@@ -42,12 +42,12 @@ font-family: 'Russo One', sans-serif;
 }
 .toolbar-nav-items >a{
     text-decoration: none;
-    color: grey;
+    color: rgb(250, 174, 174);
     margin: 5px;
 }
 .toolbar-nav-items a:hover,
 .toolbar-nav-items a:active {
-    color: salmon;
+    color: rgb(128, 226, 233);
 }
 /* ******************** DrawerToggleBtn ********************* */
 .toggle-button {
@@ -66,13 +66,13 @@ font-family: 'Russo One', sans-serif;
 .toggle-btn-burger{
     width: 30px;
     height: 3px;
-    background: rgb(78, 77, 77);
+    background-color: rgba(143, 241, 237, 0.959);
 }
 /* ********************   Sidedrawer   ************************ */
 .side-drawer {
     height: 100%;
-    background: white;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    background-color: #1a1a1a;
+    box-shadow: 2px 0 2px rgba(100, 240, 233, 0.5);
     position: fixed;
     top: 0;
     left: -500px;
@@ -90,18 +90,31 @@ font-family: 'Russo One', sans-serif;
     display: flex;
     justify-content: flex-end;
     margin: 20px;
+    color: white;
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
 }
 .side-drawer a{
     /* height: 100%; */
     text-decoration: none;
-    display: flex;
     margin-bottom: 100px;
-    justify-content: center;
-
+    display: flex;
+    justify-content: center ;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    margin: 20px;
+    color: white;
 }
+.collection-sec{
+    display: none;
+}
+.sidedrawer-close-btn:hover{
+    color: rgb(241, 145, 134);
+}
+
 .side-drawer a:hover,
 .side-drawer a:active {
-    color: salmon;
+    color: rgb(241, 145, 134);
 }
 /* ********************    Home    ****************************** */
 .home-div{
@@ -118,7 +131,7 @@ font-family: 'Russo One', sans-serif;
     color: rgba(255, 255, 255, 0.918);
     display: grid;
     grid-template-columns: 100px 1fr 1fr;
-    grid-template-rows: 150px 1fr 1fr 250px;
+    grid-template-rows: 150px 1fr 1fr 400px;
 
 }
 .intro-div h1{
@@ -129,13 +142,19 @@ font-family: 'Russo One', sans-serif;
     margin-bottom: 0px;
     
 }
+.intro-div h1:hover{
+    color: rgb(90, 252, 252);
+    transition: 0.7s ease-out;
+}
 .intro-div h3{
     font-family: 'Anton', sans-serif;
     font-size: 40px;
     grid-column: 2/4;
     grid-row: 3/ 4;
-    
-
+}
+.intro-div h3:hover{
+    color: rgb(90, 252, 252);
+    transition: 0.7s ease-out;
 }
 .intro-div h4{
     font-family: 'Anton', sans-serif;
@@ -146,11 +165,17 @@ font-family: 'Russo One', sans-serif;
     color: rgb(207, 174, 154);
 
 }
+.intro-div h4:hover{
+    color: rgb(252, 149, 90);
+    transition: 0.7s ease-out;
+}
 .skills-div{
     padding: 15px;
     grid-column: 1/4;
     grid-row: 4/ 6;
     display: grid;
+    margin-left: 30px;
+    margin-right: 20px;
     /* grid-template-columns: 10; */
     /* grid-template-columns: 1fr 1fr 1fr; */
     /* grid-template-rows: 1fr ; */
@@ -166,26 +191,32 @@ font-family: 'Russo One', sans-serif;
     grid-row: 1/ 2;
     height: 100px;
     text-align: center;
-    font-size: 60px;
+    font-size: 80px;
     letter-spacing: 1.5pt;
     color: rgba(255, 255, 255, 0.918);
 }
 .skills-div >h1:hover{
     color: rgb(197, 125, 77);
-    font-size: 65px;
+    font-size: 55px;
+    color: rgb(90, 252, 252);
+    transition: 0.3s ease-in-out;
 }
 .skills-div >div{
-    padding:5px;
     color: rgb(207, 174, 154);
     font-family: 'Oswald', sans-serif;
-    
-    max-width: 150px;
+    border:1px solid rgb(35, 185, 190) ;
+    margin:5px;
+    padding: 10px;
     max-height: 100px;
+    max-width: 150px;
+    text-align: center;
 
 }
 .skills-div >div:hover{
-    color: rgb(32, 218, 209);
-    font-size: 15px;
+    
+    /* font-size: 15px; */
+    color: rgb(90, 252, 252);
+    transition: 0.7s ease-out;
 
 }
 
@@ -321,7 +352,6 @@ font-family: 'Russo One', sans-serif;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    z-index: 20;
 }
 
 .insta-snap{
@@ -353,14 +383,71 @@ font-family: 'Russo One', sans-serif;
 }
 /* ******************** Contact *************** */
 .contact-div{
-    height: 100vh
+    height: 100vh;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+.contact-div h1{
+    grid-column: 1/ 3;
+    grid-row: 2/ 3;
+    text-align: right;
+
+    line-height: 35px;
+    font-size: 50px
+}
+.contact-info{
+    grid-column: 3/ 4;
+    grid-row: 2/ 3;
+    margin: 80px 20px 0 0;
+    
+  
+   
+}
+.contact-info >p{
+    font-size: 15px ;
+    
+}
+/* **********************  Footer ****************** */
+
+.footer-div{
+    height: 50vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
+.social-media{
+    grid-column: 1/ 4;
+    grid-row: 3/ 4;
+    display: flex;
+    justify-content: space-around;
+
+  
+    
+}
+.social-media a{
+    text-decoration: none;
+    color: white
+}
+.social-media a:hover{
+    color: rgb(116, 248, 239)
+}
 
 
 /* *************************  mobile size ***************************** */
 @media (max-width: 760px){
     .toolbar-nav-items{
+        display: none;
+    }
+    .collection-div{
         display: none;
     }
 }
@@ -371,4 +458,95 @@ font-family: 'Russo One', sans-serif;
     .toggle-button{
         display: none;
     }
+    .toolbar-nav-items >a{
+        font-family: 'Oswald', sans-serif;
+    }
+    /* ******************** home ********** */
+    .image-div{
+        height: 15vh;
+        width: 45vw;
+        background-color: rgb(0, 255, 255);
+        transform: skewY(20deg);
+        
+    }
+    .image-div2{
+        height: 15vh;
+        width: 35vw;
+        margin: 0 auto;
+        background-color: rgb(255, 102, 0);
+        /* transform: skewY(-20deg); */
+        /* transform: rotate(-20deg); */
+        grid-column: 3/4;
+        grid-row: 3/ 4;
+    }
+    .image-div3{
+        height: 50vh;
+        width: 1vw;
+        background-color: rgb(245, 162, 37);
+        /* transform: skewY(20deg); */
+        grid-column: 3/4;
+        grid-row: 1/ 4;
+        margin-right: 10px;
+
+    }
+    .image-div4{
+        height: 50vh;
+        width: 2vw;
+        margin-left: 80px;
+        margin-top: 100px;
+        background-color: rgb(105, 221, 202);
+        /* transform: skewY(20deg); */
+        grid-column: 3/4;
+        grid-row: 1/ 5;
+        margin-right: 10px;
+    }
+    .image-div5{
+        height: 50vh;
+        width: 2vw;
+        margin-left: 150px;
+        margin-top: 250px;
+        background-color: rgb(105, 221, 202);
+        /* transform: skewY(20deg); */
+        grid-column: 3/4;
+        grid-row: 1/ 5;
+        margin-right: 10px;
+    }
+    .skills-div{
+        
+        /* margin: 10px auto; */
+        border: 2px solid white;
+        height: 60vh;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 12px 6px 18px 0px rgba(110,145,142,0.2)
+    }
+    .skills-div >div{
+        display: none;
+        
+
+    }
+    .collection-sec {
+        display: inline-block;
+        /* height: 50vh;
+        width: 20%; */
+        margin: 70px;
+        color: rgb(207, 174, 154);
+        font-family: 'Oswald', sans-serif;
+    }
+    .collection-sec div{
+        margin: 5px
+
+    }
+    /* **************** */
+    .projects-div >h1{
+        margin: 50px
+
+    }
+    .u-triv{
+        margin-left: 100px
+    }
+    .instagram-clone-div{
+        margin-left: 100px
+    }
+    
 }

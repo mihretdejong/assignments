@@ -1,6 +1,7 @@
 import React, { Component} from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Navbar from './components/Navbar.js'
+import Footer from './components/Footer.js'
 import Sidedrawer from './components/Sidedrawer.js'
 import Home from './components/Home.js'
 import About from './components/About.js'
@@ -44,6 +45,7 @@ class App extends Component{
                     <Route  path="/contact" render={rProps => <Contact {...rProps}/>}/>
 
                 </Switch>
+                <Footer/>
 
             </div>
         )
