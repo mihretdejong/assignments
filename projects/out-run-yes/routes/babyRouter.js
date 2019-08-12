@@ -31,13 +31,13 @@ babyRouter.post("/", (req, res, next) => {
     req.body.user = req.user._id
     // we need to add teh user's id to the baby 
     // we get the user's id info from the token which we have access to
-    const newBaby = new Baby(req.body)
-    newBaby.save((err, savedBaby) => {
+    const newBabyEntry = new Baby(req.body)
+    newBabyEntry.save((err, savedBabyEntry) => {
         if(err){
            res.status(500)
            return next(err) 
         }
-        return res.status(201).send(savedBaby)
+        return res.status(201).send(savedBabyEntry)
     })
 })
 
@@ -62,7 +62,7 @@ babyRouter.delete('/:babyId', (req, res, next) => {
 })
 
 babyRouter.put("/:_id", (req, res, next) => {
-    // console.log(req.body)
+    console.log(req.body)
     Baby.findOne({_id: req.params._id}, (err, foundBabyEntry) => {
         if(err){
             res.status(500)

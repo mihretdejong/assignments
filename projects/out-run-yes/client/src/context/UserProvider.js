@@ -7,6 +7,8 @@ const UserContext = React.createContext()
 //takes the axios package and resave in userAxios package which we can use to configure the authentication
 const  userAxios = axios.create()
 //Axios interceptor(it's like a middleware)
+//whenever using useraxios, intercept and use this configiration from the local storage, 
+//add the token to authorzation 
 userAxios.interceptors.request.use((config) => {
     const token = localStorage.getItem("token")
     config.headers.Authorization = `Bearer ${token}`
@@ -24,12 +26,13 @@ class UserProvider extends Component{
             user: JSON.parse(localStorage.getItem("user")) || {},
             token: localStorage.getItem("token") || "", 
             babies: [],
-            errMsg: ""
+            errMsg: "",
+            babyposts: [],
 
         }
     }
     // the user provider maintains the user info
-    //the auth methods below
+    //the auth methods are below
     //it mmaintains the user and token in state 
 
     // this recieves the credential as a paramenter from our authform
@@ -86,23 +89,65 @@ class UserProvider extends Component{
     }
     
 
-
+    // this won't work unless we pass babies to the App which is the component that's directly consuming 
     getUserBabies = () => {
+        userAxios.get("/api/baby")
+            .then(res => {
+                this.setState({
+                    babies: res.data
+                })
+            })
+            .catch(err => console.log(err))
          
     }
-
-    addBaby = (newBaby) => {
+    // addBaby expects newBaby 
+    addBabyEntry = (newBabyEntry) => {
         // console.log(newBaby)
-        userAxios.post("/api/baby", newBaby)
+        // called in the baby index.js componenet 
+        userAxios.post("/api/baby", newBabyEntry)
             .then(res => {
-                console.log(res.data)
+                // console.log(res.data)
+                const savedBabyentry = res.data
+                // and the instead of adding res.data in the array, we can add savedBaby entry in the array
+                this.setState(prevState => ({ 
+                    babies: [...prevState.babies, savedBabyentry]
+                }))
             })
             
             .catch(err => console.log(err))
     }
+    //set state with the post response data
+    //create a new component that displays post response data
+    // connect that componnet with the provider, pass the posts prop to that componenet 
+    //in that component, map through the posts and sort by date
+    //
+
+    // addBabyPosts = ( _id, newBabyPost) => {
+    //     userAxios.put(`/api/baby/${_id}`, newBabyPost )
+    //         .then(res => {
+    //             const { babyPosts } = res.data.posts
+    //             localStorage.setItem("babyPosts", babyPosts)
+    //             localStorage.setItem("babyPosts", JSON.stringify(babyPosts))
+    //             this.setState({babyPosts: babyPosts})
+    //         })
+    //         .catch(err => console.log(err))
+    // }
+    addBabyPosts = ( _id, newBabyPost) => {
+        userAxios.put(`/api/baby/${_id}`, newBabyPost )
+            .then(res => {
+                // console.log(res.data.posts)
+                this.setState(prevState => ({
+                    babyposts: res.data.posts
+                }))
+            })
+            .catch(err => console.log(err))
+    }
+   
+
     // the context returns the UserContext.Provider
 
     render(){
+        // console.log(this.state.babyPosts)
         return(
             <UserContext.Provider
                 value={{
@@ -110,8 +155,9 @@ class UserProvider extends Component{
                     signup: this.signup,
                     login: this.login,
                     logout: this.logout,
-                    getUserBabies: this.getUserBaby,
-                    addBaby: this.addBaby
+                    getUserBabies: this.getUserBabies,
+                    addBabyEntry: this.addBabyEntry,
+                    addBabyPosts: this.addBabyPosts
                 }}>
                 { this.props.children }
 

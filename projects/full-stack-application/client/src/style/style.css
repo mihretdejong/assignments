@@ -1,3 +1,108 @@
+/*  */
+/* *********************** Navbar **************** */
+*{
+    padding: 0;
+    margin: 0;
+}
+.navbar{
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* it helps keep the bar top */
+    background-color: transparent;
+}
+.toolbar-navigation{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+}
+.toolbar-logo{
+    margin-left: 5px
+}
+.toolbar-logo a{
+    color: white;
+    text-decoration: none;
+}
+/* flex: 1 simply creates a space/gap between elements  */
+.gap {
+    flex: 1
+}
+.toolbar-nav-items a{
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+
+}
+.toolbar-nav-items a:hover,
+.toolbar-nav-items a:active {
+    color: salmon;
+
+}
+/* *********************** drawer-toggle-btn************* */
+.toggle-button {
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-around;
+    margin-bottom: 1px;
+    height: 25px;
+    width: 36px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+}
+.toggle-btn-burger{
+    width: 30px;
+    height: 3px;
+    background: rgb(78, 77, 77);
+
+}
+
+/* ****************** Sidedrawer ************* */
+.side-drawer {
+    height: 100%;
+    background: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: -500px;
+    width: 900px;
+    max-width: 400px;
+    transition: 0.7s ease-out;
+    /* transform: translatex(-100%) */
+
+}
+.side-drawer.open {
+    transform: translatex(0);
+    left: 0px;
+
+}
+.sidedrawer-close-btn{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+
+.side-drawer a{
+    /* height: 100%; */
+    text-decoration: none;
+    display: flex;
+    margin-bottom: 100px;
+    justify-content: center;
+
+}
+
+.side-drawer a:hover,
+.side-drawer a:active {
+    color: salmon;
+}
+
+
+
 /* -----------------------home-------------- */
 .home-image-div{
     /* position: fixed; */
@@ -6,11 +111,7 @@
     width: 100%;
     height: 50vh;
 }
-/* --------------------ImgCarousel -------------------------*/
-/* .carousel-img1{
-    background-image: url('../Images/graciecutiewater.jpg')
 
-} */
 .carousel-div{
     height: 200px;
 }
@@ -72,4 +173,20 @@
 
     
 
+}
+
+/* *********************      **************** */
+@media (max-width: 760px){
+    .toolbar-nav-items{
+        display: none;
+    }
+}
+
+@media (min-width: 760px){
+    .toolbar-navigation{
+        display: none;
+    }
+    .toggle-button{
+        display: none;
+    }
 }

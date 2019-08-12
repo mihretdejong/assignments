@@ -1,4 +1,4 @@
-.toggle-button {
+/* .toggle-button {
     display: flex;
     flex-direction: column ;
     justify-content: space-around;
@@ -10,20 +10,15 @@
     cursor: pointer;
     padding: 0;
     box-sizing: border-box;
-}
-/*  */
+} */
+
 /* it's like border but can't control it */
 /* .toggle-button:focus {
     outline: none;
 } */
-.toggle-btn-burger{
+/* .toggle-btn-burger{
     width: 30px;
     height: 3px;
     background: rgb(78, 77, 77);
 
-}
-@media (min-width: 760px){
-    .toggle-button{
-        display: none;
-    }
-}
+} */

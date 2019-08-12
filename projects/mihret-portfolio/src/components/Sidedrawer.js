@@ -15,10 +15,21 @@ const Sidedrawer = props => {
             <nav className={drawerClasses}>
                 <div>
                     <div onClick={props.click} className="sidedrawer-close-btn"> X </div>
-                    <Link to="/">HOME</Link>
-                    <Link to="/about">ABOUT</Link>
-                    <Link to="/projects">PROJECTS</Link>
-                    <Link to="/contact">CONTACT</Link>
+                    <div className="sidedrawer-close-btn" onClick={props.click}> 
+                        <Link to="/">HOME</Link> 
+                    </div>
+                    <div className="sidedrawer-close-btn" onClick={props.click}> 
+                         <Link to="/about">ABOUT</Link>
+                    </div>
+                    <div className="sidedrawer-close-btn" onClick={props.click}> 
+                        <Link to="/projects">PROJECTS</Link>
+                    </div>
+                    <div className="sidedrawer-close-btn" onClick={props.click}> 
+                         <Link to="/contact">CONTACT</Link>
+                       
+                    </div>
+                    
+                   
 
                 </div>
             </nav>

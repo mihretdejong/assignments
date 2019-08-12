@@ -1,6 +1,6 @@
 import React from 'react'
-import '../style/home.css'
-import ImgCarousel from './ImgCarousel.js'
+
+// import ImgCarousel from './ImgCarousel.js'
 
 const Home = () => {
     return(

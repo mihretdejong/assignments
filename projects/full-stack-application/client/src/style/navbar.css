@@ -1,4 +1,4 @@
-*{
+/* *{
     padding: 0;
     margin: 0;
 }
@@ -7,9 +7,9 @@
     height: 60px;
     width: 100%;
     top: 0;
-    left: 0;
+    left: 0; */
     /* it helps keep the bar top */
-    background-color: transparent;
+    /* background-color: transparent;
 }
 .toolbar-navigation{
     display: flex;
@@ -23,9 +23,9 @@
 .toolbar-logo a{
     color: white;
     text-decoration: none;
-}
+} */
 /* flex: 1 simply creates a space/gap between elements  */
-.gap {
+/* .gap {
     flex: 1
 }
 .toolbar-nav-items a{
@@ -38,11 +38,11 @@
 .toolbar-nav-items a:active {
     color: salmon;
 
-}
-@media (max-width: 760px){
+} */
+/* @media (max-width: 760px){
     .toolbar-nav-items{
         display: none;
     }
-}
+} */
 
 

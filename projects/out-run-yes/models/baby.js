@@ -6,6 +6,10 @@ const babySchema = new Schema({
         type: String,
         required: true
     },
+    babyProImg:{
+        type: String,
+        required: true
+    },
     posts: {
         type: [{
             img: {

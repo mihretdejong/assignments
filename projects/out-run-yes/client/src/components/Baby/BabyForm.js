@@ -2,9 +2,11 @@ import React from 'react'
 // import 'babyform.css'
 
 const BabyForm = props => {
-    // console.log(props)
+    
 
-    const { handleChange, handleSubmit, babyname, babyImg, btnText, caption } = props
+    console.log(props)
+    const { handleChange, handleSubmit,babyProImg, babyname, btnText, } = props
+     
     return (
         <div className="baby-form-direct-div" >
             {/* <div className="gracie-div" style={{backgroundImg: `url(${https://images.unsplash.com/photo-1544126592-807ade215a0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80})`}}/> */}
@@ -20,23 +22,25 @@ const BabyForm = props => {
                         placeholder="Baby Name"/>
                     <input
                         type="text"
+                        name="babyProImg"
+                        value={babyProImg}
+                        onChange={handleChange}
+                        placeholder="Baby Picture"/>
+                    {/* <input
+                        type="text"
                         name="babyImg"
                         value={babyImg}
                         onChange={handleChange}
-                        placeholder="Baby Picture"/>
-                    <input
+                        placeholder="Baby Picture"/> */}
+                    {/* <input
                         type="text"
                         name="caption"
                         value={caption}
                         onChange={handleChange}
-                        placeholder="Baby Image Cpation "/>
-                    <button>{btnText}</button>
-                    
-                    
+                        placeholder="Baby Image Cpation "/> */}
+                    <button>{btnText}</button>  
                 </form>
-                <div>
-                    <div> {babyname}</div>
-                </div>
+               
     
           </div>
     )

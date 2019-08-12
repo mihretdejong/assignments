@@ -51,7 +51,7 @@
 .baby-form-div{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr; */
 }
 .baby-form-direct-div{
     grid-column: 2/ 3;
@@ -72,4 +72,61 @@
     max-width: 140px;
     padding: 10px
     
+}
+.babyNameLandingPage{
+    grid-column: 2/ 3;
+    grid-row: 3/ 7;
+
+}
+/* ****************** Baby Profile***** */
+.profile-page{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr
+}
+.profile-page >h1{
+    grid-column: 1/ 2;
+    margin: 10px;
+    color: rgb(88, 68, 15)
+}
+.baby-pro-img{
+    width: 15vw;
+    height: 20vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.baby-prof-links{
+    grid-column: 2/ 3;
+    grid-row: 2/ 3;
+    display: flex;
+    flex-direction: column;
+}
+.baby-prof-links >a{
+    text-decoration: none;
+    color: rgb(58, 54, 54);
+    font-size: 60px;
+    margin: 25px
+
+}
+.baby-prof-links >a:hover{
+    color: rgb(150, 110, 106)
+}
+
+/* *************** Post Form ******/
+.post-form-div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.post-form-div >input{
+    margin: 5px;
+    width: 200px;
+    padding: 5px
+}
+.post-form-div >button{
+    height: 30px;
+    width: 100px;
+    margin-top: 10px;
+    background-color: 
 }
