@@ -2,7 +2,7 @@ import React from 'react'
 
 const BabyPostForm = (props) => {
     const { handleSubmit, handleChange, img, imgCaption } = props
-    console.log(props)
+    // console.log(props)
 
     return(
         <div>

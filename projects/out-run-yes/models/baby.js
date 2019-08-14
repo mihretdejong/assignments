@@ -40,6 +40,31 @@ const babySchema = new Schema({
     //     }],
     //     default: []
     // },
+    babyGrowthChart: {
+        type: [{
+            height:{
+                type: String, 
+                default: ""
+            },
+            weight:{
+                type: String,
+                default: ""
+            },
+            headCircumference: {
+                type: String, 
+                default: ""
+            },
+            date: {
+                type: String, 
+                default: ""
+            },
+            time: {
+                type:Date,
+                default: Date.now
+            }
+        }],
+        default: []
+    },
     user: {
         type: Schema.Types.ObjectId,
         ref: "User",

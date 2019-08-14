@@ -1,6 +1,6 @@
 import React, { Component} from 'react'
 import BabyPostForm from './BabyPostForm.js'
-import BabyBookPosts from '../BabyBookPosts.js'
+import BabyBookPosts from '../BabyBookPost/BabyBookPosts.js'
 
 
 
@@ -12,9 +12,8 @@ class BabyPost extends Component{
             imgCaption: ""
         })
     }
-    componentDidMount(){
-        this.props.getUserBabies()
-    }
+  
+    
 
     handleChange = (e) => {
         const { name, value } = e.target
@@ -24,7 +23,7 @@ class BabyPost extends Component{
     handleSubmit = (e) => {
         e.preventDefault()
         // const _id = props.location.state._id
-        const { _id } = this.props.location.state
+        const { babyID } = this.props.location.state
         const newPostObj = {
             post:{
                 img: this.state.img,
@@ -33,9 +32,14 @@ class BabyPost extends Component{
         }
         console.log(this.props)
         //pass the function, the id of the baby from this.props
-        this.props.addBabyPosts(_id, newPostObj)
+        this.props.addBabyPosts(babyID, newPostObj)
         this.setState({img: "", imgCaption: ""})
     }
+    // deleteBabysPost = () => {
+        
+    //     this.props.deleteBabysPost(_id)
+       
+    // }
 
     render(){
         //{/* babies={this.props.babies} */}
@@ -46,20 +50,20 @@ class BabyPost extends Component{
         // console.log(this.props.location.state)
         return(
             <div>
+                
+                <BabyBookPosts
+                    babyID={this.props.location.state.babyID}
+                    indBabyInfo={this.props.location.state}
+                
+                    
+                    />
                 <BabyPostForm
                     {...this.state}
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
 
                     />
-                {/* <BabyBookPosts
-                    
-                 indBabyInfo={this.props.location.state}
-                    /> */}
-                <div>
-
-                    
-                </div>
+           
               
                 
             </div>

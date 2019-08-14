@@ -83,8 +83,11 @@ class Auth extends Component{
                             btntext="Login"
                             className="login"
                             />
-                        <p onClick={this.toggler}> Don't have an account </p>
-                        <p>{this.props.errMsg}</p>
+                            <div className="signup-redirect-div">
+                                <p > Don't have an account?
+                                    <span onClick={this.toggler} > Sign up</span> </p>
+                                <p>{this.props.errMsg}</p>
+                            </div>
                     </>
                     
 

@@ -21,7 +21,7 @@ const AuthForm = props =>{
                 name="password"
                 value={password}
                 onChange={handleChange}
-                placeholder="password"/>
+                placeholder="Password"/>
             <button>{btntext}</button>
 
         </form>

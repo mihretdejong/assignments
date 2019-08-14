@@ -29,8 +29,6 @@ class Baby extends Component {
         const newObj = {
             name: this.state.babyname,
             babyProImg: this.state.babyProImg
-
-
             // posts: [{
             //     img: this.state.babyImg,
             //     imgCaption: this.state.caption
@@ -40,14 +38,13 @@ class Baby extends Component {
         // this.props.addBaby(this.state) insetead of adding the newly defined const newObj, it will update our state in UserProvider with the new information 
         this.props.addBabyEntry(newObj)
         // console.log(this.props)
-       
         // we set it to an empthy string so that it refreshses  
         this.setState({babyname: "", babyProImg: ""})
     }
 
     render(){
         //this.props is coming from our context provider 
-        console.log(this.props)
+        // console.log(this.props)
         const { babies } = this.props
         
         
@@ -63,8 +60,8 @@ class Baby extends Component {
                 <div className="babyNameLandingPage">
 
                     {babies.map((baby, _id) => 
-                        <Link to={{pathname: "/babyprofile", state: {...baby}}}>
-                            <h1  key={baby._id} >{baby.name}</h1>
+                        <Link key={baby._id} to={{pathname: "/babyprofile", state: {...baby}}}>
+                            <h1   >{baby.name}</h1>
                         </Link>)}
                 </div>
 

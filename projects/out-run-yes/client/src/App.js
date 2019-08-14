@@ -4,6 +4,8 @@ import Auth from './components/Auth'
 import Baby from './components/Baby'
 import BabyProfile from './components/BabyProfile/BabyProfile.js'
 import BabyPost from './components/BabyPost'
+import BabyGrowthChart from './components/BabyGrowthChart'
+import BabyBookPosts from './components/BabyBookPost/BabyBookPosts.js'
 // we don't have to say index.js, we can just say Baby and that will be the component imporetd
 import ProtectedRoute from './shared/ProtectedRoute.js'
 import Nav from './components/Nav/Nav.js'
@@ -21,9 +23,12 @@ import './style.css'
 //right in the <redirecting ternary, meaning instead of getting the token from state, we can directly grab it from the local storage
 //
 class App extends Component {
+    componentDidMount(){
+        this.props.getUserBabies()
+    }
     //deconstructing helps to see what we are consuming from the user provider 
     render(){
-        const { token, logout, user, addBabyEntry, addBabyPosts, getUserBabies, babies} = this.props
+        const { token, logout, user, deleteBabysPost, addBabyEntry, addBabyPosts, getUserBabies, babies} = this.props
         // console.log(this.props)
         return(
             <div>
@@ -36,6 +41,10 @@ class App extends Component {
                                 <Auth {...routerProps}/> :
                                 <Redirect to="/baby" />
                                 }/>
+                    {/* <Route path="/bookpost" render={routerProps => token?
+                            <BabyBookPosts {...routerProps} {...this.props}/> :
+                            <Redirect to="/"/>
+                                }/> */}
                                 
                     <ProtectedRoute
                         token={token}
@@ -52,7 +61,7 @@ class App extends Component {
                         token={token}
                         path="/babyprofile"
                         component={BabyProfile}
-                        user={user}
+                        user={user}                     
                         getUserBabies={getUserBabies}
                         addBabyPosts={addBabyPosts}
                         redirectTo="/"
@@ -69,7 +78,17 @@ class App extends Component {
                         redirectTo="/"
                         babies={babies}
                         
-                    
+                        />
+                    <ProtectedRoute
+                        token={token}
+                        path="/addgrowthchart"
+                        component={BabyGrowthChart}
+                        user={user}
+                        getUserBabies={getUserBabies}
+                        addBabyPosts={addBabyPosts}
+                        redirectTo="/"
+                        babies={babies}
+                        
                         />
          {/* the protectedroute is always expecting the 
          redirectto path and if you don't provide it, it will throw an err */}

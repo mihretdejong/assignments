@@ -86,7 +86,7 @@ babyRouter.put("/:_id", (req, res, next) => {
     })
 })
 
-babyRouter.delete("/:_id/:_babyPostId", (req, res, next) => {
+babyRouter.put("/:_id/:_babyPostId", (req, res, next) => {
     // const babyPostId = req.params._babyPostId
     Baby.findOneAndUpdate(
         {_id: req.params._id}, 

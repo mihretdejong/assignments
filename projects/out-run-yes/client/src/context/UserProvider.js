@@ -27,7 +27,7 @@ class UserProvider extends Component{
             token: localStorage.getItem("token") || "", 
             babies: [],
             errMsg: "",
-            babyposts: [],
+            // babyposts: [],
 
         }
     }
@@ -116,6 +116,14 @@ class UserProvider extends Component{
             
             .catch(err => console.log(err))
     }
+    deleteBabyEntry = ( babyEntryId ) => {
+        userAxios.delete(`/api/baby/${babyEntryId}`)
+            .then(res => {
+                this.setState(prevState => ({
+                    babies: prevState.babies.filter(babyEntry => babyEntry._Id !== babyEntryId)
+                }))
+            })
+    }
     //set state with the post response data
     //create a new component that displays post response data
     // connect that componnet with the provider, pass the posts prop to that componenet 
@@ -135,19 +143,27 @@ class UserProvider extends Component{
     addBabyPosts = ( _id, newBabyPost) => {
         userAxios.put(`/api/baby/${_id}`, newBabyPost )
             .then(res => {
-                // console.log(res.data.posts)
+                console.log(res.data)
                 this.setState(prevState => ({
-                    babyposts: res.data.posts
+                    babies: prevState.babies.map(baby => baby._id === _id ? res.data : baby)
                 }))
             })
             .catch(err => console.log(err))
+    }
+    deleteBabysPost = (_id, _babyPostId) => {
+        userAxios.put(`/api/baby/${_id}/${_babyPostId}`)
+            .then(res => {
+                this.setState(prevState => ({
+                    babies: prevState.babies.map(baby => baby._id === _id? res.data : baby)
+                }))
+            })
     }
    
 
     // the context returns the UserContext.Provider
 
     render(){
-        // console.log(this.state.babyPosts)
+        console.log(this.deleteBabysPost)
         return(
             <UserContext.Provider
                 value={{
@@ -157,7 +173,8 @@ class UserProvider extends Component{
                     logout: this.logout,
                     getUserBabies: this.getUserBabies,
                     addBabyEntry: this.addBabyEntry,
-                    addBabyPosts: this.addBabyPosts
+                    addBabyPosts: this.addBabyPosts,
+                    deleteBabysPost: this.deleteBabysPost
                 }}>
                 { this.props.children }
 
