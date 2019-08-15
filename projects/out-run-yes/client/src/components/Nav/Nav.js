@@ -4,8 +4,9 @@ import React from 'react'
 const Nav = props => {
     const { logout, token } = props 
     return (
-        <nav>
+        <nav className="nav-bar">
            { token && <div className="logout-button" onClick={logout}> Logout </div> }
+         
 
         </nav>
     )

@@ -2,11 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import BabyProfileUpdated from '../BabyProfileUpdated'
 
-// import BabyBook from './component/BabyBook/BabyBook.js'
-
-// the 
 const BabyProfile = props => {
-    console.log("test" ,props)
+    // console.log("test" ,props)
     const { deleteBabyEntry } = props
     const { _id } = props.location.state
     let name1 =""
@@ -27,7 +24,6 @@ const BabyProfile = props => {
         <div className="profile-page">
             <div className="baby-pro-img" style={{backgroundImage: `url(${babyProImg1})`}}></div>
             <h1>{name1}</h1>
-            <div onClick={ () => deleteBabyEntry(_id)}>delete</div>
             <div> 
             </div>
             {/* <h1>{_id}</h1> */}
@@ -40,7 +36,9 @@ const BabyProfile = props => {
             </div>
             <BabyProfileUpdated
                 propsFromProfileId={_id}
+                class
                 />
+            <button className="delete-div-profile" onClick={ () => deleteBabyEntry(_id)}>Delete Profile</button>
         </div>
     )
 }

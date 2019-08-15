@@ -5,7 +5,7 @@ const BabyPostForm = (props) => {
     // console.log(props)
 
     return(
-        <div>
+        <div >
 
             <form className="post-form-div" onSubmit={handleSubmit}>
                 <input

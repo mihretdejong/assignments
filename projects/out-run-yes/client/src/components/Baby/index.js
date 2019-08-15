@@ -48,12 +48,14 @@ class Baby extends Component {
         // console.log(babies1)
         return (
             <div className="baby-form-div">
-                    <h1> Hi {user.username}!</h1>
+                    <h1> hi {user.username}!</h1>
+                    <h4> welcome to your baby's bLog ! </h4> 
+                    {/* <h4> Start your baby's daily log right here.</h4> */}
                     <BabyForm
                         {...this.state}
                         handleChange={this.handleChange}
                         handleSubmit={this.handleSubmit}
-                        btnText="Add Little Love"
+                        btnText="Add Your Little Love"
     
                     />
                 <div className="babyNameLandingPage">
@@ -61,20 +63,8 @@ class Baby extends Component {
                     {babies.map((baby, _id) => 
                         <div key={baby._id}>
                             <Link  to={{pathname: "/babyprofile", state: {...baby}}}>
-                                <h1 >{baby.name}</h1>
+                                <h1 className="baby-name-link">{baby.name}</h1>
                             </Link>
-                                {/* <div >
-                                   {
-
-                                        <BabyForm
-                                            {...this.state}
-                                            handleChange={this.handleChange}
-                                            handleSubmit={this.handleSubmit}
-                                            btnText="Edit Baby's profile"
-                                            />                                                                                          
-                                   } 
-                                </div> */}
-
                         </div>
                         )}
                             

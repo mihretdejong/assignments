@@ -5,7 +5,7 @@ const BabyEditForm = (props) => {
     const { toggler, toggle, handleSubmit, handleChange, name, babyProImg} = props
     console.log(toggle)
     return(
-        <div >
+        <div className="baby-profile-edit" >
             {toggle?
                 
                 <form onSubmit={handleSubmit}>
@@ -23,10 +23,10 @@ const BabyEditForm = (props) => {
                         onChange={handleChange}
                         placeholder="Baby Profile Image"
                         />
-                    <button> Edit Little Love's Profile</button>
+                    <button className="inside-form-button"> Edit</button>
                 </form>
                 :
-                <button onClick={toggler} >Edit Profile</button>
+                <button  onClick={toggler} >Edit Little Love's Profile</button>
         
 
         

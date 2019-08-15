@@ -12,9 +12,6 @@ class BabyPost extends Component{
             imgCaption: ""
         })
     }
-  
-    
-
     handleChange = (e) => {
         const { name, value } = e.target
         this.setState({ [name] : value})
@@ -35,11 +32,6 @@ class BabyPost extends Component{
         this.props.addBabyPosts(babyID, newPostObj)
         this.setState({img: "", imgCaption: ""})
     }
-    // deleteBabysPost = () => {
-        
-    //     this.props.deleteBabysPost(_id)
-       
-    // }
 
     render(){
         //{/* babies={this.props.babies} */}
