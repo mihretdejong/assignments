@@ -24,7 +24,7 @@ babyRouter.get("/:babyId", (req, res, next) => {
     })
 })
 
-// Add new baby
+// Add new baby entry
 babyRouter.post("/", (req, res, next) => {
     // add user's id to the new baby object before saving in the db
     //the user's id is in the token
@@ -60,9 +60,26 @@ babyRouter.delete('/:babyId', (req, res, next) => {
         }
     )
 })
+// edit baby entry 
+// end points should be diffrent otherwise it will read the first one and never get to the second one
+babyRouter.put("/editbabyentry/:_id", (req, res, next) => {
+    // console.log("idone")
+    Baby.findOneAndUpdate(
+        {_id: req.params._id}, 
+        req.body,
+        {new: true},
+        (err, updatedBabyEntry) => {
+        if(err){
+            res.status(500)
+            return next(err)
+        }
+        return res.status(201).send(updatedBabyEntry)
+    })
+})
 
+// add a baby post request 
 babyRouter.put("/:_id", (req, res, next) => {
-    console.log(req.body)
+    // console.log("idtwo")
     Baby.findOne({_id: req.params._id}, (err, foundBabyEntry) => {
         if(err){
             res.status(500)
@@ -99,37 +116,26 @@ babyRouter.put("/:_id/:_babyPostId", (req, res, next) => {
             return next(err)
         }
         return res.send(foundBabyEntry)
-       
-        // console.dir(newArr)
-        // Baby.findOneAndUpdate(
-        //     {_id: req.params._id},
-        //     {posts: [...newArr]},
-        //     {new: true},
-        //     (err, updatedBabyPost) => {
-        //         if(err){
-        //             res.status(500)
-        //             return next(err)
-        //         }
-        //         return res.status(202).send(updatedBabyPost)
-        //     }
-        // )
-        // Baby.findOneAndRemove(
-        //     {_id: req.params._id, posts: req.params.},
-        //      {posts: req.params._babyPostId, }
-        //     (err, deletedBabyPost) => {
-        //         if(err){
-        //             res.status(500)
-        //             return next(err)
-        //         }
-        //         return res.status(200).send(
-        //             {
-        //                 posts: deletedBabyPost,
-        //                 msg: `Successfully deleted the image and image caption`
-        //             }
-        //         )
-        //     }
-        // )
     })
 })
-
+babyRouter.put("/growthchart/:_id", (req, res, next) => {
+    Baby.findOne({_id: res.params._id}, (err, foundBabyEntry) => {
+        if(err){
+            res.status(500)
+            return next(err)
+        }
+        Baby.findOneAndUpdate(
+            {_id: req.params._id},
+            {$push: {babyGrowthChart: req.body.babyGrowthChart}},
+            {new: true},
+            (err, updatedBabyGrowthChart) => {
+                if(err){
+                    res.status(500)
+                    return next(err)
+                }
+                return res.status(201).send(updatedBabyGrowthChart)
+            }
+        )
+    })
+})
 module.exports = babyRouter

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { withRouter } from 'react-router-dom'
 
 
 const UserContext = React.createContext()
@@ -113,7 +114,6 @@ class UserProvider extends Component{
                     babies: [...prevState.babies, savedBabyentry]
                 }))
             })
-            
             .catch(err => console.log(err))
     }
     deleteBabyEntry = ( babyEntryId ) => {
@@ -121,8 +121,21 @@ class UserProvider extends Component{
             .then(res => {
                 this.setState(prevState => ({
                     babies: prevState.babies.filter(babyEntry => babyEntry._Id !== babyEntryId)
-                }))
+                }), () => this.props.history.push("/baby"))
             })
+    }
+    editBabyEntry = ( babyEntryId, updatedBabyEntry) => {
+        userAxios.put(`/api/baby/editbabyentry/${babyEntryId}`, updatedBabyEntry )
+            .then(res => {
+                this.getUserBabies()
+                // this.setState(prevState => ({
+                //     babies1: prevState.babies.map(babyEntry => babyEntry._id === babyEntryId ? res.data : babyEntry),
+                //     babies: prevState.babies.map(babyEntry => babyEntry._id === babyEntryId ? res.data : babyEntry)
+                // }), () => console.log("editbabyentry"))
+
+            })
+            .catch(err => console.log(err))
+
     }
     //set state with the post response data
     //create a new component that displays post response data
@@ -163,7 +176,6 @@ class UserProvider extends Component{
     // the context returns the UserContext.Provider
 
     render(){
-        console.log(this.deleteBabysPost)
         return(
             <UserContext.Provider
                 value={{
@@ -173,8 +185,10 @@ class UserProvider extends Component{
                     logout: this.logout,
                     getUserBabies: this.getUserBabies,
                     addBabyEntry: this.addBabyEntry,
+                    deleteBabyEntry: this.deleteBabyEntry,
                     addBabyPosts: this.addBabyPosts,
-                    deleteBabysPost: this.deleteBabysPost
+                    deleteBabysPost: this.deleteBabysPost,
+                    editBabyEntry: this.editBabyEntry
                 }}>
                 { this.props.children }
 
@@ -183,7 +197,7 @@ class UserProvider extends Component{
     }
 }
 
-export default UserProvider
+export default withRouter(UserProvider)
 // higher order func that takes C (func or componenet ) as an argument
 // and then it returns a function that takes props 
 // when the props taking function is called, it takes the user context consumer

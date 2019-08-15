@@ -5,7 +5,7 @@ import Baby from './components/Baby'
 import BabyProfile from './components/BabyProfile/BabyProfile.js'
 import BabyPost from './components/BabyPost'
 import BabyGrowthChart from './components/BabyGrowthChart'
-import BabyBookPosts from './components/BabyBookPost/BabyBookPosts.js'
+// import BabyBookPosts from './components/BabyBookPost/BabyBookPosts.js'
 // we don't have to say index.js, we can just say Baby and that will be the component imporetd
 import ProtectedRoute from './shared/ProtectedRoute.js'
 import Nav from './components/Nav/Nav.js'
@@ -28,12 +28,10 @@ class App extends Component {
     }
     //deconstructing helps to see what we are consuming from the user provider 
     render(){
-        const { token, logout, user, deleteBabysPost, addBabyEntry, addBabyPosts, getUserBabies, babies} = this.props
+        const { token, logout, user, deleteBabyEntry, addBabyEntry, addBabyPosts, getUserBabies, babies} = this.props
         // console.log(this.props)
         return(
             <div>
-                {/* Here we go */}
- 
                 <Nav token={token} logout={logout}/>
                 <Switch>
                     <Route exact path="/" 
@@ -64,6 +62,7 @@ class App extends Component {
                         user={user}                     
                         getUserBabies={getUserBabies}
                         addBabyPosts={addBabyPosts}
+                        deleteBabyEntry={deleteBabyEntry}
                         redirectTo="/"
                         babies={babies}
                         

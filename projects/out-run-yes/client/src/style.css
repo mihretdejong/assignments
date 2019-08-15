@@ -2,11 +2,18 @@
     padding: 0;
     margin: 0;
 }
+/* 
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Poiret One', cursive;
+font-family: 'Days One', sans-serif;
+font-family: 'Aclonica', sans-serif; 
+*/
+
 
 .auth-div{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr;
 }
 .auth-redirect-div {
     grid-column: 2/ 3;
@@ -66,9 +73,33 @@
     margin: 10px;
 }
 .head-div p{
-    font-size: 12px;
+    font-size: 15px;
     margin-top: 10px;
 }
+.head-div >h1{
+    color: rgb(153, 140, 69);
+    font-family: 'Aclonica', sans-serif; 
+    font-size: 80px;
+    margin-bottom: 10px
+}
+.err-msg{
+    color: firebrick
+}
+/* ***************** Nav ****************** */
+.logout-button{
+    margin: 10px;
+    border: 1px solid lightgrey;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    color: rgba(107, 104, 104,1);
+    transition: 300ms;
+}
+.logout-button:hover{
+    color: rgb(185, 180, 180);
+    background-color: lightslategrey
+}
+
 
 
 /* _____________________BabyForm_________________________ */

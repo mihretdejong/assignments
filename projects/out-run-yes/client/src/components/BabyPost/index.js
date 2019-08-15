@@ -50,18 +50,16 @@ class BabyPost extends Component{
         // console.log(this.props.location.state)
         return(
             <div>
-                
-                <BabyBookPosts
-                    babyID={this.props.location.state.babyID}
-                    indBabyInfo={this.props.location.state}
-                
-                    
-                    />
                 <BabyPostForm
                     {...this.state}
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
 
+                    />
+               <BabyBookPosts
+                    
+                    babyID={this.props.location.state.babyID}
+                    indBabyInfo={this.props.location.state}
                     />
            
               

@@ -68,7 +68,7 @@ class Auth extends Component{
                                 <p>Have an account? 
                                     <span onClick={this.toggler}> Log in  </span>
                                 </p>
-                                <p>{this.props.errMsg} </p>
+                                <p className="err-msg">{this.props.errMsg} </p>
                             </div>
                         {console.log(this.props.errMsg)}
                        </>
@@ -86,7 +86,7 @@ class Auth extends Component{
                             <div className="signup-redirect-div">
                                 <p > Don't have an account?
                                     <span onClick={this.toggler} > Sign up</span> </p>
-                                <p>{this.props.errMsg}</p>
+                                <p className="err-msg">{this.props.errMsg}</p>
                             </div>
                     </>
                     
@@ -97,15 +97,6 @@ class Auth extends Component{
         )
     }
 }
-
-
-
-
-
-
-
-
-
 
 
 export default withUser(Auth);
