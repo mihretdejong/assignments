@@ -5,6 +5,7 @@ import Baby from './components/Baby'
 import BabyProfile from './components/BabyProfile/BabyProfile.js'
 import BabyPost from './components/BabyPost'
 import BabyGrowthChart from './components/BabyGrowthChart'
+import Monthly from './components/Monthly'
 // import BabyBookPosts from './components/BabyBookPost/BabyBookPosts.js'
 // we don't have to say index.js, we can just say Baby and that will be the component imporetd
 import ProtectedRoute from './shared/ProtectedRoute.js'
@@ -71,6 +72,17 @@ class App extends Component {
                         token={token}
                         path="/addpost"
                         component={BabyPost}
+                        user={user}
+                        getUserBabies={getUserBabies}
+                        addBabyPosts={addBabyPosts}
+                        redirectTo="/"
+                        babies={babies}
+                        
+                        />
+                    <ProtectedRoute
+                        token={token}
+                        path="/monthlybabybook"
+                        component={Monthly}
                         user={user}
                         getUserBabies={getUserBabies}
                         addBabyPosts={addBabyPosts}

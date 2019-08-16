@@ -381,6 +381,22 @@ font-family: 'Aclonica', sans-serif;
     margin: 10px;
     color: rgb(134, 101, 17)
 }
+/* **************  MonthlyBook ********** */
+.monthly-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 
+}
+.book{
+    height: 20vh;
+    width: 15vh;
+    margin: 10px;
+    padding: 5px;
+    background-color: rgb(158, 156, 152);
+    border-radius: 10px;
+    color: rgb(219, 208, 208);
+
+
+}
 
 @media (min-width: 760px ){
 /* ****************** auth-form-div ********* */

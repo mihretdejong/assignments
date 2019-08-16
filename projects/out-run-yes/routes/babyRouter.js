@@ -24,6 +24,7 @@ babyRouter.get("/:babyId", (req, res, next) => {
     })
 })
 
+
 // Add new baby entry
 babyRouter.post("/", (req, res, next) => {
     // add user's id to the new baby object before saving in the db

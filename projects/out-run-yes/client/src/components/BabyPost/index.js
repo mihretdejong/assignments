@@ -1,7 +1,8 @@
 import React, { Component} from 'react'
 import BabyPostForm from './BabyPostForm.js'
 import BabyBookPosts from '../BabyBookPost/BabyBookPosts.js'
-
+import CaptureImage from '../camera/CaptureImage.js'
+import { Link, Route } from 'react-router-dom'
 
 
 class BabyPost extends Component{
@@ -39,6 +40,9 @@ class BabyPost extends Component{
     }
 
     render(){
+        const { babies } = this.props
+        console.log(babies)
+        const mappedBaby = babies.map(baby => <p>{baby.name}</p>)
         //{/* babies={this.props.babies} */}
         // do a dot find, to find the id of the baby in babies [] that matches the 
         // id in the this.props.location and pass it to the BabyBookPosts
@@ -47,6 +51,12 @@ class BabyPost extends Component{
         // console.log(this.props.location.state)
         return(
             <div>
+                {mappedBaby}
+                <div className="">
+                    <Link to="/monthlybabybook" >Check out </Link>
+                    
+                </div>
+                <CaptureImage/>
                 <BabyPostForm
                     {...this.state}
                     handleChange={this.handleChange}
