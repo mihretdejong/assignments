@@ -36,7 +36,7 @@ const BabyProfile = props => {
             </div>
             <BabyProfileUpdated
                 propsFromProfileId={_id}
-                class
+                
                 />
             <button className="delete-div-profile" onClick={ () => deleteBabyEntry(_id)}>Delete Profile</button>
         </div>

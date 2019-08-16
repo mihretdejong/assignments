@@ -220,6 +220,7 @@ font-family: 'Aclonica', sans-serif;
     height: 20vh;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     border-radius: 60%
 }
 .baby-prof-links{
@@ -282,11 +283,15 @@ font-family: 'Aclonica', sans-serif;
 /* *************** Post Form ******/
 .post-form-div{
     margin-top: 50px;
-    width: 100%;
+    margin-left: 100px;
+    width: 250px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
 }
 .post-img-div{
     width: 90%;
@@ -299,11 +304,23 @@ font-family: 'Aclonica', sans-serif;
     border-radius: 30px;
 
 }
+.post-form-div h3{
+    text-align: left;
+    color: rgb(102, 81, 26);
+    margin-left: 20px;
+    font-family: 'Poiret One', cursive;
+    margin-bottom: 10px;
+
+}
 .post-form-div >input{
     margin: 5px;
     width: 200px;
     padding: 5px;
     border-radius: 30px;
+}
+.text-area{
+    width: 200px;
+    height: 100px;
 }
 .post-form-div >button{
     height: 25px;
@@ -311,6 +328,7 @@ font-family: 'Aclonica', sans-serif;
     margin-top: 10px;
     border-radius: 30px;
     margin-bottom: 10px;
+    margin-left: 60px;
     font-family: 'Poiret One', cursive;
     font-size: 15px;
     color: rgba(56, 54, 40, 1);

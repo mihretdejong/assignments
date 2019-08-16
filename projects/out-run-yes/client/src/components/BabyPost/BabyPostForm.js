@@ -1,13 +1,14 @@
 import React from 'react'
 
 const BabyPostForm = (props) => {
-    const { handleSubmit, handleChange, img, imgCaption } = props
+    const { handleSubmit, handleChange, img, imgCaption, title, ageInMonths,  } = props
     // console.log(props)
 
     return(
         <div >
 
             <form className="post-form-div" onSubmit={handleSubmit}>
+                <h3> Baby's Image</h3>
                 <input
                     type="text"
                     value={img}
@@ -15,7 +16,25 @@ const BabyPostForm = (props) => {
                     onChange={handleChange}
                     placeholder="Add baby's image"
                     />
+                <h3>Title</h3>
                 <input
+                    type="text"
+                    value={title}
+                    name="title"
+                    onChange={handleChange}
+                    placeholder="Title of Image"
+                    />
+                <h3>Age in months...</h3>
+                <input
+                    type="number"
+                    value={ageInMonths}
+                    name="ageInMonths"
+                    onChange={handleChange}
+                    placeholder="Age In Months"
+                    />
+                <h3>Thoughts... </h3>
+                <input
+                    className="text-area"
                     type="text"
                     value={imgCaption}
                     name="imgCaption"

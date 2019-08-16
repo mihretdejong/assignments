@@ -10,11 +10,24 @@ const babySchema = new Schema({
         type: String,
         required: true
     },
+    babyBlurb:{
+        type: String,
+        default: ""
+
+    },
     posts: {
         type: [{
             img: {
                 type: String,
                 required: true
+            },
+            title: {
+                type: String,
+                default: ""
+            },
+            ageInMonths:{
+                type: Number,
+                default: 0
             },
             imgCaption: {
                 type: String, 
@@ -27,36 +40,70 @@ const babySchema = new Schema({
         }],
         default: []
     },
-    // inputAndOutput: {
-    //     type: [{
-    //         input: {
-    //             type: String,
-    //             required: true
-    //         },
-    //         imgCaption: {
-    //             type: String, 
-    //             required: true
-    //         }
-    //     }],
-    //     default: []
-    // },
+    input: {
+        type: [{
+            input: {
+                type: String,
+                required: true
+            },
+            imgCaption: {
+                type: String, 
+                required: true
+            },
+            thoughts: {
+                type: String, 
+                required: true
+            },
+            ageInMonths: {
+                type: Number, 
+                required: 0
+            }
+        }],
+        default: []
+    },
+    sleep: {
+        type: [{
+            timeEntry: {
+                type: Number,
+                default: 0
+            },
+            napTime: {
+                type: Date,
+                default: Date.now
+            }
+        }]
+
+    },
+    fluid: {
+        type: [{
+            fluidEntry: {
+                type: Number,
+                default: 0
+            },
+
+            fulidTime:{
+                type: Date,
+                default: Date.now
+            }
+        }]
+    },
     babyGrowthChart: {
         type: [{
             height:{
-                type: String, 
-                default: ""
+                type: Number, 
+                default: 0
             },
             weight:{
-                type: String,
-                default: ""
+                type: Number,
+                default: 0
             },
             headCircumference: {
-                type: String, 
-                default: ""
+                type: Number, 
+                default: 0
             },
             date: {
                 type: String, 
-                default: ""
+                default: 0
             },
             time: {
                 type:Date,

@@ -9,7 +9,10 @@ class BabyPost extends Component{
         super()
         this.state = ({
             img: "",
-            imgCaption: ""
+            title: "",
+            ageInMonths: 0,
+            imgCaption: "", 
+            
         })
     }
     handleChange = (e) => {
@@ -24,13 +27,15 @@ class BabyPost extends Component{
         const newPostObj = {
             post:{
                 img: this.state.img,
-                imgCaption: this.state.imgCaption
+                title: this.state.title,
+                ageInMonths: this.state.ageInMonths,
+                imgCaption: this.state.imgCaption, 
             } 
         }
         console.log(this.props)
         //pass the function, the id of the baby from this.props
         this.props.addBabyPosts(babyID, newPostObj)
-        this.setState({img: "", imgCaption: ""})
+        this.setState({img: "", imgCaption: "", title: ""})
     }
 
     render(){
