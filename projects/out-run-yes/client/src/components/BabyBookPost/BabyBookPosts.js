@@ -12,8 +12,8 @@ const BabyBookPosts = (props) => {
              {currentBaby && currentBaby.posts.map(post => 
                         <div className="post-div" key={post._id}>
                                 <div className="post-img-div" style={{backgroundImage: `url(${post.img})`}}/> 
-                                <p>{post.title}</p>
-                                <p>I'm {post.ageInMonths} months old!</p>
+                                <h2>{post.title}</h2>
+                                <p> Little love is {post.ageInMonths} months old!</p>
                                 <p>{post.imgCaption}</p>
                                 <button onClick={ () =>  deleteBabysPost(babyID, post._id)} >Delete Post</button>                      
                        </div>).reverse()} 

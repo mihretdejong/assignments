@@ -1,22 +1,26 @@
 import React from 'react'
 import { withUser } from '../../context/UserProvider.js'
+import { Link } from 'react-router-dom'
 
 const MonthlyBookForm = (props) => {
-    const { handleChange, ageInMonths } = props
+    const { handleChange, ageInMonths, postsForMonth } = props
+    let mappedBabies 
+    // if(babies.length !== 0){
+    //     mappedBabies = babies.map(baby =>   )
+    // }
     return(
         <div className="monthly-div">
-            <div 
-                className="book month-one"
-                onClick={handleChange}
-                value={1}
-                name={ageInMonths}
-                >My baby's 1st month story book</div>
-            <div 
-                className="book month-two"
-                onClick={handleChange}
-                value={2}
-                name={ageInMonths}
-                >My baby's 2nd month story book</div>
+            <Link to={{ pathname: "eachmonth", state: {age: 12, postsForMonth: postsForMonth}}}>
+                <div
+                    className=""
+                    >My baby's 1st month story book</div>
+            
+            </Link>
+            <Link to={{ pathname: "eachmonth", state: {age: 12, postsForMonth: postsForMonth}}}>
+            
+                <div 
+                    >My baby's 2nd month story book</div>
+            </Link>
             <div 
                 className="book month-three"
                 onClick={handleChange}

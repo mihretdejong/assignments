@@ -38,6 +38,7 @@ font-family: 'Aclonica', sans-serif;
     grid-row: 2/ 3;
     display: flex;
     flex-direction: column;
+    margin: 30px;
     /* justify-content: flex-start; */
 }
 .auth-form-div >button{
@@ -81,12 +82,14 @@ font-family: 'Aclonica', sans-serif;
 .head-div p{
     font-size: 15px;
     margin-top: 10px;
+    margin-bottom: 50px;
 }
 .head-div >h1{
     color: rgb(153, 140, 69);
     font-family: 'Aclonica', sans-serif; 
     font-size: 80px;
-    margin-bottom: 10px
+    margin-bottom: 0px;
+
 }
 .err-msg{
     color: firebrick
@@ -180,6 +183,10 @@ font-family: 'Aclonica', sans-serif;
     padding: 10px
     
 }
+.baby-form >button:hover{
+    color: white;
+    background-color: lightgrey
+}
 .babyNameLandingPage{
     grid-column: 2/ 3;
     grid-row: 3/ 7;
@@ -261,6 +268,10 @@ font-family: 'Aclonica', sans-serif;
     color: rgb(95, 76, 27);
     margin-left: 40px 
 }
+.baby-profile-edit >button:hover{
+    color: white;
+    background-color: lightgray
+}
 /* ***************** Edit Profile ***************** */
 .baby-profile-edit >form{
     margin: 15px;
@@ -283,8 +294,8 @@ font-family: 'Aclonica', sans-serif;
 /* *************** Post Form ******/
 .post-form-div{
     margin-top: 50px;
-    margin-left: 100px;
-    width: 250px;
+    margin-left: 55px;
+    width: 350px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -295,7 +306,7 @@ font-family: 'Aclonica', sans-serif;
 }
 .post-img-div{
     width: 90%;
-    height: 30vh;
+    height: 50vh;
     margin: 10px auto;
     background-size: cover;
     background-repeat: no-repeat;
@@ -307,20 +318,20 @@ font-family: 'Aclonica', sans-serif;
 .post-form-div h3{
     text-align: left;
     color: rgb(102, 81, 26);
-    margin-left: 20px;
+    /* margin-left: 20px; */
     font-family: 'Poiret One', cursive;
     margin-bottom: 10px;
 
 }
 .post-form-div >input{
     margin: 5px;
-    width: 200px;
+    width: 300px;
     padding: 5px;
     border-radius: 30px;
 }
 .text-area{
     width: 200px;
-    height: 100px;
+    height: 70px;
 }
 .post-form-div >button{
     height: 25px;
@@ -328,7 +339,7 @@ font-family: 'Aclonica', sans-serif;
     margin-top: 10px;
     border-radius: 30px;
     margin-bottom: 10px;
-    margin-left: 60px;
+    margin-left: 100px;
     font-family: 'Poiret One', cursive;
     font-size: 15px;
     color: rgba(56, 54, 40, 1);
@@ -337,9 +348,17 @@ font-family: 'Aclonica', sans-serif;
 .post-div >p{
     font-family: 'Poiret One', cursive;
     font-size: 15px;
-    padding: 20px;
-    margin: 10px auto;
-    text-align: center;
+    padding-left: 20px;
+    
+    /* padding: 20px; */
+    /* margin:  auto; */
+    /* text-align: center; */
+}
+.post-div >h2{
+    margin-left: 20px;
+    /* font-family: 'Poiret One', cursive; */
+    font-family: 'Aclonica', sans-serif;
+    color: rgb(95, 76, 27);
 }
 .post-div >button{
     width: 100px;
@@ -347,9 +366,7 @@ font-family: 'Aclonica', sans-serif;
     border-radius: 30px;
     font-family: 'Josefin Sans', sans-serif;
     color: rgb(95, 76, 27);
-    margin: 0px 20px;
-
-
+    margin: 20px 20px;
 }
 
 
@@ -396,6 +413,20 @@ font-family: 'Aclonica', sans-serif;
     color: rgb(219, 208, 208);
 
 
+}
+/* ******************** Growth Chart *************** */
+.growth-chart{
+    width: 100%;
+    height: 80vh;
+    background-image: url('http://codesuki.github.io/react-d3-components/charts.png');
+    background-size: cover
+}
+/* *************** mapped post ************** */
+.monthly-mapped{
+    width: 100%;
+    height: 50vh;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 @media (min-width: 760px ){

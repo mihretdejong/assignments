@@ -38,6 +38,9 @@ class BabyPost extends Component{
         this.props.addBabyPosts(babyID, newPostObj)
         this.setState({img: "", imgCaption: "", title: ""})
     }
+    startCamera = () => {
+        
+    }
 
     render(){
         const { babies } = this.props
@@ -51,11 +54,12 @@ class BabyPost extends Component{
         // console.log(this.props.location.state)
         return(
             <div>
-                {mappedBaby}
+                {/* {mappedBaby} */}
                 <div className="">
-                    <Link to="/monthlybabybook" >Check out </Link>
+                    {/* <Link to="/monthlybabybook" >Check out </Link> */}
                     
                 </div>
+                <div onClick={this.startCamera}></div>
                 <CaptureImage/>
                 <BabyPostForm
                     {...this.state}

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import MonthlyBookForm from './MonthlyBookForm.js'
-
 import { withUser } from '../../context/UserProvider.js'
 
 
@@ -23,17 +22,26 @@ class Monthly extends Component{
 
     }
     getBabysPostByMonth = () => {
+
         
     }
+    
     
 
 
     render(){
-        console.log(this.props)
+        // const { posts: [posts] } = this.props.babies
+        // const { posts: [baby] } = this.props
+        const posts = this.props.babies
+        
+        // const mappedPosts = baby.posts.map(baby =>  )
+        // console.log(this.props.babies)
         return(
             <div>
                 
-                <MonthlyBookForm/>
+                <MonthlyBookForm
+                     postsForMonth={posts} 
+                    />
 
             </div>
         )

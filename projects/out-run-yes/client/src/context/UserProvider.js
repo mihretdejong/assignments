@@ -26,7 +26,7 @@ class UserProvider extends Component{
             //this keeps us logged in even if the page resets
             user: JSON.parse(localStorage.getItem("user")) || {},
             token: localStorage.getItem("token") || "", 
-            babies: [],
+            babies: [{posts: []}],
             errMsg: "",
             // babyposts: [],
 

@@ -31,6 +31,7 @@ class BabyGrowthChart extends Component{
                     handleChange={this.handleChange}
 
                     />
+                <div className="growth-chart"></div>
 
             </div>
         )

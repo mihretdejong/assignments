@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import BabyBioForm from './BabyBioForm.js'
 
 
 class BabyBioIn extends Component{
@@ -12,6 +13,9 @@ class BabyBioIn extends Component{
     render(){
         return(
             <div>
+                
+                <BabyBioForm/>
+
 
             </div>
         )
