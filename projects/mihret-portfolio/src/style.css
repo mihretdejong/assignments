@@ -9,22 +9,20 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Anton', sans-serif;
 font-family: 'Poppins', sans-serif;
 font-family: 'Russo One', sans-serif;
+font-family: 'Abel', sans-serif;
  */
 /* ********************* Entire SPA ********************** */
 .particles-background{
     position: absolute;
     width: 100%;
     height: 100%;
+    /* z-index: -1 */
 
 }
 .all-warper{
     background-color: #1a1a1a;
     width: 100%;
     height: 100%;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 150px 1fr 1fr; */
-    
 }
 
 
@@ -34,19 +32,12 @@ font-family: 'Russo One', sans-serif;
     width: 100%;
     top: 0;
     left: 0;
-    
-    /* it helps keep the bar top */
-    /* background-color: #1a1a1a; */
 }
-
-
 .toolbar-navigation{
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 0 10px;
-
-     
+    padding: 0 10px;   
 }
 .gap {
     flex: 1
@@ -77,6 +68,7 @@ font-family: 'Russo One', sans-serif;
     cursor: pointer;
     padding: 0;
     box-sizing: border-box;
+    z-index: 10;
 }
 .toggle-btn-burger{
     width: 30px;
@@ -96,7 +88,6 @@ font-family: 'Russo One', sans-serif;
     max-width: 400px;
     transition: 0.7s ease-out;
     z-index: 20
-    /* transform: translatex(-100%) */
 }
 .side-drawer.open {
     transform: translatex(0);
@@ -110,7 +101,7 @@ font-family: 'Russo One', sans-serif;
     color: white;
     font-size: 50px;
     font-family: 'Poppins', sans-serif;
-    transition: 500ms;
+    transition: 1000ms;
 }
 .side-drawer a{
     /* height: 100%; */
@@ -144,10 +135,6 @@ font-family: 'Russo One', sans-serif;
 /* flexbox and grid work on direct child */
 .intro-div{
     display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    /* grid-template-rows: 1fr 1fr 1fr; */
-    /* min-height: 50vh; */
-    /* line-height: 400% */
     color: rgba(255, 255, 255, 0.918);
     display: grid;
     grid-template-columns: 55px 1fr 1fr;
@@ -193,13 +180,6 @@ font-family: 'Russo One', sans-serif;
     grid-row: 4/ 6;
     display: grid;
     padding: 20px;
-    /* grid-template-columns: 10; */
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    /* grid-template-rows: 1fr ; */
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
 
 }
 .skills-div >h1{
@@ -265,7 +245,7 @@ font-family: 'Russo One', sans-serif;
     letter-spacing: 1pt;
 }
 
-.text-div-about>h1{
+.text-div-about >h1{
     padding: 20px;
     font-family: 'Poppins', sans-serif;
 }
@@ -305,8 +285,7 @@ font-family: 'Russo One', sans-serif;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-   
-    
+    z-index: 5;  
 }
 
 .projects-div h1{
@@ -318,11 +297,25 @@ font-family: 'Russo One', sans-serif;
     font-size: 40px;
     
 }
+.project-discription{
+    width: 80%;
+    height: 20vh ;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    margin-left: 50px;
+    letter-spacing: 1px;
+   
+}
+.project-discription >p{
+    margin-bottom: 30px;
+}
+/* the z-index only works directly on the div and not necessarly the container div */
 .u-triv{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 5;
 
 }
 .u-triv >h2{
@@ -336,6 +329,7 @@ font-family: 'Russo One', sans-serif;
     /* justify-content: space-evenly; */
     align-items: center;
     width: 100vw;
+    margin-top: 50px
 
 }
 
@@ -344,11 +338,13 @@ font-family: 'Russo One', sans-serif;
     height:55vh;
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 5px;
-    transition: 500ms;
+    margin: 10px;
+    transition: 200ms;
+    
 }
 .utriv-snap:hover{
-    box-shadow: -7px 0px 6px 4px rgba(162,167,170,0.64);
+    /* box-shadow: -7px 0px 6px 4px rgba(162,167,170,0.64); */
+   opacity: 0.7
 }
 .utriv-snap.utriv-home-page{
     background-image: url(./images/utriv1.png);
@@ -379,6 +375,7 @@ font-family: 'Russo One', sans-serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
 }
 
 .insta-snap{
@@ -386,11 +383,12 @@ font-family: 'Russo One', sans-serif;
     height:55vh;
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 5px;
-    transition: 500ms;
+    margin: 10px ;
+    transition: 200ms;
 }
 .insta-snap:hover{
-    box-shadow: -7px 0px 6px 4px rgba(162,167,170,0.64);
+    opacity: 0.5;
+    
 }
 .insta-snap.insta-signup-page{
     background-image: url(./images/signup.png);
@@ -409,6 +407,7 @@ font-family: 'Russo One', sans-serif;
     font-family: 'Poppins', sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    z-index: 5;
 
 }
 .contact-div >h1{
@@ -446,10 +445,7 @@ font-family: 'Russo One', sans-serif;
 .social-media{
     
     display: flex;
-    justify-content: center;
-
-  
-    
+    justify-content: center;    
 }
 .social-media a{
     text-decoration: none;
@@ -646,22 +642,78 @@ font-family: 'Russo One', sans-serif;
         background-size: cover
     }
     /* ***************** Contact *********** */
+    .contact-div{
+        grid-template-columns: 230px;
+        margin: 0px 5px 0 10px;
+
+    }
     .contact-info{
-        margin: 0 auto ;
+        margin: 0 150px ;
         grid-column: 2/ 3
     }  
 }
 
-@media screen and (min-width: 768) and (max-width: 1024px){
+/* *********** iPhone 5/SE screen size */
+
+@media (max-width: 568px){
+    .side-drawer{
+        width: 300px;
+    }
+    .intro-div h1{
+        font-size: 60px; 
+    }
+    .intro-div h3{
+        font-family: 'Anton', sans-serif;
+        font-size: 25px;
+    }
+    .skills-div >h1{
+        font-size: 60px;
+    }
+    .skills-div >div{
+        width: 70px;
+        margin: 0;
+        font-size: 15px;
+    }
     .prof-img-div{
-        grid-column: 2/ 3;
-        grid-row: 1/ 2;
-        
+        height: 60vh;
+        width: 30vw;
     }
-    .enjoy-div {
-        color: blue
+    .text-div-about >h1{
+        font-size: 30px;
     }
-    .about-div{
-        display: none;
+    .text-div-about >h5{
+        font-size: 10px;
     }
+    /* ********* Projects Page ******/
+    .projects-div h1{
+        font-size: 30px;
+        margin: 0 0 10px 50px ;
+
+    }
+    .proj-utri-img{
+        margin-top: 100px;
+    }
+    .instagram-clone{
+        margin-top: 100px;
+    }
+    .contact-div >h1{
+        font-size: 30px;
+    }
+    .social-media{
+        margin-left: 7px;
+    }
+    .social-media a{
+        width: 70px;
+        padding: 5px;   
+    } 
+
 }
+/* @media (max-width: 812px){
+    .prof-mg-div{
+        width: 40vw;
+        height: 30vh;
+    }
+    .enjoy-div{
+        height: 60vh;
+    }
+} */

@@ -7,7 +7,7 @@ const About = () => {
             
                 <div className="enjoy-div">
                     <div className="resume-wrapper-div">
-                         <a href={require('../images/MihretDJFSDevResume81019.jpg')} download> <div className="resume-div">Checkout my resume</div> </a>
+                         <a href={require('../images/MihretDJ-FSDevResume82219.jpg')} download> <div className="resume-div">Checkout my resume</div> </a>
                     </div>
                     <div className="prof-img-div">
 
@@ -24,8 +24,7 @@ const About = () => {
                         <h5>Running marathons when I'm not coding...</h5>
 
                     </div>
-                    {/* <h5>Running marathons when I'm not coding...</h5> */}
-                    {/* <a href={require('../images/MihretDeJongWebDeveloperJPEG.jpg')} download/> */}
+                   
 
                 </div>
 
