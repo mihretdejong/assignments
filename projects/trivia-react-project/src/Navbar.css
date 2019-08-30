@@ -34,9 +34,10 @@
     color: grey;
     text-decoration: none;
     padding: 0 1.5rem;
+    transition: 500ms;
 
 }
 .toolbar-nav-items a:hover,
 .toolbar-nav-items a:active{
-    color:grey
+    color: palevioletred
 }

@@ -14,7 +14,6 @@
     width: 200px;
     max-width: 400px;
     z-index: 200; 
-    /* transform: translateX(-100);*/
 }
 
  .side-drawer.open{
@@ -57,9 +56,8 @@
     font-size: 35px ;
     font-family: 'Bahianita', cursive;
     letter-spacing: 5pt;
-    /* background-color: rgba(0, 0, 0, 0.5) */
     text-shadow:  -2px 2px 4px #2E2F30;
-    -webkit-animation: fadein 5s;
+    transition: 500ms;
 
 }
 @keyframes fadein {
@@ -74,7 +72,6 @@
 @media (min-width: 750px){
     .side-drawer{
         display: none;
-
     } 
     .toggle-button{
         display: none;
