@@ -180,6 +180,7 @@ font-family: 'Abel', sans-serif;
     grid-row: 4/ 6;
     display: grid;
     padding: 20px;
+    margin-left: 18px;
 
 }
 .skills-div >h1{
@@ -375,7 +376,7 @@ font-family: 'Abel', sans-serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    /* margin-top: 100px; */
 }
 
 .insta-snap{
@@ -392,7 +393,7 @@ font-family: 'Abel', sans-serif;
 }
 .insta-snap.insta-signup-page{
     background-image: url(./images/signup.png);
-    /* margin-left: 15px */
+    margin-top: 100px
 }
 .insta-snap.insta-home-page{
     background-image: url(./images/feed.png)
@@ -635,11 +636,15 @@ font-family: 'Abel', sans-serif;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        margin-top: 70px;
     }
     .insta-snap{
         width: 20vw;
         height:45vh;
         background-size: cover
+    }
+    .insta-snap.insta-signup-page{
+        margin-top: 10px
     }
     /* ***************** Contact *********** */
     .contact-div{
@@ -675,8 +680,8 @@ font-family: 'Abel', sans-serif;
         font-size: 15px;
     }
     .prof-img-div{
-        height: 60vh;
-        width: 30vw;
+        height: 30vh;
+        width: 40vw;
     }
     .text-div-about >h1{
         font-size: 30px;
@@ -708,7 +713,7 @@ font-family: 'Abel', sans-serif;
     } 
 
 }
-/* @media (max-width: 812px){
+/* @media (max-width: 812px) and (min-width: 570px){
     .prof-mg-div{
         width: 40vw;
         height: 30vh;

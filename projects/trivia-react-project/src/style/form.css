@@ -1,0 +1,86 @@
+
+
+.form-page{
+    width: 100vw;
+    height: 100vh;
+    
+}
+/* #grad4 {
+    height: 150px;
+    width: 150px;
+    background-image: radial-gradient(farthest-corner at 60% 55%,blue,green,yellow,black);
+} */
+
+.form-div {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, rgb(241, 199, 194), white)
+    
+}
+.text-div-form{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: 1px 3px 6px rgb(126, 134, 139) ;
+    
+
+
+}
+.text-div-form h3{
+    margin: 5px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 30px;
+    color: rgba(95, 90, 90, 0.99);
+}
+.form-select{
+    position: relative;
+    font-family: 'Rajdhani', sans-serif;
+    width: 60vw;
+    height: 40vh ;
+   
+    
+    
+    /* transform: translate(-50%, -50%); */
+
+}
+/* -webkit-appearance: button */
+.form-select select{
+    background: rgb(228, 173, 159);
+    color: rgba(95, 90, 90, 0.99);
+    font-family: 'Rajdhani', sans-serif;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 20px;
+    box-shadow: 0 5px 10px rgba(131, 128, 128, 0.5);
+    margin: 5px;
+    -webkit-appearance: none;
+    outline: none;
+    background: transparent;
+
+}
+
+
+.trivia-submit-btn{
+    width: 40vw;
+    height: 5vh;
+    margin: 40px auto;
+    border-radius: 50px;
+    font-family: 'Rajdhani', sans-serif;
+    box-shadow: 2px 2px 5px grey;
+    background: transparent;
+    border: 1px solid white
+}
+/* .trivia-submit-btn: hover {
+    transition:
+} */
+.select-selected{
+    background-color: dodgerblue;
+}

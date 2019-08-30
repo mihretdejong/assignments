@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.category-div{
+    margin:100px 0 20px 100px;
+    height: 400vh;
+}
+
+/* if we go below 736px, get rid of my toolbar */
+@media (max-width: 736px){
+    .toolbar-nav-items {
+        display: none;
+    }
+    .side-drawer{
+        background-color: rgb(0, 0, 0, 0.5);
+    }
+    .toolbar-logo{
+        background-image: url('')
+    }
+    .side-drawer-right{
+        height: 100%;
+        background: rgb(0, 0, 0, 0.7);
+        box-shadow: -7px 0px 22px rgba(0, 0, 0, 0.5);
+        position: fixed;
+        transition: left .5s cubic-bezier(0.6, 0.82, 0.165, 1);
+        top: 0;
+        right: -200px;
+        width: 200px;
+        max-width: 400px;
+        z-index: 200;
+    }
+}

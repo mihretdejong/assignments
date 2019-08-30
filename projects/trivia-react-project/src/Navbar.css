@@ -1,0 +1,42 @@
+.toolbar-navigation {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    top: 0;
+    /* left:px;  */
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+}
+.toolbar-logo{
+    width: 100%;
+    height: 200px;
+    /* background-image: url('./Images/imageedit_25_3619404442.png');
+    background-size: contain;
+    background-repeat: no-repeat; */
+}
+.toolbar-logo a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    
+}
+.gap{
+  flex: 1;  
+}
+/* the gap is an empmty div that just adds a space between our two nav items */
+.toolbar-nav-items{
+    margin: 10px;
+
+}
+.toolbar-nav-items a{
+    color: grey;
+    text-decoration: none;
+    padding: 0 1.5rem;
+
+}
+.toolbar-nav-items a:hover,
+.toolbar-nav-items a:active{
+    color:grey
+}

@@ -37,15 +37,7 @@ const Projects = () => {
                         <a href="https://ourinsta.herokuapp.com/profile"><div className="insta-snap insat-profile-page"></div></a>  
                 </div>
             </div>
-            {/* <div className="instagram-clone">
-                <h2>Instagram Clone</h2>
-
-                <div className="instagram-clone">
-                        <a href="https://ourinsta.herokuapp.com/"><div className="insta-snap insta-signup-page"></div></a>
-                        <a href="https://ourinsta.herokuapp.com/feed"><div className="insta-snap insta-home-page"></div></a>
-                        <a href="https://ourinsta.herokuapp.com/profile"><div className="insta-snap insat-profile-page"></div></a>  
-                </div>
-            </div> */}
+           
           
         </div>
      

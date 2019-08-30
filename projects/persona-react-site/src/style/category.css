@@ -1,0 +1,32 @@
+.level-div{
+    width: 300px;
+    display: flex;
+}
+.subject-div{
+    width: 300px;
+    display: flex;
+    align-content: center;
+}
+.category-div >div{
+    grid-column: 1/ 2;
+    width: 80%;
+    height: 15%;
+    padding: 30px;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 50px auto;
+}
+.category-div button{
+    border: 3px solid lightgrey;
+    border-radius: 25px;
+    display: inline;
+    margin: 10px;
+}
+.submit-btn-home{
+    border: 3px solid lightgrey;
+    border-radius: 25px;
+    display: inline;
+    margin: 10px;
+}
+

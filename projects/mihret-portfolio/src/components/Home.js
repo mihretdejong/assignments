@@ -23,16 +23,16 @@ const Home = () => {
              
                     <div>React.js</div>
                     <div>HTML/CSS</div>
-                    <div>Adobe Lightroom</div>
                     <div>JavaScript</div>
                     <div>Git</div>
                     <div>Jquery</div>
-                    <div>Token Auth</div>
                     <div>JSON</div>
                     <div>Express</div>
                     <div>Node.js</div>
                     <div>Mongodb</div>
                     <div>Mongoose</div>
+                    <div>Adobe Lightroom</div>
+                    <div>Token Auth</div>
 
                     <section className="collection-sec">
                         <div>React.js</div>
